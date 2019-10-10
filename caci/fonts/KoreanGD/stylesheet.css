@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'KoreanGD18R';
+    src: url('hinted-KoreanGD18-R.eot');
+    src: url('hinted-KoreanGD18-R.eot?#iefix') format('embedded-opentype'),
+        url('hinted-KoreanGD18-R.woff2') format('woff2'),
+        url('hinted-KoreanGD18-R.woff') format('woff'),
+        url('hinted-KoreanGD18-R.ttf') format('truetype'),
+        url('hinted-KoreanGD18-R.svg#KoreanGD18-R') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KoreanGD10R';
+    src: url('hinted-KoreanGD10-R.eot');
+    src: url('hinted-KoreanGD10-R.eot?#iefix') format('embedded-opentype'),
+        url('hinted-KoreanGD10-R.woff2') format('woff2'),
+        url('hinted-KoreanGD10-R.woff') format('woff'),
+        url('hinted-KoreanGD10-R.ttf') format('truetype'),
+        url('hinted-KoreanGD10-R.svg#KoreanGD10-R') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
