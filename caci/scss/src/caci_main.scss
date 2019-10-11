@@ -1,0 +1,38 @@
+// caci_main.scss
+@charset "UTF-8";
+/* caci_main.css */
+
+$caciC : (#a91f2b, #00002a, #333, #fff );
+$caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
+
+
+
+/* 공통영역 */
+
+#headBox {position:fixed; width:100%; height:auto; min-height:150px; background-color: nth($caci_sC,2);}
+#conBox {width:100%; height:auto; min-height:500px; padding-top: 150px; background-color: #555;}
+#footBox {width:100%; height:auto; min-height:300px; background-color: #999;}
+
+
+/* -디자인 기준 : 480px */
+@media screen and (max-width:479px) {  
+ #headBox{background-color: rgba(nth($caci_sC,2),1);}
+
+}
+
+/* -디자인 기준 : 480px */
+@media screen and (min-width:480px) and (max-width:767px) { 
+
+}
+
+/* -디자인 기준 : 768px */
+@media screen and (min-width:768px) and (max-width:959px) { 
+
+
+}
+
+/* -디자인 기준 : 960px */
+@media screen and (min-width:960px) { 
+
+
+}
