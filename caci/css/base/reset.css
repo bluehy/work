@@ -11,15 +11,15 @@ ul,ol,li{list-style:none;}
 table, thead,tbody,tfoot,tr,th,td {margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:1px solid #777;}
 
 a{color:#fff; text-decoration:none;}
-a:hover {color: #f07;}
+a:hover {color: #a91f2b;}
 a:focus {color:1px dotted #555; }
 
 abbr{text-decoration:none; text-transform:uppercase;}
 button{border:0; cursor:pointer; background-color: transparent;}
-button:hover{background-color: #f07;}
+button:hover{background-color: #a91f2b;}
 button:focus{outline:1px dotted #555;}
 
-hr {margin:0; padding:0; border-bottom:1px solid #f06;}
+hr {margin:0; padding:0; border-bottom:1px solid #a91f2b;}
 
 /* html5 ================================ */
 main, header, footer, aside, nav, section, article, figure, figcaption {display:block;}

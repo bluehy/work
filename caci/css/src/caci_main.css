@@ -1,31 +1,177 @@
 @charset "UTF-8";
 /* caci_main.css */
+
+/* 
+
+$caciC : (#a91f2b, #00002a, #333, #fff );
+$caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
+
+*/
+
+
 /* 공통영역 */
+
+#wrap {
+  min-width:480px; min-width:30rem; max-width:2000px; max-width:125rem;
+}
+
+
+/* #headBox ================================================== */
 #headBox {
   position: fixed;
+  z-index: 1000;
   width: 100%;
   height: auto;
-  min-height: 150px;
-  background-color: #f9f4ed; }
+  min-height: 60px;
+  padding: 10px 35px;
+  box-sizing:border-box;
+  background-color: #f9f4ed;}
+    
+    h1 {float:left; width: 150px; height: 40px; background-color: #a91f2b; }
+    #gnb {float:right; width: 30px; height: 30px; transform: translateY(5px);background-image:url("../../img/icon/1x/Asset\ 4.png")}
 
+
+/* #conBox ==================================================== */
 #conBox {
   width: 100%;
   height: auto;
-  min-height: 500px;
-  padding-top: 150px;
+  min-height: 2000px;
   background-color: #555; }
 
+
+  .conarea {padding-top: 40px; box-sizing: border-box; background-repeat:no-repeat;}
+  h3 {text-align:center;}
+
+
+  #viewarea {width: 100%; padding-top: 100px; background-color: #999;}
+    #viewarea > ul {width:215px; height:auto;}
+    #viewarea > ul >li {float:left; width:35px; height:3px; background-color: #5b6574; margin-right:6px;}
+    #viewarea > ul >li a {display:block; width: 100%; height: 100%;}
+    #viewarea > ul >li:hover a {background-color: #a91f2b;}
+    #viewarea > ul >li:focus a {background-color: #a91f2b;}
+
+    #viewarea > .viewBtn {width: 12px; height:40px; background-color: #555; }
+    #viewarea > .nextBtn {position:absolute; right: 35px; top: 40%;  background-image:url("../../img/icon/1x/Asset\ 2.png");
+      background-repeat:no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;}
+
+    #viewarea > .prevBtn {position:absolute; left: 35px; top:40%; background-image:url("../../img/icon/1x/Asset\ 1.png");
+      background-repeat:no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;}
+
+    #viewarea > dl {width: 378px; height: 530px; margin:auto;}
+    #viewarea > dl dt {width: 300px; height: 400px; margin:auto; margin-bottom: 20px;
+      background-image:url("../../img/레베카_공식포스터.jpg");
+      background-position: 50% 50%;
+      background-size: contain;}
+    #viewarea > dl dd {width: 100%; margin-bottom: 4px; font-size:12px; font-size:0.75rem}
+    #viewarea > dl dd:first-child {margin-bottom: 10px; font-size:14px; font-size:0.875rem;}
+    #viewarea > dl dd:last-child {margin-bottom:0;}
+
+    #viewarea > .theater {position: absolute; top: 70px; left:0; right:0;  width: 250px; height: 20px; margin:auto; font-size:12px; font-size:0.75rem;}
+    #viewarea > .theater > li {float:left; width: 70px; height:100%; margin-right: 15px; background-color: transparent;}
+    #viewarea > .theater > li:last-child {margin-right:0;}
+    #viewarea > .theater > li a {width: 100%; height: 100%; text-align:center;}
+    #viewarea > .theater > li:hover a, 
+    #viewarea > .theater > li:focus a {font-size:14px; font-size: 0.875rem; font-weight: bold; background-color:transparent;}
+    #viewarea > .theater > li:hover a:after,
+    #viewarea > .theater > li:hover a::after {content:" "; display:block; width: 100%; height: 5px; background-color: #a91f2b;}
+
+    #viewarea .ticketing {position: absolute; bottom: 60px; left:0; right:0;  width: 80px; height: 35px; margin:auto; }
+
+  #usearea {width: 100%; background-color: #fff;}
+/*   #usearea:before,
+  #usearea::before {content:" "; display:block; width: 500px; height: 500px; transform:translateY(-50%) rotate(-45deg); border:250px solid #333; box-sizing:border-box; border-top: 250px solid transparent; border-right:250px solid transparent;} */
+    #usearea ul {width: 300px; height: 60px; margin:auto;}
+    #usearea ul li {float:left; width: 60px; height: 60px; margin-right:20px;}
+    #usearea ul li:last-child {margin-right:0;}
+    #usearea ul li a {display:block; width: 60px; height: 60px; border:1px solid #a91f2b; border-radius:100%;}
+    #usearea ul li a:hover,
+    #usearea ul li a:focus {background-color: #a91f2b;}
+
+  #businessarea {width: 100%; background-color: #fff;}
+
+
+  #rentalarea {width: 100%; background-color: #fff;}
+
+
+  #newsarea {width: 100%; background-color: #fff;}
+  
+
+
+  /* #footBox ================================================== */
 #footBox {
   width: 100%;
   height: auto;
   min-height: 300px;
-  background-color: #999; }
+  background-color: #eaf2f5;
+  color: #333;
+  border-top:1px solid #333; }
+
+  .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto; }
+  .movetop > button {width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; border-top: 1px solid #333;}
 
 /* -디자인 기준 : 480px */
-@media screen and (max-width: 479px) {
-  #headBox {
-    background-color: #f9f4ed; } }
+/* @media screen and (max-width: 479px) {} */
 
 /* -디자인 기준 : 480px */
+@media screen /* and (min-width:480px) */ and (max-width:767px) { 
+
+  /* #headBox {} */
+
+  /* #conBox {} */
+
+  #viewarea {position:relative; height:780px; height:48.75rem;
+    /* background-position: 50% 50%;
+    background-size: contain; */}
+    #viewarea .viewInfo {position: absolute; bottom: 30px; left:0; right:0; margin:auto;}
+
+  #usearea {height: 200px; height: 12.5rem }
+
+  #businessarea {height: 785px; height: 49.0625rem; }
+
+  #rentalarea {height: 415px; height: 25.9375rem;}
+
+  #newsarea {height: 400px; height: 25rem; }
+
+    /* #footBox {} */
+
+
+    
+}
+
 /* -디자인 기준 : 768px */
-/* -디자인 기준 : 960px */
+@media screen and (min-width:768px) and (max-width:959px) { 
+
+  /* #headBox {} */
+
+  /* #conBox {} */
+
+  /* #footBox {} */
+
+}
+
+/* -디자인 기준 : 1280px */
+@media screen and (min-width:1280px) { 
+
+  /* #headBox {} */
+
+  /* #conBox {} */
+
+  /* #footBox {} */
+
+}
+
+
+/* -디자인 기준 : 1920px */
+@media screen and (min-width:1920px) { 
+
+  /* #headBox {} */
+
+  /* #conBox {} */
+
+  /* #footBox {} */
+
+}
