@@ -64,9 +64,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
 
   #viewarea {position:relative; width: 100%; padding-top: 100px; background-image:url("../../img/icon/1x/Asset\ 7.png");
-  background-repeat:no-repeat;
-  background-position:50% 0;
-  background-size:100% auto;}
+  background-repeat:no-repeat;}
     #viewarea .viewInfo {position: absolute; bottom: 30px; left:0; right:0; margin:auto;}
     #viewarea > ul {width:215px; height:auto;}
     #viewarea > ul >li {float:left; width:35px; height:3px; background-color: #5b6574; margin-right:6px;}
@@ -238,7 +236,9 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   /* #headBox {} */
 
   /* #conBox {} */
-  #viewarea {min-height:900px;}
+  #viewarea {min-height:900px;
+    background-position:50% 0;
+    background-size:100% auto;}
 
 
   #usearea {min-height: 200px;}
