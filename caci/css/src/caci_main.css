@@ -27,8 +27,14 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   box-sizing:border-box;
   background-color: #f9f4ed;}
     
-    h1 {float:left; width: 150px; height: 40px; background-color: #a91f2b; }
+    h1 {float:left; width: 150px; height: 40px; background-image:url("../../img/caci_logo.png");
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size: 100% auto; }
+    h1 a {display:block; width: 100%; height: 100%;}
     #gnb {float:right; width: 30px; height: 30px; transform: translateY(5px);background-image:url("../../img/icon/1x/Asset\ 4.png")}
+    .menubar {display:none; width:600px;}
+    .unb {display:none; width:200px; }
 
 
 /* #conBox ==================================================== */
@@ -40,7 +46,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
 
   .conarea {padding-top: 40px; box-sizing: border-box; background-repeat:no-repeat;}
-  h3 {text-align:center;}
+  h3 {text-align:center; margin-bottom:30px;}
 
 
   #viewarea {width: 100%; padding-top: 100px; background-color: #999;}
@@ -50,7 +56,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #viewarea > ul >li:hover a {background-color: #a91f2b;}
     #viewarea > ul >li:focus a {background-color: #a91f2b;}
 
-    #viewarea > .viewBtn {width: 12px; height:40px; background-color: #555; }
+    #viewarea > .viewBtn {width: 12px; height:40px; background-color: transparent; }
     #viewarea > .nextBtn {position:absolute; right: 35px; top: 40%;  background-image:url("../../img/icon/1x/Asset\ 2.png");
       background-repeat:no-repeat;
       background-position: 50% 50%;
@@ -79,7 +85,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #viewarea > .theater > li:hover a:after,
     #viewarea > .theater > li:hover a::after {content:" "; display:block; width: 100%; height: 5px; background-color: #a91f2b;}
 
-    #viewarea .ticketing {position: absolute; bottom: 60px; left:0; right:0;  width: 80px; height: 35px; margin:auto; }
+    #viewarea .ticketing {position: absolute; bottom: 60px; left:0; right:0;  width: 80px; height: 35px; margin:auto; background-color: #bf9c50;}
 
   #usearea {width: 100%; background-color: #fff;}
 /*   #usearea:before,
@@ -91,8 +97,10 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #usearea ul li a:hover,
     #usearea ul li a:focus {background-color: #a91f2b;}
 
-  #businessarea {width: 100%; background-color: #fff;}
-
+  #businessarea {width: 100%; height: auto; background-color: #fff;}
+    #businessarea ul {width:100%; height:600px;}
+    #businessarea ul li {width:100%; height:200px;}
+    #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%;}
 
   #rentalarea {width: 100%; background-color: #fff;}
 
@@ -108,13 +116,30 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   min-height: 300px;
   background-color: #eaf2f5;
   color: #333;
-  border-top:1px solid #333; }
+  font-size:12px; font-size:0.75rem;
+  /* border-top:1px solid #333;  */}
 
-  .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto; }
-  .movetop > button {width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; border-top: 1px solid #333;}
+  #footBox .footarea {width: 100%; height: auto; min-height: 300px;}
+    .footarea h3 {width: 150px; height:40px; margin:auto; margin-bottom: 20px;
+    background-image:url("../../img/caci_logo.png");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% auto;}
+    .footarea h3 a {display:block; width: 100%; height: 100%;}
+    .footarea ul {width: 300px; height: 14px; margin:auto; margin-bottom:10px; }
+    .footarea ul li {float:left; width:auto; height: 14px;margin-right: 10px;}
+    .footarea ul li:last-child {margin-right: 0;}
+    .footarea ul li a {display:block; width: auto; height: 100%; color: #333;}
 
-/* -디자인 기준 : 480px */
-/* @media screen and (max-width: 479px) {} */
+    .footarea p {width: 300px; height: auto; margin:auto; text-align:center; margin-bottom: 10px;}
+    .footarea p em {font-style:normal; text-transform:uppercase;}
+
+
+  .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto;}
+  .movetop > button {width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; /* border-top: 1px solid #333; */}
+
+
+
 
 /* -디자인 기준 : 480px */
 @media screen /* and (min-width:480px) */ and (max-width:767px) { 
@@ -130,7 +155,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
   #usearea {height: 200px; height: 12.5rem }
 
-  #businessarea {height: 785px; height: 49.0625rem; }
+    /* #businessarea {min-hei} */
 
   #rentalarea {height: 415px; height: 25.9375rem;}
 
@@ -139,8 +164,8 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     /* #footBox {} */
 
 
-    
-}
+
+} /* // 480 디자인 */
 
 /* -디자인 기준 : 768px */
 @media screen and (min-width:768px) and (max-width:959px) { 
@@ -151,7 +176,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
   /* #footBox {} */
 
-}
+} /* // 768 디자인 */
 
 /* -디자인 기준 : 1280px */
 @media screen and (min-width:1280px) { 
@@ -162,7 +187,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
   /* #footBox {} */
 
-}
+} /* // 1280 디자인 */
 
 
 /* -디자인 기준 : 1920px */
@@ -174,4 +199,4 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 
   /* #footBox {} */
 
-}
+} /* // 1920 디자인 */
