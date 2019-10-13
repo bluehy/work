@@ -111,20 +111,23 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #usearea ul li a:hover,
     #usearea ul li a:focus {background-color: #a91f2b;}
 
+
+
   #businessarea {width: 100%; height: auto; background-color: #fff;}
     #businessarea ul {width:100%; height:600px;}
     #businessarea ul li {width:100%; height:200px;}
-    #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%;}
+    #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%; text-align:center; font-size:20px; font-size:1.25rem; line-height: 200px; }
 
 
     
   #rentalarea {width: 100%; background-color: #fff; padding-left:20px; padding-right:20px;}
-    #rentalarea ul {width: 400px; height: 14px; margin:auto; margin-bottom: 20px; }
-    #rentalarea ul:nth-of-type(2) {width: 100%; height: 200px; overflow:scroll;}
-    #rentalarea ul li {float:left; width: auto; height:100%; margin-right: 10px;}
-    #rentalarea ul:nth-of-type(2) li {float:left; width: 250px; height:200px; margin-right: 20px; background-color: #999;}
-    #rentalarea ul:nth-of-type(2) li:last-child {margin-right: 0;}
-    #rentalarea ul li a {display:block; width:auto; height:100%; font-size:14px; color: #333;}
+    #rentalarea > ul {width: 100%; height: 14px; margin:auto; margin-bottom: 20px; padding:0 40px; box-sizing:border-box;}
+    #rentalarea >div {width: 100%; height:auto; overflow:scroll;}
+    #rentalarea > div > ul {width: 900px; height: 200px; overflow:scroll;}
+    #rentalarea > ul li {float:left; width: auto; height:100%; margin-right: 10px;}
+    #rentalarea > div > ul li {float:left; width: 250px; height:200px; margin-right: 20px; background-color: #999;}
+    #rentalarea > div > ul li:last-child {margin-right: 0;}
+    #rentalarea > ul li a {display:block; width:auto; height:100%; font-size:14px; color: #333;}
 
 
 
@@ -137,7 +140,8 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   #newsarea .nextBtn {right: 0; bottom:0;}
   #newsarea .prevBtn {right: 35px; bottom:0;}
 
-  #newsarea ul {float:left; width: 290px; height: 130px;overflow:hidden;}
+  #newsarea div:nth-of-type(2){float:left; width:290px; height: 130px; overflow:scroll;}
+  #newsarea ul {width: 600px; height: auto;overflow:hidden;}
   #newsarea ul li {float:left; width: 130px; height:130px; margin-left: 20px; background-color: #999;}
   #newsarea ul li:first-child {margin-left:0;}
 
