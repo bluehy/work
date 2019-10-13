@@ -48,6 +48,20 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   .conarea {padding-top: 40px; box-sizing: border-box; background-repeat:no-repeat;}
   h3 {text-align:center; margin-bottom:30px;}
 
+  
+  .nextBtn {position:absolute; 
+    background-image:url("../../img/icon/1x/Asset\ 2.png");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;}
+
+  .prevBtn {position:absolute; 
+    background-image:url("../../img/icon/1x/Asset\ 1.png");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;}
+
+
 
   #viewarea {width: 100%; padding-top: 100px; background-color: #999;}
     #viewarea > ul {width:215px; height:auto;}
@@ -57,12 +71,12 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #viewarea > ul >li:focus a {background-color: #a91f2b;}
 
     #viewarea > .viewBtn {width: 12px; height:40px; background-color: transparent; }
-    #viewarea > .nextBtn {position:absolute; right: 35px; top: 40%;  background-image:url("../../img/icon/1x/Asset\ 2.png");
+    #viewarea > .nextBtn {right: 35px; top: 40%;  background-image:url("../../img/icon/1x/Asset\ 2.png");
       background-repeat:no-repeat;
       background-position: 50% 50%;
       background-size: contain;}
 
-    #viewarea > .prevBtn {position:absolute; left: 35px; top:40%; background-image:url("../../img/icon/1x/Asset\ 1.png");
+    #viewarea > .prevBtn {left: 35px; top:40%; background-image:url("../../img/icon/1x/Asset\ 1.png");
       background-repeat:no-repeat;
       background-position: 50% 50%;
       background-size: contain;}
@@ -102,11 +116,30 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     #businessarea ul li {width:100%; height:200px;}
     #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%;}
 
-  #rentalarea {width: 100%; background-color: #fff;}
+
+    
+  #rentalarea {width: 100%; background-color: #fff; padding-left:20px; padding-right:20px;}
+    #rentalarea ul {width: 400px; height: 14px; margin:auto; margin-bottom: 20px; }
+    #rentalarea ul:nth-of-type(2) {width: 100%; height: 200px; overflow:scroll;}
+    #rentalarea ul li {float:left; width: auto; height:100%; margin-right: 10px;}
+    #rentalarea ul:nth-of-type(2) li {float:left; width: 250px; height:200px; margin-right: 20px; background-color: #999;}
+    #rentalarea ul:nth-of-type(2) li:last-child {margin-right: 0;}
+    #rentalarea ul li a {display:block; width:auto; height:100%; font-size:14px; color: #333;}
 
 
-  #newsarea {width: 100%; background-color: #fff;}
+
+
+
+  #newsarea {width: 100%; background-color: #fff; padding-left: 20px; padding-right: 20px;}
   
+  #newsarea .caci_news {position:relative; width: 130px; height:130px; margin-right:20px; float:left; text-align:center; background-color: #333; color: #fff; line-height: 130px; }
+  #newsarea .newsBtn {width: 30px; height:30px; background-color: transparent; }
+  #newsarea .nextBtn {right: 0; bottom:0;}
+  #newsarea .prevBtn {right: 35px; bottom:0;}
+
+  #newsarea ul {float:left; width: 290px; height: 130px;overflow:hidden;}
+  #newsarea ul li {float:left; width: 130px; height:130px; margin-left: 20px; background-color: #999;}
+  #newsarea ul li:first-child {margin-left:0;}
 
 
   /* #footBox ================================================== */
@@ -135,8 +168,8 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     .footarea p em {font-style:normal; text-transform:uppercase;}
 
 
-  .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto;}
-  .movetop > button {width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; /* border-top: 1px solid #333; */}
+  .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto; background-color: transparent;}
+  .movetop > a {display:block; width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; /* border-top: 1px solid #333; */}
 
 
 
