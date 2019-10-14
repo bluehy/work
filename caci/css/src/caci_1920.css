@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* caci_1920.css */
+/* -디자인 기준 : 1920px */
+@media screen and (min-width: 1920px) {
+  #wrap {
+    max-width: 2400px; }
+  /* #headBox {} */
+  /* #conBox {} */
+  #viewarea {
+    min-height: 900px; }
+  #usearea {
+    min-height: 200px; }
+  #businessarea {
+    min-height: 500px; }
+  #rentalarea {
+    min-height: 420px; }
+  #newsarea {
+    min-height: 450px; }
+  /* #footBox {} */ }
+
+/* // 1920 디자인 */

@@ -1,0 +1,489 @@
+@charset "UTF-8";
+/* caci_common.scss */
+/* 공통영역 */
+#wrap {
+  min-width: 480px;
+  min-width: 30rem;
+  max-width: 2000px;
+  max-width: 125rem; }
+
+/* #headBox ================================================== */
+#headBox {
+  position: fixed;
+  z-index: 1000;
+  min-width: 480px;
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  padding: 10px 35px;
+  box-sizing: border-box;
+  background-color: #f9f4ed; }
+
+h1 {
+  float: left;
+  width: 150px;
+  height: 40px;
+  background-image: url("../../img/caci_logo.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto; }
+
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#gnb {
+  float: right;
+  width: 30px;
+  height: 30px;
+  transform: translateY(5px);
+  background-image: url("../../img/icon/1x/Asset 4.png"); }
+
+#gnb a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.menubar {
+  display: none;
+  width: 600px;
+  height: 32px; }
+
+.unb {
+  display: none;
+  width: 200px;
+  height: 16px; }
+
+/* #conBox ==================================================== */
+#conBox {
+  width: 100%;
+  height: auto;
+  min-height: 2000px;
+  background-color: #555; }
+
+.conarea {
+  padding-top: 40px;
+  box-sizing: border-box;
+  background-repeat: no-repeat; }
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.nextBtn {
+  position: absolute;
+  background-image: url("../../img/icon/1x/Asset 2.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain; }
+
+.prevBtn {
+  position: absolute;
+  background-image: url("../../img/icon/1x/Asset 1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain; }
+
+#viewarea {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  background-image: url("../../img/icon/1x/Asset 7.png");
+  background-repeat: no-repeat; }
+
+#viewarea .viewInfo {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+#viewarea > ul {
+  width: 215px;
+  height: auto; }
+
+#viewarea > ul > li {
+  float: left;
+  width: 35px;
+  height: 3px;
+  background-color: #5b6574;
+  margin-right: 6px; }
+
+#viewarea > ul > li a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#viewarea > ul > li:hover a {
+  background-color: #a91f2b; }
+
+#viewarea > ul > li:focus a {
+  background-color: #a91f2b; }
+
+#viewarea > .viewBtn {
+  width: 12px;
+  height: 40px;
+  background-color: transparent; }
+
+#viewarea > .nextBtn {
+  right: 35px;
+  top: 40%;
+  background-image: url("../../img/icon/1x/Asset 2.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain; }
+
+#viewarea > .prevBtn {
+  left: 35px;
+  top: 40%;
+  background-image: url("../../img/icon/1x/Asset 1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain; }
+
+#viewarea > dl {
+  width: 378px;
+  height: 530px;
+  margin: auto; }
+
+#viewarea > dl dt {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-image: url("../../img/레베카_공식포스터.jpg");
+  background-position: 50% 50%;
+  background-size: contain; }
+
+#viewarea > dl dd {
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+#viewarea > dl dd:first-child {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+#viewarea > dl dd:last-child {
+  margin-bottom: 0; }
+
+#viewarea > .theater {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 20px;
+  margin: auto;
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+#viewarea > .theater > li {
+  float: left;
+  width: 70px;
+  height: 100%;
+  margin-right: 15px;
+  background-color: transparent; }
+
+#viewarea > .theater > li:last-child {
+  margin-right: 0; }
+
+#viewarea > .theater > li a {
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+
+#viewarea > .theater > li:hover a,
+#viewarea > .theater > li:focus a {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background-color: transparent; }
+
+#viewarea > .theater > li:hover a:after,
+#viewarea > .theater > li:hover a::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #a91f2b; }
+
+#viewarea .ticketing {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  width: 80px;
+  height: 35px;
+  margin: auto;
+  background-color: #bf9c50; }
+
+#usearea {
+  position: relative;
+  width: 100%;
+  background-color: #fff; }
+
+#usearea:before,
+#usearea::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: translateY(60px);
+  border: 50vw solid transparent;
+  box-sizing: border-box;
+  border-top: 20vw solid #999; }
+
+#usearea ul {
+  width: 300px;
+  height: 60px;
+  margin: auto; }
+
+#usearea ul li {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px; }
+
+#usearea ul li:last-child {
+  margin-right: 0; }
+
+#usearea ul li a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #a91f2b;
+  border-radius: 100%; }
+
+#usearea ul li a:hover,
+#usearea ul li a:focus {
+  background-color: #a91f2b; }
+
+#businessarea {
+  width: 100%;
+  height: auto;
+  background-color: #fff; }
+
+#businessarea ul {
+  width: 100%;
+  height: 600px; }
+
+#businessarea ul li {
+  width: 100%;
+  height: 200px; }
+
+#businessarea ul li a {
+  display: block;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 200px; }
+
+#rentalarea {
+  width: 100%;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#rentalarea > ul {
+  width: 100%;
+  height: 14px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0 40px;
+  box-sizing: border-box; }
+
+#rentalarea > ul li {
+  float: left;
+  width: auto;
+  height: 100%;
+  margin-right: 10px; }
+
+#rentalarea > ul li a {
+  display: block;
+  width: auto;
+  height: 100%;
+  font-size: 14px;
+  color: #333; }
+
+#rentalarea > div {
+  width: 100%;
+  height: auto;
+  overflow: scroll; }
+
+#rentalarea > div > ul {
+  width: 3000px;
+  transform: translateX(-200px);
+  height: auto;
+  overflow: hidden; }
+
+#rentalarea > div > ul li {
+  float: left;
+  width: 250px;
+  height: 200px;
+  margin-right: 60px;
+  transform: scale(0.8);
+  background-color: #999; }
+
+#rentalarea > div > ul li:nth-child(2) {
+  transform: scaleX(1); }
+
+#rentalarea > div > ul li:last-child {
+  margin-right: 0; }
+
+#newsarea {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#newsarea .caci_news {
+  position: absolute;
+  z-index: 500;
+  width: 130px;
+  height: 130px;
+  margin-right: 20px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  line-height: 130px; }
+
+#newsarea .caci_news:before,
+#newsarea .caci_news:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  transform: translateX(130px);
+  width: 20px;
+  height: 100%;
+  background-color: #fff; }
+
+#newsarea .newsBtn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent; }
+
+#newsarea .nextBtn {
+  right: 0;
+  bottom: 0; }
+
+#newsarea .prevBtn {
+  right: 35px;
+  bottom: 0; }
+
+#newsarea div:nth-of-type(2) {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  overflow: scroll; }
+
+#newsarea div:nth-of-type(2) > ul {
+  width: 2000px;
+  height: auto;
+  padding-left: 150px;
+  overflow: hidden; }
+
+#newsarea div:nth-of-type(2) > ul li {
+  float: left;
+  width: 130px;
+  height: 130px;
+  margin-right: 20px;
+  background-color: #999; }
+
+#newsarea div:nth-of-type(2) > ul li:last-child {
+  margin-right: 0; }
+
+/* #footBox ================================================== */
+#footBox {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  background-color: #eaf2f5;
+  color: #333;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* border-top:1px solid #333;  */ }
+
+#footBox .footarea {
+  width: 100%;
+  height: auto;
+  min-height: 300px; }
+
+.footarea h3 {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-image: url("../../img/caci_logo.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto; }
+
+.footarea h3 a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.footarea ul {
+  width: 300px;
+  height: 14px;
+  margin: auto;
+  margin-bottom: 10px; }
+
+.footarea ul li {
+  float: left;
+  width: auto;
+  height: 14px;
+  margin-right: 10px; }
+
+.footarea ul li:last-child {
+  margin-right: 0; }
+
+.footarea ul li a {
+  display: block;
+  width: auto;
+  height: 100%;
+  color: #333; }
+
+.footarea p {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.footarea p em {
+  font-style: normal;
+  text-transform: uppercase; }
+
+.movetop {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  margin: auto;
+  background-color: transparent; }
+
+.movetop > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eaf2f5;
+  border-radius: 100%;
+  /* border-top: 1px solid #333; */ }
+
+.movetop > a > i {
+  color: #333;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px; }
