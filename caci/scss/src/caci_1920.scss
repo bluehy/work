@@ -1,12 +1,12 @@
 /* caci_1920.css */
 
  /* -디자인 기준 : 1920px */
- @media screen and (min-width:1920px) { 
+ @media screen and (min-width:1280px) { 
  
    #wrap {max-width: 2400px;}
    /* #headBox {} */
- 
-   #navBar 
+
+   #navBar {float:none; position: absolute; left: 0; right:0; margin:auto;}
 
    /* #conBox {} */
    #viewarea {min-height:900px;}
