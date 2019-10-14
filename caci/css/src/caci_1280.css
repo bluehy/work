@@ -3,6 +3,11 @@
 /* -디자인 기준 : 1280px..이나 960기준으로 수정함 */
 @media screen and (min-width: 960px) {
   /* #headBox {} */
+  #gnb {
+    display: none; }
+  #navBar {
+    display: block;
+    float: right; }
   /* #conBox {} */
   #viewarea {
     min-height: 900px;
