@@ -20,6 +20,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
 #headBox {
   position: fixed;
   z-index: 1000;
+  min-width:480px;
   width: 100%;
   height: auto;
   min-height: 60px;
@@ -33,6 +34,7 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
     background-size: 100% auto; }
     h1 a {display:block; width: 100%; height: 100%;}
     #gnb {float:right; width: 30px; height: 30px; transform: translateY(5px);background-image:url("../../img/icon/1x/Asset\ 4.png")}
+    #gnb a {display:block; width: 100%; height: 100%;}
     .menubar {display:none; width:600px; height: 32px;}
     .unb {display:none; width:200px; height: 16px;}
 
@@ -139,14 +141,16 @@ $caci_sC : (#dec4a4, #f9f4ed, #eaf2f5, #5b6574, #bf9c50);
   #newsarea {position:relative; width: 100%; background-color: #fff; padding-left: 20px; padding-right: 20px;}
   
   #newsarea .caci_news {position:absolute; z-index:500; width: 130px; height:130px; margin-right:20px; text-align:center; background-color: #333; color: #fff; line-height: 130px; }
+  #newsarea .caci_news:before,
+  #newsarea .caci_news:before {content:" "; display:block; position:absolute; transform:translateX(130px); width:20px; height:100%; background-color: #fff;}
   #newsarea .newsBtn {width: 30px; height:30px; background-color: transparent; }
   #newsarea .nextBtn {right: 0; bottom:0;}
   #newsarea .prevBtn {right: 35px; bottom:0;}
 
-  #newsarea div:nth-of-type(2){position:absolute; width:100%; height: auto; overflow:scroll;}
-  #newsarea ul {width: 2000px; height: auto; overflow:hidden;}
-  #newsarea ul li {float:left; width: 130px; height:130px; margin-left: 20px; background-color: #999;}
-  #newsarea ul li:first-child {margin-left:150px;}
+  #newsarea div:nth-of-type(2){position:absolute; width:90%; height: auto; overflow:scroll;}
+  #newsarea div:nth-of-type(2)> ul {width: 2000px; height: auto; padding-left:150px; overflow:hidden;}
+  #newsarea div:nth-of-type(2)> ul li {float:left; width: 130px; height:130px; margin-right: 20px; background-color: #999;}
+  #newsarea div:nth-of-type(2)> ul li:last-child {margin-right:0;}
 
 
   /* #footBox ================================================== */
