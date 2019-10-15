@@ -95,8 +95,7 @@ h1 a {
 #conBox {
   width: 100%;
   height: auto;
-  min-height: 2000px;
-  background-color: #555; }
+  min-height: 2000px; }
 
 .conarea {
   padding-top: 40px;
@@ -260,13 +259,14 @@ h3 {
 #usearea {
   position: relative;
   width: 100%;
-  background-color: #fff; }
+  background-color: #f9f4ed; }
 
 /*      #usearea:before,
      #usearea::before {content:" "; display:block; position:absolute; width: 0; height:0; transform:translateY(60px); border:50vw solid transparent; box-sizing: border-box; border-top: 20vw solid #999;} */
 #usearea ul {
   width: 300px;
   height: 60px;
+  padding-top: 30px;
   margin: auto; }
 
 #usearea ul li {
@@ -293,22 +293,26 @@ h3 {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #eaf2f5; }
+  padding-top: 15rem;
+  /*  top:-10rem; */
+  /* background-color: #eaf2f5;  */
+  /* overflow: hidden; */ }
 
-#businessarea:before,
-#businessarea::before {
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 100vw;
-  height: 100vw;
-  /* border:50vw solid #fff; */
-  transform-origin: 100% 0;
-  transform: translate(-50%, -40px) rotate(20deg);
-  background-color: #333; }
+/* 
+   h3 {position:relative; z-index:400;}
 
+   @mixin businesspsuedo($r){content:" "; position:absolute; display:block; width:200vw; height:500px; transform-origin: 50% 0; top:5rem; transform: rotate($r+deg); background-color: #fff;}
+
+
+   #businessarea:before,
+   #businessarea::before {@include businesspsuedo( 20);right:0;}
+   #businessarea:after,
+   #businessarea::after {@include businesspsuedo(-20);left:0;}
+  
+   */
 #businessarea ul {
   position: relative;
+  z-index: 400;
   width: 100%;
   height: 600px; }
 
@@ -368,7 +372,7 @@ h3 {
   float: left;
   width: 250px;
   height: 200px;
-  margin-right: 60px;
+  margin-right: 50px;
   transform: scale(0.8);
   background-color: #999; }
 

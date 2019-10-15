@@ -40,8 +40,8 @@
  #conBox {
    width: 100%;
    height: auto;
-   min-height: 2000px;
-   background-color: #555; }
+   min-height: 2000px; 
+   }
  
  
    .conarea {padding-top: 40px; box-sizing: border-box; background-repeat:no-repeat;}
@@ -104,10 +104,10 @@
  
 
 
-   #usearea {position:relative; width: 100%; background-color: #fff;}
+   #usearea {position:relative; width: 100%; background-color: #f9f4ed;}
 /*      #usearea:before,
      #usearea::before {content:" "; display:block; position:absolute; width: 0; height:0; transform:translateY(60px); border:50vw solid transparent; box-sizing: border-box; border-top: 20vw solid #999;} */
-     #usearea ul {width: 300px; height: 60px; margin:auto;}
+     #usearea ul {width: 300px; height: 60px; padding-top:30px; margin:auto;}
      #usearea ul li {float:left; width: 60px; height: 60px; margin-right:20px;}
      #usearea ul li:last-child {margin-right:0;}
      #usearea ul li a {display:block; width: 60px; height: 60px; border:1px solid #a91f2b; border-radius:100%;}
@@ -116,13 +116,22 @@
  
  
  
-   #businessarea {position:relative; width: 100%; height: auto; background-color: #eaf2f5;}
+   #businessarea {position:relative; width: 100%; height: auto; padding-top:15rem;/*  top:-10rem; *//* background-color: #eaf2f5;  */ /* overflow: hidden; */}/* 
+   h3 {position:relative; z-index:400;}
+
+   @mixin businesspsuedo($r){content:" "; position:absolute; display:block; width:200vw; height:500px; transform-origin: 50% 0; top:5rem; transform: rotate($r+deg); background-color: #fff;}
+
+
    #businessarea:before,
-   #businessarea::before {content:" "; position:absolute;  display:block; width:100vw; height:100vw; /* border:50vw solid #fff; */ transform-origin: 100% 0; transform: translate(-50%, -40px) rotate(20deg); background-color: #333;}
-  //  삼각형 가리기....두개로...박스로..가리기...
-     #businessarea ul {position:relative; width:100%; height:600px;}
+   #businessarea::before {@include businesspsuedo( 20);right:0;}
+   #businessarea:after,
+   #businessarea::after {@include businesspsuedo(-20);left:0;}
+  
+   */
+   //  삼각형 가리기....두개로...박스로..가리기...
+     #businessarea ul {position:relative; z-index:400; width:100%; height:600px;}
      #businessarea ul li {width:100%; height:200px;}
-     #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%; text-align:center; font-size:20px; font-size:1.25rem; line-height: 200px; }
+     #businessarea ul li a {display:block; background-color: #333; width:100%; height:100%; text-align:center; font-size:20px; font-size:1.25rem; line-height: 200px;}
  
  
      
@@ -133,7 +142,7 @@
  
      #rentalarea > div {width: 100%; height:auto; overflow:scroll;}
      #rentalarea > div > ul {width: 3000px; transform:translateX(-200px); height: auto; overflow:hidden;}
-     #rentalarea > div > ul li {float:left; width: 250px; height:200px; margin-right: 60px; transform:scale(0.8);background-color: #999;}
+     #rentalarea > div > ul li {float:left; width: 250px; height:200px; margin-right: 50px; transform:scale(0.8);background-color: #999;}
      #rentalarea > div > ul li:nth-child(2) {transform:scaleX(1)}
      #rentalarea > div > ul li:last-child {margin-right: 0;}
  
