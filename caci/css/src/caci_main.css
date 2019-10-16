@@ -1,7 +1,6 @@
 /* caci_main.css */
-/* _var.scss */
-@import url("caci_common.css");
-@import url("caci_480.css");
-@import url("caci_768.css");
-@import url("caci_1280.css");
-@import url("caci_1920.css");
+@import url(./caci_common.css);
+@import url(./caci_480.css);
+@import url(./caci_768.css);
+@import url(./caci_1280.css);
+@import url(./caci_1920.css);

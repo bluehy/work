@@ -2,11 +2,11 @@
 // caci_main.scss
 /* caci_main.css */
 
-@import "_var.scss";
+// @import "./var";
 
-
-@import url("caci_common.css");
-@import url("caci_480.css");
-@import url("caci_768.css");
-@import url("caci_1280.css");
-@import url("caci_1920.css");
+@import "./caci_common.css";
+@import "./caci_480.css";
+@import "./caci_768.css";
+@import "./caci_1280.css";
+@import "./caci_1920.css";
+   

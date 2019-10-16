@@ -1,12 +1,13 @@
 @charset "UTF-8";
-/* caci_common.scss */
+/* caci_common.css */
+/* _var.scss */
 /* 공통영역 */
 #wrap {
   min-width: 480px;
   min-width: 30rem;
   max-width: 2000px;
   max-width: 125rem;
-  overflow-X: hidden; }
+  /* overflow-X:hidden; */ }
 
 /* #headBox ================================================== */
 #headBox {
@@ -357,18 +358,24 @@ h3 {
   font-size: 14px;
   color: #333; }
 
-#rentalarea > div {
+#rentalarea .rental_view {
   width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #333; }
+
+#rentalarea .rental_view > div {
+  width: 100vw;
   height: auto;
   overflow: scroll; }
 
-#rentalarea > div > ul {
+#rentalarea .rental_view > div > ul {
   width: 3000px;
-  transform: translateX(-200px);
+  transform: translateX(-100px);
   height: auto;
   overflow: hidden; }
 
-#rentalarea > div > ul li {
+#rentalarea .rental_view > div > ul li {
   float: left;
   width: 250px;
   height: 200px;
@@ -376,10 +383,10 @@ h3 {
   transform: scale(0.8);
   background-color: #999; }
 
-#rentalarea > div > ul li:nth-child(2) {
+#rentalarea .rental_view > div > ul li:nth-child(2) {
   transform: scaleX(1); }
 
-#rentalarea > div > ul li:last-child {
+#rentalarea .rental_view > div > ul li:last-child {
   margin-right: 0; }
 
 #newsarea {
@@ -423,30 +430,37 @@ h3 {
   right: 35px;
   bottom: 0; }
 
-#newsarea div:nth-of-type(2) {
+#newsarea .news_view {
   position: absolute;
   width: 90%;
+  height: 130px;
+  overflow: hidden; }
+
+#newsarea .news_view > div {
+  position: absolute;
+  width: 100vw;
   height: auto;
   overflow: scroll; }
 
-#newsarea div:nth-of-type(2) > ul {
+#newsarea .news_view > div > ul {
   width: 2000px;
   height: auto;
   padding-left: 150px;
   overflow: hidden; }
 
-#newsarea div:nth-of-type(2) > ul li {
+#newsarea .news_view > div > ul li {
   float: left;
   width: 130px;
   height: 130px;
   margin-right: 20px;
   background-color: #999; }
 
-#newsarea div:nth-of-type(2) > ul li:last-child {
+#newsarea .news_view > div > ul li:last-child {
   margin-right: 0; }
 
 /* #footBox ================================================== */
 #footBox {
+  position: relative;
   width: 100%;
   height: auto;
   min-height: 300px;
@@ -455,6 +469,31 @@ h3 {
   font-size: 12px;
   font-size: 0.75rem;
   /* border-top:1px solid #333;  */ }
+
+.movetop {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+  top: -50px;
+  margin: auto;
+  background-color: transparent; }
+
+.movetop > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eaf2f5;
+  border-radius: 100%;
+  /* border-top: 1px solid #333; */ }
+
+.movetop > a > i {
+  color: #333;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px; }
 
 #footBox .footarea {
   width: 100%;
@@ -507,27 +546,3 @@ h3 {
 .footarea p em {
   font-style: normal;
   text-transform: uppercase; }
-
-.movetop {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  margin: auto;
-  background-color: transparent; }
-
-.movetop > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #eaf2f5;
-  border-radius: 100%;
-  /* border-top: 1px solid #333; */ }
-
-.movetop > a > i {
-  color: #333;
-  width: 100%;
-  height: 100%;
-  font-size: 2rem;
-  text-align: center;
-  line-height: 100px; }
