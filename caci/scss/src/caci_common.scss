@@ -3,7 +3,7 @@
 /* 공통영역 */
 
 #wrap {
-   min-width:480px; min-width:30rem; max-width:2000px; max-width:125rem; overflow-X:hidden;
+   min-width:480px; min-width:30rem; max-width:2000px; max-width:125rem; /* overflow-X:hidden; */
  }
  
  
@@ -105,6 +105,7 @@
 
 
    #usearea {position:relative; width: 100%; background-color: #f9f4ed;}
+      
 /*      #usearea:before,
      #usearea::before {content:" "; display:block; position:absolute; width: 0; height:0; transform:translateY(60px); border:50vw solid transparent; box-sizing: border-box; border-top: 20vw solid #999;} */
      #usearea ul {width: 300px; height: 60px; padding-top:30px; margin:auto;}
@@ -167,6 +168,7 @@
  
    /* #footBox ================================================== */
  #footBox {
+   position:relative;
    width: 100%;
    height: auto;
    min-height: 300px;
@@ -175,6 +177,12 @@
    font-size:12px; font-size:0.75rem;
    /* border-top:1px solid #333;  */}
  
+   .movetop {position:relative; width: 100px; height:100px; z-index:1000; top: -50px; margin:auto; background-color: transparent;}
+   .movetop > a {display:block; width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; /* border-top: 1px solid #333; */}
+   .movetop > a > i {color:#333; width: 100%; height:100%; font-size:2rem; text-align:center; line-height:100px;}
+
+
+
    #footBox .footarea {width: 100%; height: auto; min-height: 300px;}
      .footarea h3 {width: 150px; height:40px; margin:auto; margin-bottom: 20px;
      background-image:url("../../img/caci_logo.png");
@@ -191,9 +199,7 @@
      .footarea p em {font-style:normal; text-transform:uppercase;}
  
  
-   .movetop {position:relative; width: 100px; height:100px; top: -50px; margin:auto; background-color: transparent;}
-   .movetop > a {display:block; width: 100%; height: 100%; background-color: #eaf2f5; border-radius:100%; /* border-top: 1px solid #333; */}
-   .movetop > a > i {color:#333; width: 100%; height:100%; font-size:2rem; text-align:center; line-height:100px;}
+  
  
  
  
