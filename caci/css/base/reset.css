@@ -1,34 +1,34 @@
-@charset "UTF-8";
-/* reset.css */
+@charset "utf-8";
+/* reset_test.css */
 
-html, body {width: 100%; height:100%; margin:0; padding:0; border:0; color:#333; font-family:'KoreanGD10R','KoreanGD18R',"돋움", sans-serif;}
+ /* ====== 1. body, html ====== */
+ html, body {width: 100%; height:100%;
+   margin:0; padding:0; border:0; color:#333; font-family: 'Nanum Gothic', 'Noto Sans KR', "돋움", sans-serif;}
 
-h1,h2,h3,h4,h5,h6,
-ul,li,ol,dl,dt,dd,
-p,pre,img{margin:0; padding:0; border:0;}
-ul,ol,li{list-style:none;}
+ h1,h2,h3,h4,h5,h6,
+ ul,li,ol,dl,dt,dd,
+ p,pre,img{margin:0; padding:0; border:0;}
+ ul,ol,li{list-style:none;}
 
-table, thead,tbody,tfoot,tr,th,td {margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:1px solid #777;}
+ table, thead, tbody, tfoot, tr, th, td{margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:1px solid #777;}
+ 
+ a{color: inherit; text-decoration:none;}
+ a:hover{color:#f07;} 
+ a:focus{color:#f07; outline:1px dotted #f06;}
+ abbr{text-decoration:none; text-transform:uppercase; }
+ button{border:0; cursor:pointer; background-color: transparent; border:1px solid #f06;}
+ button:hover{background-color:#fa0;}
+ button:focus{outline:1px dotted #555;}
+ 
+ hr{margin:0; padding:0; border-bottom: 1px solid #f06;}
+ /* html5 =================================================== */
+main, header, footer, aside,nav,section, article, figure, figcaption{display:block; }
 
-a{color:#fff; text-decoration:none;}
-a:hover {color: #a91f2b;}
-a:focus {color:1px dotted #555; }
-
-abbr{text-decoration:none; text-transform:uppercase;}
-button{border:0; cursor:pointer; background-color: transparent;}
-button:hover{background-color: #a91f2b;}
-button:focus{outline:1px dotted #555;}
-
-hr {margin:0; padding:0; border-bottom:1px solid #a91f2b;}
-
-/* html5 ================================ */
-main, header, footer, aside, nav, section, article, figure, figcaption {display:block;}
-
-/* form ========================================== */
+ /* form ==================================================== */
 form, fieldset, legend {margin:0; padding:0; border:0; }
-legend{position:absolute; width:0; height:0; overflow:hidden;}
-input{box-sizing:border-box; text-indent:0.5rem; cursor:pointer;}
-button{border:0; background-color: #555; color:#fff; cursor:pointer;}
+legend {position: absolute; width:0; height:0; overflow:hidden;}
+input {box-sizing:border-box; text-indent:0.5rem; cursor:pointer;}
+button {border:0; background-color:#07f; color:#fff; cursor:pointer;}
 select, text-area {box-sizing:border-box;}
 
 
