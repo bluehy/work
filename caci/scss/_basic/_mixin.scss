@@ -1,0 +1,18 @@
+@mixin hidden(){
+   display:block; width:0; height:0; overflow:hidden;
+}
+
+
+// px to rem ----------
+$rootUnit : 16;
+
+@function unit($u){
+   @return $u / $rootUnit;
+}// @function(){ ... }
+
+
+@mixin conUnit($pro, $u){
+   #{$pro}:$u + px;
+   #{$pro}:unit($u) + rem;
+}
+// --------------------

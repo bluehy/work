@@ -1,0 +1,21 @@
+// user_form.scss
+/* user_form.css */
+
+@import "../_basic/var";
+@import "../_basic/etc";
+@import "../_basic/mixin";
+
+// ------------------------------------
+
+#wrap {width:100%; height:100%;}
+
+// headBox
+@import "../_temp/headBox";
+
+// conBox
+#conBox { background-color: #fff;
+   
+}
+
+// footBox
+@import "../_temp/footBox";
