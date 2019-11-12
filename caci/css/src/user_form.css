@@ -13,29 +13,31 @@
 #conBox { background-color: #fff; }
 
 /* footBox.css */
-#footBox { width: 100%; height: auto; padding: 1rem; box-sizing: border-box; background-color: #eaeaea; }
+#footBox { width: 100%; height: auto; padding: 2rem; box-sizing: border-box; background-color: #eaeaea; }
 
-#footBox .foot_wrap { width: 100%; height: auto; text-align: center; }
+#footBox .foot_wrap { position: relative; width: 100%; height: auto; text-align: center; }
 
 #footBox .foot_wrap > h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox .foot_wrap > h3 { width: 150px; height: 50px; background-color: #fff; background-image: url("../../img/caci_logo.png"); background-position: 50% 50%; background-size: 100% auto; background-repeat: no-repeat; }
+#footBox .foot_wrap .move_top { position: absolute; width: 150px; height: 80px; top: 0; left: 50%; transform: translate(-50%, -5rem); }
+
+#footBox .foot_wrap > h3 { width: 150px; height: 50px; margin: auto; background-image: url("../../img/caci_logo.png"); background-position: 50% 50%; background-size: 100% auto; background-repeat: no-repeat; }
 
 #footBox .foot_wrap span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox .foot_wrap address { font-style: normal; font-size: 0.75rem; }
+#footBox .foot_wrap address { position: relative; padding-top: 3rem; font-style: normal; font-size: 0.75rem; }
 
-#footBox .foot_wrap address ul { width: 100%; height: auto; }
+#footBox .foot_wrap address div { position: absolute; width: auto; top: 1rem; left: 50%; transform: translate(-50%); margin-bottom: 1rem; }
 
-#footBox .foot_wrap address ul li { width: auto; margin-bottom: 1rem; }
+#footBox .foot_wrap address a { display: block; float: left; width: auto; height: 1rem; padding: 0 0.5rem; box-sizing: border-box; margin-right: 1rem; }
 
-#footBox .foot_wrap address ul a { display: block; float: left; width: auto; height: 1rem; margin-right: 1rem; }
+#footBox .foot_wrap address a:last-child { margin-right: 0; }
 
-#footBox .foot_wrap address ul dl { width: auto; height: auto; margin-bottom: 0.75rem; }
+#footBox .foot_wrap address dl { width: auto; height: auto; margin-bottom: 0.75rem; }
 
-#footBox .foot_wrap address ul dl dt { width: auto; height: 1rem; }
+#footBox .foot_wrap address dl dt { width: auto; height: 1rem; }
 
-#footBox .foot_wrap address ul dl dd { width: auto; height: 1rem; }
+#footBox .foot_wrap address dl dd { width: auto; height: 1rem; }
 
 #footBox .foot_wrap address p { text-transform: uppercase; }
 
