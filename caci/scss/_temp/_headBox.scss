@@ -1,21 +1,24 @@
 /* headBox.scss */
 #headBox {width: 100%; @include conUnit(height,60); background-color: rgba(0,0,0,0.6); padding: 10px; box-sizing:border-box;
-   > h1 {float:left; width: 200px; @include conUnit(height, 40);
-      > a {display:block; width:100%; height: 100%; background-image:url("../../img/caci_logo_white.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;
-         >span {@include hidden;}
-      } // a
-   }// h1
 
-@media screen and (max-width: 486px){
+   .head_wrap{
+  
+      > h1 {float:left; width: 200px; @include conUnit(height, 40);
+         > a {display:block; width:100%; height: 100%; background-image:url("../../img/caci_logo_white.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;
+            >span {@include hidden;}
+         } // a
+      }// h1
 
-
-}
-
-
+      @media screen and (max-width: 486px){
 
 
+      }
 
 
 
+
+
+
+   }//.head_wrap
 
 }// #headBox
