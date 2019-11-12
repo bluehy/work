@@ -3,6 +3,7 @@
    const wrap = $('#wrap');
    wrap.prepend('<header id="headBox"></header>');
    const headBox = wrap.children('#headBox');
+   const footBox = wrap.children('#footBox');
 
    // headBox
    headBox.load('./temp/headBox.html');
@@ -13,6 +14,6 @@
 
 
    // footer
-
+   footBox.load('./temp/footBox.html');
 
 })(jQuery);
