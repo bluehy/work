@@ -13,6 +13,34 @@
 #conBox { background-color: #fff; }
 
 /* footBox.css */
-#footBox { width: 100%; height: 100px; background-color: #ccc; }
+#footBox { width: 100%; height: auto; padding: 1rem; box-sizing: border-box; background-color: #eaeaea; }
 
-#footBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
+#footBox .foot_wrap { width: 100%; height: auto; text-align: center; }
+
+#footBox .foot_wrap > h2 { display: block; width: 0; height: 0; overflow: hidden; }
+
+#footBox .foot_wrap > h3 { width: 150px; height: 50px; background-color: #fff; background-image: url("../../img/caci_logo.png"); background-position: 50% 50%; background-size: 100% auto; background-repeat: no-repeat; }
+
+#footBox .foot_wrap span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#footBox .foot_wrap address { font-style: normal; font-size: 0.75rem; }
+
+#footBox .foot_wrap address ul { width: 100%; height: auto; }
+
+#footBox .foot_wrap address ul li { width: auto; margin-bottom: 1rem; }
+
+#footBox .foot_wrap address ul a { display: block; float: left; width: auto; height: 1rem; margin-right: 1rem; }
+
+#footBox .foot_wrap address ul dl { width: auto; height: auto; margin-bottom: 0.75rem; }
+
+#footBox .foot_wrap address ul dl dt { width: auto; height: 1rem; }
+
+#footBox .foot_wrap address ul dl dd { width: auto; height: 1rem; }
+
+#footBox .foot_wrap address p { text-transform: uppercase; }
+
+#footBox .foot_wrap .page_info h3 { display: block; width: 0; height: 0; overflow: hidden; }
+
+#footBox .foot_wrap .page_info p { font-size: 0.75rem; }
+
+@media screen and (max-width: 768px) { #footBox .foot_wrap h3 { background-color: #07f; } }
