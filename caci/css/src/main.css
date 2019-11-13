@@ -4,11 +4,29 @@
 /* headBox.scss */
 #headBox { width: 100%; height: 60px; height: 3.75rem; background-color: rgba(0, 0, 0, 0.6); padding: 10px; box-sizing: border-box; }
 
+#headBox .head_wrap { width: 100%; max-width: 60rem; height: 100%; min-height: 2.5rem; margin: auto; }
+
 #headBox .head_wrap > h1 { float: left; width: 200px; height: 40px; height: 2.5rem; }
 
 #headBox .head_wrap > h1 > a { display: block; width: 100%; height: 100%; background-image: url("../../img/caci_logo_white.png"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 #headBox .head_wrap > h1 > a > span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#headBox .head_wrap > #gnb { position: relative; width: auto; min-width: 30rem; height: 100%; margin: auto; }
+
+#headBox .head_wrap > #gnb ul { position: absolute; width: auto; min-width: 445px; height: auto; left: 50%; transform: translate(-50%); background-color: rgba(0, 0, 0, 0.5); }
+
+#headBox .head_wrap > #gnb ul li { float: left; width: auto; height: auto; padding: 0 0.5rem; margin-right: 1.125rem; text-align: center; color: #fff; font-size: 1.125rem; }
+
+#headBox .head_wrap > #gnb ul li a { display: block; width: 100%; height: 100%; line-height: 2.5rem; }
+
+#headBox .head_wrap #unb { display: none; }
+
+#headBox .head_wrap > #navMenu { float: right; width: 2.5rem; height: 2.5rem; }
+
+#headBox .head_wrap > #navMenu > i { width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem; }
+
+@media screen and (max-width: 768px) { #headBox .head_wrap #gnb { display: none; } }
 
 /* viewBox.css */
 #viewBox { width: 100%; height: 100%; }

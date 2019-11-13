@@ -15,12 +15,12 @@
       }
       span {@include hidden;};
       
-      address {position:relative; padding-top: 3rem; font-style:normal; font-size: nth($font_h1,1);
+      address {position:relative; padding-top: 3rem; font-style:normal; font-size: nth($font_s,1);
          div {position:absolute; width:auto; min-width: 24.375rem; top:1rem; left: 50%; transform:translate(-50%); margin-bottom: 1rem;}
             a {display: block; float:left; width: auto; height: 1rem; padding: 0 0.5rem; box-sizing:border-box;  margin-right: 1rem;
             &:last-child {margin-right:0;}
             }//a
-         dl {width: auto; height: auto; margin-bottom: nth($font_h1,1);
+         dl {width: auto; height: auto; margin-bottom: nth($font_s,1);
             dt{width: auto; height: 1rem;}
             dd{width: auto; height: 1rem;}
          }//dl
@@ -29,7 +29,7 @@
 
       .page_info{
          h3 {@include hidden;}
-         p {font-size: nth($font_h1,1);}
+         p {font-size: nth($font_s,1);}
       }
 
 
