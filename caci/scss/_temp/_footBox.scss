@@ -2,7 +2,7 @@
 
 
 // common
-#footBox {width: 100%; height: auto; padding: 5rem 2rem; box-sizing:border-box; background-color: #eaeaea;
+#footBox {width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing:border-box; background-color: #eaeaea;
    .foot_wrap{position:relative; width: 100%; height: auto; text-align:center;
 
       > h2 {@include hidden;}
