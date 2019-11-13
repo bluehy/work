@@ -11,6 +11,10 @@
    const conBox = wrap.children('#conBox');
    const footBox = wrap.children('#footBox');
 
+
+//------------------------------------------------------------
+
+
    headBox.load('./temp/headBox.html');
    footBox.load('./temp/footBox.html');
 
