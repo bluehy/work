@@ -2,7 +2,7 @@
 
 
 // common
-#footBox {width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing:border-box; background-color: #eaeaea;
+#footBox {width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing:border-box; background-color: $sub2;
    .foot_wrap{position:relative; width: 100%; height: auto; text-align:center;
 
       > h2 {@include hidden;}
@@ -25,7 +25,7 @@
             dt{width: auto; height: 1rem;}
             dd{width: auto; height: 1rem;}
          }//dl
-         p{text-transform:uppercase;}
+         p{text-transform:uppercase; margin-bottom: 1rem;}
       }// address
 
       .page_info{

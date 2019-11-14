@@ -71,5 +71,16 @@
 
 
 
+// headBox영역 진입시 gnb메뉴 show
+gnb.on('mouseenter',function(){
+   gnbUl.addClass('action');
+   gnbDd.stop().slideDown();
+});
+
+gnb.on('mouseleave',function(){
+   gnbUl.removeClass('action');
+   gnbDd.stop().slideUp();
+});
+
 
 })(jQuery);
