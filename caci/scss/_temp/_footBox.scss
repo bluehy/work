@@ -16,6 +16,7 @@
       span {@include hidden;};
       
       address {position:relative; padding-top: 3rem; font-style:normal; font-size: nth($font_s,1);
+         >span {@include hidden;}
          div {position:absolute; width:auto; min-width: 24.375rem; top:1rem; left: 50%; transform:translate(-50%); margin-bottom: 1rem;}
             a {display: block; float:left; width: auto; height: 1rem; padding: 0 0.5rem; box-sizing:border-box;  margin-right: 1rem;
             &:last-child {margin-right:0;}
