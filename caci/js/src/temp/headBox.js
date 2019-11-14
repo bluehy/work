@@ -4,38 +4,37 @@
    const hList = [
                   {title:'공연·전시',
                   sub:[
-                     {subTitle:'subT_01',subLink:'sub_01'},
-                     {subTitle:'subT_01',subLink:'sub_01'}
+                     {subTitle:'공연안내',subLink:'sub_01'},
+                     {subTitle:'전시안내',subLink:'sub_01'}
                   ]},
                   {title:'문화사업·아카데미',
                   sub:[
-                     {subTitle:'subT_02',subLink:'sub_02'},
-                     {subTitle:'subT_02',subLink:'sub_02'},
-                     {subTitle:'subT_02',subLink:'sub_02'},
-                     {subTitle:'subT_02',subLink:'sub_02'},
-                     {subTitle:'subT_02',subLink:'sub_02'},
+                     {subTitle:'축제사업',subLink:'sub_02'},
+                     {subTitle:'문화나눔사업',subLink:'sub_02'},
+                     {subTitle:'구립예술단체',subLink:'sub_02'},
+                     {subTitle:'사회공헌협력사업',subLink:'sub_02'},
+                     {subTitle:'아카데미',subLink:'sub_02'},
                   ]},
                   {title:'대관안내',
                   sub:[
-                     {subTitle:'subT_03',subLink:'sub_03'},
-                     {subTitle:'subT_03',subLink:'sub_03'},
-                     {subTitle:'subT_03',subLink:'sub_03'},
-                     {subTitle:'subT_03',subLink:'sub_03'},
-                     {subTitle:'subT_03',subLink:'sub_03'},
+                     {subTitle:'대관절차',subLink:'sub_03'},
+                     {subTitle:'대관시설',subLink:'sub_03'},
+                     {subTitle:'대관료',subLink:'sub_03'},
+                     {subTitle:'대관규정',subLink:'sub_03'},
+                     {subTitle:'대관신청양식',subLink:'sub_03'},
                   ]},
                   {title:'시설 이용안내',
                   sub:[
-                     {subTitle:'subT_04',subLink:'sub_04'},
-                     {subTitle:'subT_04',subLink:'sub_04'},
-                     {subTitle:'subT_04',subLink:'sub_04'},
-                     {subTitle:'subT_04',subLink:'sub_04'},
-                     {subTitle:'subT_04',subLink:'sub_04'},
+                     {subTitle:'좌석배치도',subLink:'sub_04'},
+                     {subTitle:'층별안내',subLink:'sub_04'},
+                     {subTitle:'오시는길',subLink:'sub_04'},
+                     {subTitle:'편의시설',subLink:'sub_04'}
                   ]},
                   {title:'충무아트센터 소식',
                   sub:[
-                     {subTitle:'subT_05',subLink:'sub_05'},
-                     {subTitle:'subT_05',subLink:'sub_05'},
-                     {subTitle:'subT_05',subLink:'sub_05'},
+                     {subTitle:'공지사항',subLink:'sub_05'},
+                     {subTitle:'센터소개',subLink:'sub_05'},
+                     {subTitle:'후원회안내',subLink:'sub_05'},
                      {subTitle:'subT_05',subLink:'sub_05'},
                      {subTitle:'subT_05',subLink:'sub_05'},
                   ]}
