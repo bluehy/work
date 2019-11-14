@@ -46,4 +46,6 @@
    footBox.load('./temp/footBox.html');
 
 
+
+
 })(jQuery);

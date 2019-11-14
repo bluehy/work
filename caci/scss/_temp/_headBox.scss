@@ -4,7 +4,7 @@
 
 #headBox {position:fixed; z-index: 1000; width: 100%; min-width: 320px; @include conUnit(height,60);
 
-   .head_wrap{position:relative; top:0; z-index: -100; width: 100%; max-width:85.375rem; height: 100%; padding: 10px; box-sizing:border-box; min-height: 2.5rem; margin:auto;
+   .head_wrap{position:relative; top:0; left:0; z-index: -100; width: 100%; max-width:85.375rem; height: 100%; padding: 10px; box-sizing:border-box; min-height: 2.5rem; margin:auto;
 
       //logo
       > h1 {float:left; width: 200px; @include conUnit(height, 40);
@@ -70,11 +70,13 @@
 
       @media screen and (max-width: 960px){
          background-color: rgba(0,0,0,0.6);
+         h1 {width:150px; height: 40px};
          #gnb,#unb {display:none;}
          #navMenu {display: block;}
       }
 
       @media screen and (min-width: 961px) and (max-width: 1280px){
+         h1 {width:150px; height: 40px};
          #gnb > ul {position:static; float:right; transform: translate(0); min-width: 41.875rem;
             li > dl > dt > a {font-size: nth($font_s,2); padding: 0 1rem; }
          }
