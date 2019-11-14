@@ -34,9 +34,7 @@
                   sub:[
                      {subTitle:'공지사항',subLink:'sub_05'},
                      {subTitle:'센터소개',subLink:'sub_05'},
-                     {subTitle:'후원회안내',subLink:'sub_05'},
-                     {subTitle:'subT_05',subLink:'sub_05'},
-                     {subTitle:'subT_05',subLink:'sub_05'},
+                     {subTitle:'후원회안내',subLink:'sub_05'}
                   ]}
                   ];
 
