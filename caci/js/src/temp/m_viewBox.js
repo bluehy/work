@@ -26,6 +26,8 @@
       slideGuide.children('li').eq(i).find('a').css({backgroundImage:'url("../img/main/viewBox/slideImg'+j+'.jpg")'});
    };
 
+
+
    // ------------------------------------------------------
    // 슬라이드 좌우 슬라이드 초기값 구현
    let slideLi = slideGuide.children('li');
@@ -38,6 +40,8 @@
    slideGuide.css({width: 100 * slideLen +'%',marginLeft:-100 + '%'});
    slideLi.css({width:100 / slideLen + '%'});
    
+
+
 
 
 

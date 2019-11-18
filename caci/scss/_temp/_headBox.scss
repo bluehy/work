@@ -35,7 +35,8 @@
          }// ul
          ul.action {
             &:before,&::before{padding-bottom : 1.5rem; }
-            /* dd{display:block;} */}
+            // dd{display:block;}
+         }
       }// #gnb -------------------------------------------------------------
       
       
@@ -54,6 +55,17 @@
             >span {@include hidden;}
          }// i
       } //#navMenu
+
+
+      // #pageNav
+      > #pageNav {$count: 3;
+         position:fixed; top: 50%; left: 5%; transform:translate(-50%, -50%); width: 2px; height: auto; min-height: 2.5rem;
+         >ul {width: 100%; height: 2.5rem * $count; background-color: rgba(255,255,255,0.5);
+            >li {width: 100%; height: 100% / $count; transition:all 300ms ease;
+            &.action {background-color: #fff;}
+            }//li
+         }// ul
+      }// #pageNav
 
 
 // device별 사이즈 변경

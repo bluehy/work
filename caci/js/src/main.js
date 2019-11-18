@@ -7,10 +7,10 @@
    wrap.prepend('<header id="headBox"></header>');
    const headBox = wrap.children('#headBox');
 
-   wrap.append('<section id="viewBox"></section>');
+   wrap.append('<section id="viewBox" class="con_area"></section>');
    const viewBox = wrap.children('#viewBox');
 
-   wrap.append('<main id="mainBox"></main>');
+   wrap.append('<main id="mainBox" class="con_area"></main>');
    const mainBox = wrap.children('#mainBox');
 
    wrap.append('<footer id="footBox"></footBox>');

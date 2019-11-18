@@ -83,4 +83,33 @@ gnb.on('mouseleave',function(){
 });
 
 
+// -----------------------------------------------------
+// 페이지 네비게이션 추가
+headWrap.append('<nav id="pageNav"><ul></ul></nav>');
+
+const pageNav = headWrap.children('#pageNav');
+const pageUl = pageNav.children('ul');
+
+let conAreaLen = $('.con_area').length;
+console.log(conAreaLen);
+
+for (let i = 0; i < conAreaLen; i++){
+   pageUl.append('<li><a href="#"></a></li>');
+   // let conId = $('.con_area').eq(i).id;
+   // console.log(conId);
+}
+
+const pageLi = pageUl.children('li');
+
+pageUl.css({'height': 2.5 * conAreaLen + 'rem'});
+pageLi.css({'height': 100 / conAreaLen + '%'});
+
+
+pageLi.eq(0).addClass('action');
+
+// ------------------------------------------------------
+
+
+
+
 })(jQuery);

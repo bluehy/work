@@ -13,9 +13,24 @@
 
 
 //------------------------------------------------------------
+// load html/append <script></script>
+   const jsUrl = '../js/src/temp/';
 
 
-   headBox.load('./temp/headBox.html');
+   // headBox ---------------------------------------------
+   headBox.load('./temp/headBox.html', function () {
+      let conJs = 'headBox.js';
+      body.append('<script src="' + jsUrl + conJs + '"></script>');
+   });// headBox.load()
+
+   // viewBox --------------------------------------------
+
+
+   // conBox ---------------------------------------------
+
+
+   // footer ----------------------------------------------
    footBox.load('./temp/footBox.html');
+
 
 })(jQuery);
