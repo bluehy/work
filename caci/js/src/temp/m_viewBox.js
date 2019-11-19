@@ -41,9 +41,28 @@
    slideLi.css({width:100 / slideLen + '%'});
    
 
+   // 자동 슬라이드
+   let timed = 3000;
+   let myN = 0;
+   let go;
+   
+   const GoSlide = function(){
+      go = setInterval(function() {
+         myN++;
+         if (myN >= slideLen - 1) {
+            myN = 0;
+            slideGuide.stop().css({ 'left': 100 + '%' });
+         }
+         slideGuide.stop().animate({ 'left': -100 * myN + '%' });
+         // indiLi.eq(myN).addClass('action');
+         // indiLi.eq(myN).siblings().removeClass('action');
+      }, timed); // go = setInterval
+   }// GoSlide()
+   GoSlide();
 
-
-
+   const StopSlide = function () {
+      clearInterval(go);
+   };
 
 
 })(jQuery);

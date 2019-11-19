@@ -50,38 +50,59 @@
 
 
       // #navMenu
-      > #navMenu {display:none; float:right; width: 2.5rem; height: 2.5rem; background-color: transparent;
-         // open_side_gnb
-         > button {width: 2.5rem; height: 2.5rem; background-color: transparent;
-            i {width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem;
-            }// i
-         }// .open_side_gnb
-         
+      > #navMenu {display:none; float:right; width: 2.5rem; height: 2.5rem;
+            // open_side_gnb
+            > button {width: 2.5rem; height: 2.5rem; background-color: transparent;
+               i {width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem;
+               }// i
+            }// .open_side_gnb
 
-         #sideGnb {position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: $sub2; padding: 0; box-sizing:border-box; transition:all 300ms ease; opacity:0;
-            
-            // close_side_gnb
-            button {width: 2.5rem; height: 2.5rem; background-color: transparent; transform-origin: 50% 50%; transition:all 300ms ease; width: 100%; margin:auto; margin-bottom : 2rem;}
-            button > i {width: 100%; height: 100%; color: $black; font-size: 2rem; text-align: center; line-height: 2.5rem;}
+            // sideGnb_
+            #sideGnb {position:fixed; z-index:1000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: $sub2; padding: 0; box-sizing:border-box; opacity:0;  transition:opacity 300ms ease; overflow: hidden;
+               .side_guide{width: 100%; height: auto;
+                  // close_side_gnb
+                  button {display: block; width: 3rem; height: 3rem; margin:auto; background-color: transparent; margin-bottom : 2rem; padding:0;}
+                  button > i {width: 100%; height: 100%; color: $black; font-size: 3rem; text-align: center; line-height: 3rem;}
 
-            ul {width: 100%; height:100%; color: $black;
-               li {float:left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem;
-               &:nth-of-type(4),&:nth-of-type(5){width: 50%;}
-               }//li
-               dl {width: 100%; height: auto;}
-               dt {width: 9.375rem; margin:auto; font-size: nth($font_s,3); font-weight: bold; margin-bottom: 1rem;
-                  a {display: block; width: 100%; height: 100%; text-align:center;}
-               }//dt
-               dd {width: 7.5rem; margin:auto;
-               a{float:none; display: block; width: 100%; height: auto; padding:0.2rem 0; margin:auto; margin-bottom: 0.5rem; text-align:center;}
-               }//dd
-            }//ul
-         }//#sideGnb                
-      #sideGnb.action {z-index:1000; width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height:500px; background-color: $sub2; color: $black; opacity:1; padding: 5rem 1rem;
-         dl {display:block;}
-      }//#sideGnb.action
-      
+                  // memberArea
+                  .member_area {width: 0; height: 0; margin-bottom: 2rem; opacity:0;
+                     ul{width: 100%; height: auto;
+                     &:after,&::after {content:" "; display: block; width: 0; height: 0; clear:both;}
+                        li{position:relative; float:left; width: 50%; height: 50px; text-align:center;
+                        &:first-of-type:after,&:first-of-type::after {content:" "; display: block; top:50%; right: 0; transform:translateY(-50%); position:absolute; width: 0; height: 60%; border-right: 2px solid $sub2;}
+                           a{display: block; width: 100%; height:100%; line-height: 50px; color: $sub2;background-color: $red; }
+                        }//li
+                     }//ul
+                  }//.member_area
+
+                  // sideGnb_ul
+                  >ul {width: 100%; height:auto; color: $black;
+                     li {float:left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem;
+                     &:nth-of-type(4),&:nth-of-type(5){width: 50%;}
+                     }//li
+                     dl {width: 100%; height: auto;}
+                     dt {width: 9.375rem; margin:auto; font-size: nth($font_s,3); font-weight: bold; margin-bottom: 1rem;
+                        a {display: block; width: 100%; height: 100%; text-align:center;}
+                     }//dt
+                     dd {width: 7.5rem; margin:auto; display:none;
+                     a{float:none; display: block; width: 100%; height: auto; padding:0.2rem 0; margin:auto; margin-bottom: 0.5rem; text-align:center;}
+                     }//dd
+                  }//ul
+               }//.side_guide
+            }//#sideGnb                
+            #sideGnb.action {width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: $sub2; color: $black; opacity:1; padding: 3rem 1rem;
+               .member_area{width: 100%; height: auto; opacity:1;}
+               dl {display:block;
+               dd {display:block;}
+               }
+            }//#sideGnb.action
+
       } //#navMenu
+
+      #navMenu:before,#navMenu::before {content:" "; display: block; position:fixed; z-index: 100; left:0; top:0; background-color: rgba($darkblue,0.5); opacity:0;}
+      #navMenu.action{
+         &:before, &::before{width: 100vw; height: 100vh; opacity:1; transition:opacity 300ms ease;}
+      }
 
       // #pageNav
       > #pageNav {$count: 3;
@@ -102,16 +123,23 @@
 
       @media screen and (max-width: 768px){
          #navMenu{
-         #sideGnb.action {width: 100vw; height: auto;
-            .close_side_gnb {top: 15%;}
-            ul{
-               li {width: 100%; min-height: 50px; margin-bottom: 0.5rem; font-size:nth($font_s,2)}
-               dl {
-                  dt {font-size:nth($font_s,2);}
-                  dd {display:none;}
-               }//dl
-            }//ul
-         }//#sideGnb.action
+            #sideGnb.action {width: 100vw; height: 90vh; min-height: 0; max-height: 900px; padding: 3rem 0;
+               .side_guide{width: 100%; height: 100%; overflow:scroll; padding:0 5rem 5rem 0;
+                  .close_side_gnb {top: 15%;}
+                  .member_area {width: 100%;
+                     ul{height: 50px;
+                        li {width: 50%;}
+                     }
+                  }
+                  ul{
+                     li {width: 100%; min-height: 50px; margin-bottom: 1.5rem; font-size:nth($font_s,2)}
+                     dl {
+                        dt {font-size:nth($font_s,2);}
+                        dd {display:none;}
+                     }//dl
+                  }//ul
+               }//.side_guide
+            }//#sideGnb.action
          }//#navMenu
 
       }
@@ -127,7 +155,7 @@
          h1 {width:150px; height: 40px};
          #gnb > ul {position:static; float:right; transform: translate(0); min-width: 41.875rem;
             li > dl > dt > a {font-size: nth($font_s,2); padding: 0 1rem; }
-         }
+         }//#gnb
       }
 
       @media screen and (min-width: 1281px) and (max-width: 1920px){

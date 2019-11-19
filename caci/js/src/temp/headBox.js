@@ -50,8 +50,9 @@
 
    const navMenu = headWrap.children('#navMenu');
    const openBtn = navMenu.children('.open_side_gnb');
-   const sideGnb = navMenu.children('#sideGnb');   
-   const closeBtn = sideGnb.children('.close_side_gnb');
+   const sideGnb = navMenu.children('#sideGnb');
+   const sideGuide = sideGnb.children('.side_guide');
+   const closeBtn = sideGuide.children('.close_side_gnb');
 
 
    const gnbUl = gnb.children('ul');
@@ -90,10 +91,13 @@ gnb.on('mouseleave',function(){
 // -----------------------------------------------------
 // navMenu로 메뉴 오픈하기
 
-gnb.children('ul').clone(true).appendTo(sideGnb);
+sideGuide.append('<div class="member_area"></div>');
+const memberArea = sideGuide.children('.member_area');
+unb.children('ul').clone(true).appendTo(memberArea);
+gnb.children('ul').clone(true).appendTo(sideGuide);
 closeBtn.hide();
 
-const sideUl = sideGnb.children('ul');
+const sideUl = sideGuide.children('ul');
 const sideLi = sideUl.children('li');
 const sideDl = sideLi.children('dl');
 const sideDt = sideDl.children('dt');
@@ -106,12 +110,14 @@ openBtn.on('click',function(e){
    e.preventDefault();
    closeBtn.show();
    sideGnb.addClass('action');
+   navMenu.addClass('action');
 });
 
 closeBtn.on('click',function(e){
    e.preventDefault();
    closeBtn.hide();
    sideGnb.removeClass('action');
+   navMenu.removeClass('action');
 });
 
 closeBtn.on('focus', function () {

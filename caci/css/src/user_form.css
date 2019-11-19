@@ -44,37 +44,59 @@
 
 #headBox .head_wrap #unb ul li { width: 100%; height: 50%; color: #fff; font-size: 0.75rem; }
 
-#headBox .head_wrap > #navMenu { display: none; float: right; width: 2.5rem; height: 2.5rem; background-color: transparent; }
+#headBox .head_wrap > #navMenu { display: none; float: right; width: 2.5rem; height: 2.5rem; }
 
 #headBox .head_wrap > #navMenu > button { width: 2.5rem; height: 2.5rem; background-color: transparent; }
 
 #headBox .head_wrap > #navMenu > button i { width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem; }
 
-#headBox .head_wrap > #navMenu #sideGnb { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: #f9f4ed; padding: 0; box-sizing: border-box; transition: all 300ms ease; opacity: 0; }
+#headBox .head_wrap > #navMenu #sideGnb { position: fixed; z-index: 1000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: #f9f4ed; padding: 0; box-sizing: border-box; opacity: 0; transition: opacity 300ms ease; overflow: hidden; }
 
-#headBox .head_wrap > #navMenu #sideGnb button { width: 2.5rem; height: 2.5rem; background-color: transparent; transform-origin: 50% 50%; transition: all 300ms ease; width: 100%; margin: auto; margin-bottom: 2rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide { width: 100%; height: auto; }
 
-#headBox .head_wrap > #navMenu #sideGnb button > i { width: 100%; height: 100%; color: #333; font-size: 2rem; text-align: center; line-height: 2.5rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide button { display: block; width: 3rem; height: 3rem; margin: auto; background-color: transparent; margin-bottom: 2rem; padding: 0; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul { width: 100%; height: 100%; color: #333; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide button > i { width: 100%; height: 100%; color: #333; font-size: 3rem; text-align: center; line-height: 3rem; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul li { float: left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area { width: 0; height: 0; margin-bottom: 2rem; opacity: 0; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul li:nth-of-type(4), #headBox .head_wrap > #navMenu #sideGnb ul li:nth-of-type(5) { width: 50%; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul { width: 100%; height: auto; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul dl { width: 100%; height: auto; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul:after, #headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul dt { width: 9.375rem; margin: auto; font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul li { position: relative; float: left; width: 50%; height: 50px; text-align: center; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul dt a { display: block; width: 100%; height: 100%; text-align: center; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul li:first-of-type:after, #headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul li:first-of-type::after { content: " "; display: block; top: 50%; right: 0; transform: translateY(-50%); position: absolute; width: 0; height: 60%; border-right: 2px solid #f9f4ed; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul dd { width: 7.5rem; margin: auto; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide .member_area ul li a { display: block; width: 100%; height: 100%; line-height: 50px; color: #f9f4ed; background-color: #a91f2b; }
 
-#headBox .head_wrap > #navMenu #sideGnb ul dd a { float: none; display: block; width: 100%; height: auto; padding: 0.2rem 0; margin: auto; margin-bottom: 0.5rem; text-align: center; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul { width: 100%; height: auto; color: #333; }
 
-#headBox .head_wrap > #navMenu #sideGnb.action { z-index: 1000; width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 5rem 1rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li { float: left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(4), #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(5) { width: 50%; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dl { width: 100%; height: auto; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dt { width: 9.375rem; margin: auto; font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dt a { display: block; width: 100%; height: 100%; text-align: center; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd { width: 7.5rem; margin: auto; display: none; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd a { float: none; display: block; width: 100%; height: auto; padding: 0.2rem 0; margin: auto; margin-bottom: 0.5rem; text-align: center; }
+
+#headBox .head_wrap > #navMenu #sideGnb.action { width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 3rem 1rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb.action .member_area { width: 100%; height: auto; opacity: 1; }
 
 #headBox .head_wrap > #navMenu #sideGnb.action dl { display: block; }
+
+#headBox .head_wrap > #navMenu #sideGnb.action dl dd { display: block; }
+
+#headBox .head_wrap #navMenu:before, #headBox .head_wrap #navMenu::before { content: " "; display: block; position: fixed; z-index: 100; left: 0; top: 0; background-color: rgba(0, 0, 42, 0.5); opacity: 0; }
+
+#headBox .head_wrap #navMenu.action:before, #headBox .head_wrap #navMenu.action::before { width: 100vw; height: 100vh; opacity: 1; transition: opacity 300ms ease; }
 
 #headBox .head_wrap > #pageNav { position: fixed; top: 50%; left: 5%; transform: translate(-50%, -50%); width: 2px; height: auto; min-height: 2.5rem; }
 
@@ -84,11 +106,15 @@
 
 #headBox .head_wrap > #pageNav > ul > li.action { background-color: #fff; }
 
-@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: auto; }
-  #headBox .head_wrap #navMenu #sideGnb.action .close_side_gnb { top: 15%; }
-  #headBox .head_wrap #navMenu #sideGnb.action ul li { width: 100%; min-height: 50px; margin-bottom: 0.5rem; font-size: 1rem; }
-  #headBox .head_wrap #navMenu #sideGnb.action ul dl dt { font-size: 1rem; }
-  #headBox .head_wrap #navMenu #sideGnb.action ul dl dd { display: none; } }
+@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: 90vh; min-height: 0; max-height: 900px; padding: 3rem 0; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide { width: 100%; height: 100%; overflow: scroll; padding: 0 5rem 5rem 0; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide .close_side_gnb { top: 15%; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area { width: 100%; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul { height: 50px; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul li { width: 50%; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide ul li { width: 100%; min-height: 50px; margin-bottom: 1.5rem; font-size: 1rem; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide ul dl dt { font-size: 1rem; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide ul dl dd { display: none; } }
 
 @media screen and (max-width: 960px) { #headBox .head_wrap { background-color: rgba(0, 0, 0, 0.6); }
   #headBox .head_wrap h1 { width: 150px; height: 40px; }
@@ -144,5 +170,3 @@
 #footBox .foot_wrap .page_info h3 { display: block; width: 0; height: 0; overflow: hidden; }
 
 #footBox .foot_wrap .page_info p { font-size: 0.75rem; }
-
-@media screen and (max-width: 768px) { #footBox .foot_wrap h3 { background-color: #07f; } }
