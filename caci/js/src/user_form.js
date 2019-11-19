@@ -2,8 +2,8 @@
    const body = $('body');
    const wrap = $('#wrap');
    wrap.prepend('<header id ="headBox"></header>');
-   wrap.append('<section id ="viewBox"></section>');
-   wrap.append('<main id="conBox"</main>');
+   wrap.append('<section id ="viewBox" class="con_area"></section>');
+   wrap.append('<main id="conBox" class="con_area"></main>');
    wrap.append('<footer id ="footBox"></footer>');
 
    const headBox = wrap.children('#headBox');

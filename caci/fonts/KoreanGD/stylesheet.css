@@ -6,7 +6,7 @@
         url('hinted-KoreanGD18-R.woff') format('woff'),
         url('hinted-KoreanGD18-R.ttf') format('truetype'),
         url('hinted-KoreanGD18-R.svg#KoreanGD18-R') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 

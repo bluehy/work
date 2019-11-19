@@ -40,7 +40,7 @@
    slideGuide.css({width: 100 * slideLen +'%',marginLeft:-100 + '%'});
    slideLi.css({width:100 / slideLen + '%'});
    
-
+   // ------------------------------------------------------
    // 자동 슬라이드
    let timed = 3000;
    let myN = 0;
@@ -63,6 +63,11 @@
    const StopSlide = function () {
       clearInterval(go);
    };
+
+
+   
+   // --------------------------------------------------------
+
 
 
 })(jQuery);

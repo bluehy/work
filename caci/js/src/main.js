@@ -13,10 +13,16 @@
    wrap.append('<main id="mainBox"></main>');
    const mainBox = wrap.children('#mainBox');
 
+      mainBox.append('<section id="newsBox" class="con_area"></section>');
       mainBox.append('<section id="infoBox" class="con_area"></section>');
       mainBox.append('<section id="coopBox" class="con_area"></section>');
       mainBox.append('<section id="serviceBox" class="con_area"></section>');
-      mainBox.append('<section id="newsBox" class="con_area"></section>');
+
+      const newsBox = mainBox.children('#newsBox');
+      const infoBox = mainBox.children('#infoBox');
+      const coopBox = mainBox.children('#coopBox');
+      const serviceBox = mainBox.children('#serviceBox');
+
 
    wrap.append('<footer id="footBox"></footBox>');
    const footBox = wrap.children('#footBox');
@@ -45,7 +51,12 @@
       let conJs = 'm_mainBox.js';
       body.append('<script src="'+ jsUrl+ conJs+'"></script>');
    });
+      // newsBox {}
+      newsBox.load('.')
 
+      // infoBox {}
+      // coopBox {}
+      // serviceBox {}
 
    // footer ----------------------------------------------
    footBox.load('./temp/footBox.html');
