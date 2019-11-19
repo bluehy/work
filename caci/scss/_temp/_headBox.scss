@@ -51,11 +51,37 @@
 
       // #navMenu
       > #navMenu {display:none; float:right; width: 2.5rem; height: 2.5rem; background-color: transparent;
-         > i {width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem;
-            >span {@include hidden;}
-         }// i
-      } //#navMenu
+         // open_side_gnb
+         > button {width: 2.5rem; height: 2.5rem; background-color: transparent;
+            i {width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem;
+            }// i
+         }// .open_side_gnb
+         
 
+         #sideGnb {position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: $sub2; padding: 0; box-sizing:border-box; transition:all 300ms ease; opacity:0;
+            
+            // close_side_gnb
+            button {width: 2.5rem; height: 2.5rem; background-color: transparent; transform-origin: 50% 50%; transition:all 300ms ease; width: 100%; margin:auto; margin-bottom : 2rem;}
+            button > i {width: 100%; height: 100%; color: $black; font-size: 2rem; text-align: center; line-height: 2.5rem;}
+
+            ul {width: 100%; height:100%; color: $black;
+               li {float:left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem;
+               &:nth-of-type(4),&:nth-of-type(5){width: 50%;}
+               }//li
+               dl {width: 100%; height: auto;}
+               dt {width: 9.375rem; margin:auto; font-size: nth($font_s,3); font-weight: bold; margin-bottom: 1rem;
+                  a {display: block; width: 100%; height: 100%; text-align:center;}
+               }//dt
+               dd {width: 7.5rem; margin:auto;
+               a{float:none; display: block; width: 100%; height: auto; padding:0.2rem 0; margin:auto; margin-bottom: 0.5rem; text-align:center;}
+               }//dd
+            }//ul
+         }//#sideGnb                
+      #sideGnb.action {z-index:1000; width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height:500px; background-color: $sub2; color: $black; opacity:1; padding: 5rem 1rem;
+         dl {display:block;}
+      }//#sideGnb.action
+      
+      } //#navMenu
 
       // #pageNav
       > #pageNav {$count: 3;
@@ -70,13 +96,23 @@
 
 // device별 사이즈 변경
       @media screen and (max-width: 480px){
-         
+
       }
 
 
       @media screen and (max-width: 768px){
-         
-         
+         #navMenu{
+         #sideGnb.action {width: 100vw; height: auto;
+            .close_side_gnb {top: 15%;}
+            ul{
+               li {width: 100%; min-height: 50px; margin-bottom: 0.5rem; font-size:nth($font_s,2)}
+               dl {
+                  dt {font-size:nth($font_s,2);}
+                  dd {display:none;}
+               }//dl
+            }//ul
+         }//#sideGnb.action
+         }//#navMenu
 
       }
 
@@ -101,8 +137,6 @@
       @media screen and (min-width: 1920px){
 
       }
-
-
 
    }//.head_wrap
 

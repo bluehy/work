@@ -10,8 +10,13 @@
    wrap.append('<section id="viewBox" class="con_area"></section>');
    const viewBox = wrap.children('#viewBox');
 
-   wrap.append('<main id="mainBox" class="con_area"></main>');
+   wrap.append('<main id="mainBox"></main>');
    const mainBox = wrap.children('#mainBox');
+
+      mainBox.append('<section id="infoBox" class="con_area"></section>');
+      mainBox.append('<section id="coopBox" class="con_area"></section>');
+      mainBox.append('<section id="serviceBox" class="con_area"></section>');
+      mainBox.append('<section id="newsBox" class="con_area"></section>');
 
    wrap.append('<footer id="footBox"></footBox>');
    const footBox = wrap.children('#footBox');

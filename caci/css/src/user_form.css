@@ -46,9 +46,35 @@
 
 #headBox .head_wrap > #navMenu { display: none; float: right; width: 2.5rem; height: 2.5rem; background-color: transparent; }
 
-#headBox .head_wrap > #navMenu > i { width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem; }
+#headBox .head_wrap > #navMenu > button { width: 2.5rem; height: 2.5rem; background-color: transparent; }
 
-#headBox .head_wrap > #navMenu > i > span { display: block; width: 0; height: 0; overflow: hidden; }
+#headBox .head_wrap > #navMenu > button i { width: 100%; height: 100%; color: #fff; font-size: 2rem; text-align: center; line-height: 2.5rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0; height: 0; background-color: #f9f4ed; padding: 0; box-sizing: border-box; transition: all 300ms ease; opacity: 0; }
+
+#headBox .head_wrap > #navMenu #sideGnb button { width: 2.5rem; height: 2.5rem; background-color: transparent; transform-origin: 50% 50%; transition: all 300ms ease; width: 100%; margin: auto; margin-bottom: 2rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb button > i { width: 100%; height: 100%; color: #333; font-size: 2rem; text-align: center; line-height: 2.5rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul { width: 100%; height: 100%; color: #333; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul li { float: left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul li:nth-of-type(4), #headBox .head_wrap > #navMenu #sideGnb ul li:nth-of-type(5) { width: 50%; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul dl { width: 100%; height: auto; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul dt { width: 9.375rem; margin: auto; font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul dt a { display: block; width: 100%; height: 100%; text-align: center; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul dd { width: 7.5rem; margin: auto; }
+
+#headBox .head_wrap > #navMenu #sideGnb ul dd a { float: none; display: block; width: 100%; height: auto; padding: 0.2rem 0; margin: auto; margin-bottom: 0.5rem; text-align: center; }
+
+#headBox .head_wrap > #navMenu #sideGnb.action { z-index: 1000; width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 5rem 1rem; }
+
+#headBox .head_wrap > #navMenu #sideGnb.action dl { display: block; }
 
 #headBox .head_wrap > #pageNav { position: fixed; top: 50%; left: 5%; transform: translate(-50%, -50%); width: 2px; height: auto; min-height: 2.5rem; }
 
@@ -58,6 +84,12 @@
 
 #headBox .head_wrap > #pageNav > ul > li.action { background-color: #fff; }
 
+@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: auto; }
+  #headBox .head_wrap #navMenu #sideGnb.action .close_side_gnb { top: 15%; }
+  #headBox .head_wrap #navMenu #sideGnb.action ul li { width: 100%; min-height: 50px; margin-bottom: 0.5rem; font-size: 1rem; }
+  #headBox .head_wrap #navMenu #sideGnb.action ul dl dt { font-size: 1rem; }
+  #headBox .head_wrap #navMenu #sideGnb.action ul dl dd { display: none; } }
+
 @media screen and (max-width: 960px) { #headBox .head_wrap { background-color: rgba(0, 0, 0, 0.6); }
   #headBox .head_wrap h1 { width: 150px; height: 40px; }
   #headBox .head_wrap #gnb, #headBox .head_wrap #unb { display: none; }
@@ -66,6 +98,11 @@
 @media screen and (min-width: 961px) and (max-width: 1280px) { #headBox .head_wrap h1 { width: 150px; height: 40px; }
   #headBox .head_wrap #gnb > ul { position: static; float: right; transform: translate(0); min-width: 41.875rem; }
   #headBox .head_wrap #gnb > ul li > dl > dt > a { font-size: 1rem; padding: 0 1rem; } }
+
+/* viewBox.css */
+.view_wrap { width: 100%; height: 500px; background-color: #caf; background-image: url("../../img/sub1/viewBox/viewImg.jpg"); background-position: 50% 40%; background-size: auto 300%; background-repeat: no-repeat; }
+
+@media screen and (max-width: 768px) { .view_wrap { height: 250px; } }
 
 #conBox { background-color: #fff; }
 
@@ -79,6 +116,8 @@
 #footBox .foot_wrap .move_top { position: absolute; z-index: 500; width: 100px; height: 100px; top: 0; left: 50%; transform: translate(-50%, -7.5rem); }
 
 #footBox .foot_wrap .move_top a { display: block; width: 100%; height: 100%; background-color: #f9f4ed; border-radius: 100%; }
+
+#footBox .foot_wrap .move_top a i { width: 100%; height: 100%; color: #333; font-size: 2rem; text-align: center; line-height: 100px; }
 
 #footBox .foot_wrap > h3 { width: 150px; height: 50px; margin: auto; background-image: url("../../img/caci_logo.png"); background-position: 50% 50%; background-size: 100% auto; background-repeat: no-repeat; }
 

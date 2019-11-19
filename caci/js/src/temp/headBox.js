@@ -46,7 +46,12 @@
    const headWrap = headBox.children('.head_wrap');
    const gnb = headWrap.children('#gnb');
    const unb = headWrap.children('#unb');
+
+
    const navMenu = headWrap.children('#navMenu');
+   const openBtn = navMenu.children('.open_side_gnb');
+   const sideGnb = navMenu.children('#sideGnb');   
+   const closeBtn = sideGnb.children('.close_side_gnb');
 
 
    const gnbUl = gnb.children('ul');
@@ -70,18 +75,83 @@
    }//for i
 
 
-
+// -----------------------------------------------------
 // headBox영역 진입시 gnb메뉴 show
 gnb.on('mouseenter',function(){
    gnbUl.addClass('action');
-   gnbDd.stop().slideDown();
+   gnbDd.stop().stop().slideDown();
 });
 
 gnb.on('mouseleave',function(){
    gnbUl.removeClass('action');
-   gnbDd.stop().slideUp();
+   gnbDd.stop().stop().slideUp();
 });
 
+// -----------------------------------------------------
+// navMenu로 메뉴 오픈하기
+
+gnb.children('ul').clone(true).appendTo(sideGnb);
+closeBtn.hide();
+
+const sideUl = sideGnb.children('ul');
+const sideLi = sideUl.children('li');
+const sideDl = sideLi.children('dl');
+const sideDt = sideDl.children('dt');
+   const sideDtLink = sideDt.children('a');
+const sideDd = sideDl.children('dd');
+   const sideDdLink = sideDd.children('a');
+
+
+openBtn.on('click',function(e){
+   e.preventDefault();
+   closeBtn.show();
+   sideGnb.addClass('action');
+});
+
+closeBtn.on('click',function(e){
+   e.preventDefault();
+   closeBtn.hide();
+   sideGnb.removeClass('action');
+});
+
+closeBtn.on('focus', function () {
+   closeBtn.addClass('action');
+});
+
+closeBtn.on('blur', function () {
+   closeBtn.removeClass('action');
+});
+
+sideGnb.find('a').eq(-1).on('blur',function(){
+   closeBtn.focus();
+});
+
+
+// -----------------------------------------------------
+// * 브라우저 768 이하일 때, dt클릭시 dd 나타나기 * rwd
+
+sideDtLink.on('click',function(e){
+   e.preventDefault();
+   let has = $(this).parent('dt').hasClass('action');
+      if (has){
+         $(this).parent('dt').siblings('dd').stop().slideUp();
+         $(this).parent('dt').removeClass('action');
+      }else{
+         $(this).parent('dt').siblings('dd').stop().slideDown();
+         $(this).parent('dt').addClass('action');
+         $(this).closest('li').siblings().find('dd').stop().slideUp();
+         $(this).closest('li').siblings().find('dt').removeClass('action');
+      }
+});
+
+sideDtLink.on('focus',function(){
+   $(this).parent('dt').siblings('dd').stop().slideDown();
+   $(this).closest('li').siblings().find('dd').stop().slideUp();
+})
+
+sideDdLink.on('click',function(e){
+   e.preventDefault();
+});
 
 // -----------------------------------------------------
 // 페이지 네비게이션 추가
