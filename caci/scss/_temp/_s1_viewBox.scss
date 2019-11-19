@@ -3,10 +3,10 @@
 
    // 서브 page이동 버튼
    .page_btn {position:absolute; top:50%; left: 50%; width: 80%; height: 0; transform:translate(-50%);
-      button {float: right; width: 100px; height: 10px; background-color: rgba($white,0.5);
+      button {float: right; width: 100px; height: 5px; background-color: rgba($white,0.5);
       &.prev {float: left;}
 
-         p {font-size: nth($font_s,2); }
+         p {font-size: nth($font_s,2); transform:translateY(-50%); }
       }//button
    }//.page_btn
 
