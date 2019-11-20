@@ -26,11 +26,19 @@
 
    wrap.append('<footer id="footBox"></footBox>');
    const footBox = wrap.children('#footBox');
+   // ------------------------------------------------
+// jQuery device 사이즈 측정
+
+let mob = 480, tab = 7
+
+
+
 
 
 // ------------------------------------------------
 // load html/append <script></script>
    const jsUrl = '../js/src/temp/';
+   const jsUrlM = 'main/';
 
 
    // headBox ---------------------------------------------
@@ -41,18 +49,21 @@
 
 
    // viewBox ----------------------------------------------
-   viewBox.load('./temp/m_viewBox.html',function(){
+   viewBox.load('./temp/main/m_viewBox.html',function(){
       let conJs = 'm_viewBox.js';
-      body.append('<script src="'+ jsUrl +conJs +'"></script>');
+      body.append('<script src="'+ jsUrl + jsUrlM + conJs +'"></script>');
    });
 
    // main ----------------------------------------------
-   mainBox.load('./temp/m_mainBox.html',function(){
+   mainBox.load('./temp/main/m_mainBox.html',function(){
       let conJs = 'm_mainBox.js';
-      body.append('<script src="'+ jsUrl+ conJs+'"></script>');
+      body.append('<script src="' + jsUrl + jsUrlM +conJs+'"></script>');
    });
       // newsBox {}
-      newsBox.load('.')
+      newsBox.load('./temp/main/m_newsBox.html',function(){
+         let conJs = 'm_newsBox.js';
+         body.append('<script src="'+ jsUrl+ jsUrlM +conJs +'"></script>');
+      });
 
       // infoBox {}
       // coopBox {}

@@ -12,11 +12,11 @@
 
 
 // viewBox
-@import "../_temp/m_viewBox";
+@import "../_temp/_main/m_viewBox";
 
 // main
-@import "../_temp/m_mainBox";
-
+@import "../_temp/_main/m_mainBox";
+   @import "../_temp/_main/m_newsBox";
 
 // footer
 @import "../_temp/footBox";
