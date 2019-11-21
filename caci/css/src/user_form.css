@@ -16,7 +16,7 @@
 
 #headBox .head_wrap > #gnb h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#headBox .head_wrap > #gnb ul { position: absolute; z-index: 500; width: auto; min-width: 52rem; height: auto; top: 0; left: 50%; transform: translate(-50%); }
+#headBox .head_wrap > #gnb ul { position: absolute; z-index: 500; width: auto; min-width: 53rem; height: auto; top: 0; left: 50%; transform: translate(-50%); }
 
 #headBox .head_wrap > #gnb ul:before, #headBox .head_wrap > #gnb ul::before { content: " "; display: block; position: absolute; z-index: -100; left: -50vw; width: 150vw; height: 100%; background-color: rgba(0, 0, 0, 0.6); transition: all 300ms ease; }
 
@@ -98,13 +98,15 @@
 
 #headBox .head_wrap #navMenu.action:before, #headBox .head_wrap #navMenu.action::before { width: 100vw; height: 100vh; opacity: 1; transition: opacity 300ms ease; }
 
-#headBox .head_wrap > #pageNav { position: fixed; top: 50%; left: 5%; transform: translate(-50%, -50%); width: 2px; height: auto; min-height: 2.5rem; }
+#headBox .head_wrap > #pageNav { position: fixed; top: 50%; left: 5%; transform: translate(-50%, -50%); width: 3px; height: auto; min-height: 2.5rem; }
 
-#headBox .head_wrap > #pageNav > ul { width: 100%; height: 7.5rem; background-color: rgba(255, 255, 255, 0.5); }
+#headBox .head_wrap > #pageNav > ul { width: 100%; height: 7.5rem; background-color: rgba(255, 255, 255, 0.5); transition: background-color 300ms ease; }
 
-#headBox .head_wrap > #pageNav > ul > li { width: 100%; height: 33.33333%; transition: all 300ms ease; }
+#headBox .head_wrap > #pageNav > ul > li { width: 100%; height: 33.33333%; transition: all 300ms ease; background-color: #fff; opacity: 0; }
 
-#headBox .head_wrap > #pageNav > ul > li.action { background-color: #fff; }
+#headBox .head_wrap > #pageNav > ul > li.action { opacity: 1; }
+
+#headBox .head_wrap > #pageNav > ul > li a { display: block; width: 100%; height: 100%; }
 
 @media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: 90vh; min-height: 0; max-height: 900px; padding: 3rem 0; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide { width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; padding: 0 5rem 5rem 0; }
@@ -122,7 +124,8 @@
 
 @media screen and (min-width: 961px) and (max-width: 1280px) { #headBox .head_wrap h1 { width: 150px; height: 40px; }
   #headBox .head_wrap #gnb > ul { position: static; float: right; transform: translate(0); min-width: 41.875rem; }
-  #headBox .head_wrap #gnb > ul li > dl > dt > a { font-size: 1rem; padding: 0 1rem; } }
+  #headBox .head_wrap #gnb > ul li > dl > dt > a { font-size: 1rem; padding: 0 1rem; }
+  #headBox .head_wrap #unb { display: none; } }
 
 /* viewBox.css */
 .view_wrap { position: relative; top: 0; left: 0; width: 100%; height: 500px; padding-top: 60px; box-sizing: border-box; background-color: #caf; background-image: url("../../img/sub1/viewBox/viewImg.jpg"); background-position: 50% 40%; background-size: auto 300%; background-repeat: no-repeat; }

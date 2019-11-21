@@ -1,4 +1,6 @@
 (function($){
+
+   $('html, body').stop().animate({scrollTop: 0 }, 500); //새로고침시 최상단으로 이동
 // ----------------------------------------------------
 // data
    const hList = [
@@ -59,10 +61,9 @@
    const gnbLi = gnbUl.children('li');
    const gnbDl = gnbLi.children('dl');
    let gnbDt = gnbDl.children('dt');
-   const gnbDtLink = gnbDt.children('a');
+   let gnbDtLink = gnbDt.children('a');
    let gnbDd = gnbDl.children('dd');
-   const gnbDdLink = gnbDd.children('a');
-
+   let gnbDdLink = gnbDd.children('a');
 // -----------------------------------------------------
 // gnb Menu 채우기
 
@@ -75,6 +76,16 @@
          gnbLi.eq(i).find(gnbDd).append('<a href="'+ hList[i].sub[j].subLink +'">'+hList[i].sub[j].subTitle+'</a>');
       }//for j
    }//for i
+
+
+// -----------------------------------------------------
+// gnb Dl.children 재정의
+   gnbDt = gnbDl.children('dt');
+   gnbDtLink = gnbDt.children('a');
+   gnbDd = gnbDl.children('dd');
+   gnbDdLink = gnbDd.children('a');
+// -----------------------------------------------------
+
 
 
 // -----------------------------------------------------
@@ -99,10 +110,13 @@ gnbDtLink.on('focus',function(){
    gnbDd.stop().slideDown();
 });
 
+
+
 gnbDdLink.eq(-1).on('blur',function(){
    gnbUl.removeClass('action');
    gnbDd.stop().slideUp();
-}) // 
+});
+
 
 
 
@@ -156,9 +170,6 @@ sideGnb.find('a').eq(-1).on('blur',function(){
 
 
 
-
-
-
 // -----------------------------------------------------
 // 페이지 네비게이션 추가
 headWrap.append('<nav id="pageNav"><h2 class="hidden">현재 페이지 네비게이션</h2><ul></ul></nav>');
@@ -183,10 +194,88 @@ pageLi.css({'height': 100 / conAreaLen + '%'});
 
 pageLi.eq(0).addClass('action');
 
+
+
 // ------------------------------------------------------
+// 페이지 내비게이션 스크롤효과
+   const scroll = $('.con_area');
+   const scVal = [];
+
+   let scrTop;
+
+   for(let i = 0; i < scroll.length; i++){
+      let scrTop = scroll.eq(i).offset().top;
+      scVal.push(scrTop);
+   };
+   console.log(scVal);
+
+   let rel = true;
+   let wheelN = 0;
+
+
+   $(window).on('mousewheel DOMMouseScroll',function(e){
+      let oe = e.originalEvent;
+      let oeDelta = oe.wheelDelta;
+      let delta = null;
+      
+      if(!oeDelta){
+         delta = oe.detail * 40;
+      }else{
+         delta = oeDelta * -1;
+      };
+      console.log(delta);
+
+      if(rel){
+         rel = false;
+         if (delta > 0) {
+            wheelN++;
+            if (wheelN >= scVal.length) {
+               wheelN = scVal.length - 1;
+            }
+         } else {
+            wheelN--;
+            if (wheelN <= 0) {
+               wheelN = 0;
+            }
+         }//if(delta)
+         $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px'},500,function(){
+            rel = true; // 중복실행방지
+            pageLi.eq(wheelN).addClass('action');
+            pageLi.eq(wheelN).siblings().removeClass('action');
+         });
+      }//if(rel)
+
+      
+   });//windowscroll
+// ---------------------------------------------------------
+// 
+   const pageLink = pageLi.children('a');
+   pageLink.on('click',function(){
+      wheelN = $(this).parent().index();
+      $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px' });
+      $(this).parent().addClass('action');
+      $(this).parent().siblings().removeClass('action');
+   });
 
 
 
+// -----------------------------------------------------------
+   let winScroll = $(window).scrollTop();// 현재 스크롤의 위치 계산용 변수
+   console.log(winScroll + '스크롤위치_초기값');
+
+   $(window).on('scroll',function(){
+      winScroll = $(window).scrollTop();
+      console.log(winScroll + '스크롤위칫');
+
+      if (winScroll > 200) {
+         pageUl.css({ backgroundColor: 'rgba(169, 31, 43, 0.5)' });
+         pageLi.children('a').css({ backgroundColor: 'rgba(169, 31, 43, 1)' });
+      } else {
+         pageUl.css({ backgroundColor: 'rgba(255,255,255,0.5)' });
+         pageLi.children('a').css({ backgroundColor: 'rgba(255,255,255, 1)' });
+      }
+
+   });
 
 
 // ------------------------------------------------------

@@ -21,7 +21,7 @@
       .slide_btn {position:absolute; z-index: 500; width: 30%; min-width: 28.125rem; height:0; top:50%; left: 12%;
          button {width: 5rem; height: 5rem; float:right; text-align:center; background-color:transparent;
          &:last-of-type {float:left;}
-         &.action i {color: $sub5;}
+         &.action i {color: $red; text-shadow:2px 2px 0 $black;}
          }//button
          i {font-size: 3rem;}
          span {@include hidden;}

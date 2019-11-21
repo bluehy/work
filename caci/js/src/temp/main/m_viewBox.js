@@ -77,8 +77,8 @@
             slideGuide.css({ 'left': 100 + '%' });
          }
          slideGuide.stop().animate({ 'left': -100 * myN + '%' });
-         // indiLi.eq(myN).addClass('action');
-         // indiLi.eq(myN).siblings().removeClass('action');
+         indiLi.eq(myN).addClass('action');
+         indiLi.eq(myN).siblings().removeClass('action');
       }, timed); // go = setInterval
    }// GoSlide()
    GoSlide();
