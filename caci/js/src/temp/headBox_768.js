@@ -15,6 +15,7 @@
    const sideDd = sideDl.children('dd');
       const sideDdLink = sideDd.children('a');
 
+// -------------------------------------------------------------
    // * 브라우저 768 이하일 때, dt클릭시 dd 나타나기 * rwd
 
    sideDtLink.on('click', function (e) {
