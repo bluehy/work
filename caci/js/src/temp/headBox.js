@@ -61,6 +61,7 @@
    let gnbDt = gnbDl.children('dt');
    const gnbDtLink = gnbDt.children('a');
    let gnbDd = gnbDl.children('dd');
+   const gnbDdLink = gnbDd.children('a');
 
 // -----------------------------------------------------
 // gnb Menu 채우기
@@ -77,16 +78,33 @@
 
 
 // -----------------------------------------------------
-// headBox영역 진입시 gnb메뉴 show
+// headBox영역 마우스 진입시 gnb메뉴 show
 gnb.on('mouseenter',function(){
    gnbUl.addClass('action');
-   gnbDd.stop().stop().slideDown();
+   gnbDd.stop().slideDown();
 });
 
 gnb.on('mouseleave',function(){
    gnbUl.removeClass('action');
-   gnbDd.stop().stop().slideUp();
+   gnbDd.stop().slideUp();
 });
+// -------------------------------------------------------
+
+
+
+// -----------------------------------------------------
+// headBox영역 focus시 gnb메뉴 show
+gnbDtLink.on('focus',function(){
+   gnbUl.addClass('action');
+   gnbDd.stop().slideDown();
+});
+
+gnbDdLink.eq(-1).on('blur',function(){
+   gnbUl.removeClass('action');
+   gnbDd.stop().slideUp();
+}) // 
+
+
 
 // -----------------------------------------------------
 // navMenu로 메뉴 오픈하기
@@ -132,11 +150,18 @@ sideGnb.find('a').eq(-1).on('blur',function(){
    closeBtn.focus();
 });
 
+// -----------------------------------------------------
+
+
+
+
+
+
+
 
 // -----------------------------------------------------
-// -----------------------------------------------------
 // 페이지 네비게이션 추가
-headWrap.append('<nav id="pageNav"><ul></ul></nav>');
+headWrap.append('<nav id="pageNav"><h2 class="hidden">현재 페이지 네비게이션</h2><ul></ul></nav>');
 
 const pageNav = headWrap.children('#pageNav');
 const pageUl = pageNav.children('ul');
@@ -157,6 +182,12 @@ pageLi.css({'height': 100 / conAreaLen + '%'});
 
 
 pageLi.eq(0).addClass('action');
+
+// ------------------------------------------------------
+
+
+
+
 
 // ------------------------------------------------------
 // // * 브라우저 768 이하일 때, dt클릭시 dd 나타나기 * rwd

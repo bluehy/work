@@ -50,10 +50,6 @@
    });
 
    // main ----------------------------------------------
-   mainBox.load('./temp/main/m_mainBox.html',function(){
-      let conJs = 'm_mainBox.js';
-      body.append('<script src="' + jsUrl + jsUrlM +conJs+'"></script>');
-   });
       // newsBox {}
       newsBox.load('./temp/main/m_newsBox.html',function(){
          let conJs = 'm_newsBox.js';
@@ -61,8 +57,17 @@
       });
 
       // infoBox {}
+      infoBox.load('./temp/main/m_infoBox.html',function(){
+         
+      });
       // coopBox {}
+      coopBox.load('./temp/main/m_coopBox.html',function(){
+
+      });
       // serviceBox {}
+      serviceBox.load('./temp/main/m_serviceBox.html',function(){
+
+      });
 
    // footer ----------------------------------------------
    footBox.load('./temp/footBox.html');

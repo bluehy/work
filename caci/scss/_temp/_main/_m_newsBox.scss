@@ -1,0 +1,10 @@
+#newsBox {position:fixed; z-index: 800; bottom: 0; left:0; width: 50%; min-width: 320px; height: 80px; background-color: $red;}
+
+
+@media screen and (max-width: 480px){
+   
+}
+
+@media screen and (max-width: 768px){
+   #newsBox {position: static; z-index:0; width: 100%; height: 80px;}
+}
