@@ -36,13 +36,17 @@
 
 #headBox .head_wrap > #gnb ul.action:before, #headBox .head_wrap > #gnb ul.action::before { padding-bottom: 1.5rem; }
 
-#headBox .head_wrap #unb { position: fixed; top: 50%; left: 5%; transform: translate(-50%, -50%); float: right; width: 3rem; height: 2.5rem; text-align: right; }
+#headBox .head_wrap #unb { float: right; top: 0; transform: translate(0); left: 5%; width: 3rem; height: 2.5rem; text-align: center; }
 
 #headBox .head_wrap #unb h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#headBox .head_wrap #unb ul { width: 100%; height: 100%; }
+#headBox .head_wrap #unb button { width: 100%; height: 100%; background-color: transparent; }
 
-#headBox .head_wrap #unb ul li { width: 100%; height: 50%; color: #fff; font-size: 0.75rem; }
+#headBox .head_wrap #unb button i { width: 100%; height: 100%; font-size: 1.5rem; text-align: center; color: #fff; line-height: 2.5rem; }
+
+#headBox .head_wrap #unb button.action i { color: #a91f2b; }
+
+#headBox .head_wrap #unb button.action + form { display: block; }
 
 #headBox .head_wrap > #navMenu { display: none; float: right; width: 2.5rem; height: 2.5rem; }
 
@@ -123,9 +127,10 @@
   #headBox .head_wrap #navMenu { display: block; } }
 
 @media screen and (min-width: 961px) and (max-width: 1280px) { #headBox .head_wrap h1 { width: 150px; height: 40px; }
-  #headBox .head_wrap #gnb > ul { position: static; float: right; transform: translate(0); min-width: 41.875rem; }
+  #headBox .head_wrap #gnb > ul { position: static; float: right; transform: translate(0); min-width: 41.875rem; margin-right: 3rem; }
+  #headBox .head_wrap #gnb > ul li { margin-right: 0.75rem; }
   #headBox .head_wrap #gnb > ul li > dl > dt > a { font-size: 1rem; padding: 0 1rem; }
-  #headBox .head_wrap #unb { display: none; } }
+  #headBox .head_wrap #unb button i { font-size: 1.125rem; } }
 
 /* viewBox.css */
 #viewBox { width: 100%; height: 100%; }

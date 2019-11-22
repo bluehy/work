@@ -3,19 +3,19 @@
    const wrap = $('#wrap');
    wrap.prepend('<header id ="headBox"></header>');
    wrap.append('<section id ="viewBox" class="con_area"></section>');
-   wrap.append('<main id="conBox" class="con_area"></main>');
+   wrap.append('<section id="formBox" class="con_area"></main>');
+   wrap.append('<section id="formBox" class="con_area"></main>');
    wrap.append('<footer id ="footBox"></footer>');
 
    const headBox = wrap.children('#headBox');
    const viewBox = wrap.children('#viewBox');
-   const conBox = wrap.children('#conBox');
+   const formBox = wrap.children('#formBox');
    const footBox = wrap.children('#footBox');
 
 
 //------------------------------------------------------------
 // load html/append <script></script>
    const jsUrl = '../js/src/temp/';
-
 
    // headBox ---------------------------------------------
    headBox.load('./temp/headBox.html', function () {
@@ -29,8 +29,11 @@
       body.append('<script src="'+ jsUrl + conJs +'"></script>');
    })
 
-   // conBox ---------------------------------------------
-
+   // formBox ---------------------------------------------
+      formBox.load('./temp/s1_login_form.html',function(){
+         let conJs = 's1_login_form.js'
+         body.append('<script src="'+ jsUrl + conJs +'"></script>');
+      })
 
    // footer ----------------------------------------------
    footBox.load('./temp/footBox.html');

@@ -36,20 +36,22 @@
          ul.action {
             &:before,&::before{padding-bottom : 1.5rem; }
             // dd{display:block;}
-         }
+         }//ul.action
       }// #gnb -------------------------------------------------------------
       
       
-      // #unb
-      #unb {position: fixed; top: 50%; left: 5%; transform:translate(-50%, -50%);float:right; width: 3rem; height: 2.5rem; text-align:right;
+      // #unb------------------------------------------------------------------
+      #unb {float: right; top: 0; transform:translate(0); left: 5%; width: 3rem; height: 2.5rem; text-align:center;
          h2 {@include hidden;}
-         ul {width: 100%; height:100%;
-            li {width: 100%; height: 50%; color: #fff; font-size: nth($font-s,1);}
-         }// ul
-      }// #unb
+         button{width: 100%; height: 100%; background-color: transparent;
+            i {width: 100%; height: 100%; font-size: nth($font_s,4); text-align:center; color: #fff; line-height: 2.5rem;}
+            &.action i {color: $red;}
+            &.action + form {display:block;}
+         }// button
+      }// #unb------------------------------------------------------------------
 
 
-      // #navMenu
+      // #navMenu------------------------------------------------------------------
       > #navMenu {display:none; float:right; width: 2.5rem; height: 2.5rem;
             // open_side_gnb
             > button {width: 2.5rem; height: 2.5rem; background-color: transparent;
@@ -97,7 +99,7 @@
                }
             }//#sideGnb.action
 
-      } //#navMenu
+      } //#navMenu------------------------------------------------------------------
 
       #navMenu:before,#navMenu::before {content:" "; display: block; position:fixed; z-index: 100; left:0; top:0; background-color: rgba($darkblue,0.5); opacity:0;}
       #navMenu.action{
@@ -153,19 +155,22 @@
 
       @media screen and (min-width: 961px) and (max-width: 1280px){
          h1 {width:150px; height: 40px};
-         #gnb > ul {position:static; float:right; transform: translate(0); min-width: 41.875rem;
+         #gnb > ul {position:static; float:right; transform: translate(0); min-width: 41.875rem; margin-right:3rem;
+            li {margin-right: nth($font_s,1);}
             li > dl > dt > a {font-size: nth($font_s,2); padding: 0 1rem; }
          }//#gnb
-         #unb {display:none;}
+         // #unb {display:none;}
+         #unb {
+            button i {font-size:nth($font_s,3)}
+         } 
       }
 
       @media screen and (min-width: 1281px) and (max-width: 1920px){
-
       }
 
       @media screen and (min-width: 1920px){
 
-      }
+      }  
 
    }//.head_wrap
 

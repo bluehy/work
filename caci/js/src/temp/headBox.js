@@ -47,7 +47,14 @@
    const headBox = $('#headBox');
    const headWrap = headBox.children('.head_wrap');
    const gnb = headWrap.children('#gnb');
+
+   
    const unb = headWrap.children('#unb');
+   const userBtn = unb.children('.user_btn');
+   const userForm = unb.children('form');
+   const formClose = userForm.children('button');
+   const formUl = userForm.children('ul');
+   const formBtn = userForm.children('.btn_form');
 
 
    const navMenu = headWrap.children('#navMenu');
@@ -117,7 +124,26 @@ gnbDdLink.eq(-1).on('blur',function(){
    gnbDd.stop().slideUp();
 });
 
+// -----------------------------------------------------
 
+
+
+// -----------------------------------------------------
+// unb 조작_ 로그인/회원가입창 나타나기
+
+userBtn.on('click',function(){
+   let has = userBtn.hasClass('action');
+   if(has){
+      $(this).removeClass('action');
+   }else{
+      $(this).addClass('action');
+   }
+}); //userBtn.on('click')
+
+
+
+
+// -----------------------------------------------------
 
 
 // -----------------------------------------------------
@@ -207,6 +233,7 @@ pageLi.eq(0).addClass('action');
       let scrTop = scroll.eq(i).offset().top;
       scVal.push(scrTop);
    };
+   console.log('con_area의 offset_top');
    console.log(scVal);
 
    let rel = true;
