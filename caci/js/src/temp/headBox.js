@@ -208,8 +208,6 @@ console.log(conAreaLen);
 
 for (let i = 0; i < conAreaLen; i++){
    pageUl.append('<li><a href="#"></a></li>');
-   // let conId = $('.con_area').eq(i).id;
-   // console.log(conId);
 }
 
 const pageLi = pageUl.children('li');
@@ -234,6 +232,7 @@ pageLi.eq(0).addClass('action');
       scVal.push(scrTop);
    };
    console.log('con_area의 offset_top');
+   console.log(scrTop);
    console.log(scVal);
 
    let rel = true;

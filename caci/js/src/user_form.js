@@ -2,9 +2,9 @@
    const body = $('body');
    const wrap = $('#wrap');
    wrap.prepend('<header id ="headBox"></header>');
-   wrap.append('<section id ="viewBox" class="con_area"></section>');
-   wrap.append('<section id="formBox" class="con_area"></main>');
-   wrap.append('<section id="formBox" class="con_area"></main>');
+   wrap.append('<section id ="viewBox"></section>');
+   wrap.append('<section id="formBox"></section>');
+   wrap.append('<article id="infoBox"></article>');
    wrap.append('<footer id ="footBox"></footer>');
 
    const headBox = wrap.children('#headBox');
