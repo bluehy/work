@@ -76,9 +76,9 @@
 
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul { width: 100%; height: auto; color: #333; }
 
-#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li { float: left; width: 33%; height: auto; min-height: 200px; margin-bottom: 3rem; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li { float: left; width: 33%; height: auto; min-height: 150px; margin-bottom: 3rem; }
 
-#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(4), #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(5) { width: 50%; }
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(4), #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul li:nth-of-type(5) { width: 50%; margin-bottom: 1rem; }
 
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dl { width: 100%; height: auto; }
 
@@ -112,8 +112,8 @@
 
 #headBox .head_wrap > #pageNav > ul > li a { display: block; width: 100%; height: 100%; }
 
-@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: 90vh; min-height: 0; max-height: 900px; padding: 3rem 0; }
-  #headBox .head_wrap #navMenu #sideGnb.action .side_guide { width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; padding: 0 5rem 5rem 0; }
+@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: 100vh; min-height: 0; max-height: 900px; padding: 3rem 0; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide { position: absolute; left: 0; width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; padding: 0 5rem 5rem 0; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area { width: 100%; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul { height: 50px; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul li { width: 50%; }
@@ -146,7 +146,7 @@
 @media screen and (max-width: 768px) { .view_wrap { height: 250px; } }
 
 /* s1_login_form.css */
-#formBox { width: 100%; height: auto; padding-top: 60px; box-sizing: border-box; background-color: #fff; overflow: hidden; }
+#formBox { width: 100%; height: auto; padding-top: 60px; box-sizing: border-box; background-image: url("../../img/sub1/formBox/backImg_01.jpg"); background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; overflow: hidden; }
 
 #formBox h2 { width: 15rem; margin: auto; text-align: center; }
 
@@ -188,7 +188,14 @@
 
 #formBox fieldset:last-of-type a:first-of-type:after, #formBox fieldset:last-of-type a:first-of-type::after { content: " "; display: block; position: absolute; top: 50%; right: -0.5rem; width: 0; height: 10px; transform: translateY(-50%); border-right: 1px solid #333; }
 
-@media screen and (max-width: 480px) { #formBox { min-width: 320px; } }
+@media screen and (max-width: 768px) { #formBox { min-width: 320px; }
+  #formBox .form_wrap { width: 100%; padding-bottom: 7rem; }
+  #formBox .form_wrap form { width: 80%; min-width: 320px; max-width: 450px; }
+  #formBox .form_wrap form fieldset > .in_form { float: none; width: 100%; height: 100px; padding: 1rem 2rem; margin-bottom: 2rem; }
+  #formBox .form_wrap form fieldset > .in_form li { margin-top: 0; }
+  #formBox .form_wrap form fieldset > .in_form li input { width: 80%; }
+  #formBox .form_wrap form fieldset > .btn_form { float: none; width: 100%; height: 100px; padding: 0 2rem; }
+  #formBox .form_wrap form fieldset > .btn_form input { position: static; transform: translate(0); width: 100%; } }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }

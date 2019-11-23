@@ -151,6 +151,7 @@ userBtn.on('click',function(){
 
 sideGuide.append('<div class="member_area"></div>');
 const memberArea = sideGuide.children('.member_area');
+memberArea.append('<ul><li><a href="">로그인</a></li><li><a href="">회원가입</a></li></ul>');
 unb.children('ul').clone(true).appendTo(memberArea);
 gnb.children('ul').clone(true).appendTo(sideGuide);
 closeBtn.hide();
@@ -236,6 +237,9 @@ pageLi.eq(0).addClass('action');
    console.log(scVal);
 
    let rel = true;
+      if(scVal.length == 0){
+         rel = false;
+      } // 스크롤 이벤트가 적용되지 않는 페이지용
    let wheelN = 0;
 
 
