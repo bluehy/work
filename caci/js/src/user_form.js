@@ -24,7 +24,7 @@
    });// headBox.load()
 
    // viewBox --------------------------------------------
-   viewBox.load('./temp/s1_viewBox.html',function(){
+   viewBox.load('./temp/sub_viewBox.html',function(){
       let conJs = 's1_viewBox.js';
       body.append('<script src="'+ jsUrl + conJs +'"></script>');
    })

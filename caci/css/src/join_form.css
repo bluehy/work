@@ -1,4 +1,4 @@
-/* user_form.css */
+/* join_form.css */
 #wrap { width: 100%; height: 100%; }
 
 /* headBox.scss */
@@ -145,73 +145,8 @@
 
 @media screen and (max-width: 768px) { .view_wrap { height: 250px; } }
 
-/* login_form.css */
-#formBox { width: 100%; height: auto; padding-top: 60px; box-sizing: border-box; background-image: url("../../img/sub1/formBox/backImg_01.jpg"); background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; overflow: hidden; }
-
-#formBox h2 { width: 15rem; margin: auto; text-align: center; }
-
-#formBox .form_wrap { width: 100%; height: auto; padding: 3rem 0 10rem; box-sizing: border-box; }
-
-#formBox .form_wrap form { width: 500px; height: auto; margin: auto; }
-
-#formBox .form_wrap form fieldset { width: 100%; height: auto; }
-
-#formBox .form_wrap form fieldset:last-of-type { width: 15rem; text-align: center; }
-
-#formBox .form_wrap form fieldset > ul { float: left; width: 300px; height: 250px; }
-
-#formBox .form_wrap form fieldset > div { float: left; width: 200px; height: 250px; }
-
-#formBox .in_form { padding: 4rem 2rem; box-sizing: border-box; margin-bottom: 2rem; }
-
-#formBox .in_form li { width: 100%; height: 50px; }
-
-#formBox .in_form li:last-of-type { margin-top: 1.5rem; }
-
-#formBox .in_form li label { float: left; width: 2rem; height: 3rem; }
-
-#formBox .in_form li label i { color: #333; font-size: 1.5rem; line-height: 3rem; }
-
-#formBox .in_form li label span { display: block; width: 0; height: 0; overflow: hidden; }
-
-#formBox .in_form li > div { position: relative; width: auto; height: 3rem; }
-
-#formBox .in_form li > div button { position: absolute; right: 0; top: 50%; width: 3rem; height: 3rem; transform: translateY(-50%); background-color: transparent; }
-
-#formBox .in_form li > div button i { width: 100%; height: 100%; line-height: 2.9rem; font-size: 1rem; text-align: center; color: #999; }
-
-#formBox .in_form li > div button.action i { color: #a91f2b; }
-
-#formBox .in_form li input { float: right; width: 200px; height: 3rem; box-sizing: border-box; border: 1px solid #00002a; }
-
-#formBox .in_form li .narr { display: none; }
-
-#formBox .in_form li.action input { border: 0; outline: 3px solid #a91f2b; }
-
-#formBox .in_form li.action .narr { float: right; display: block; width: 200px; height: 1.5rem; font-size: 0.75rem; line-height: 1.5rem; font-weight: bold; color: #f00; }
-
-#formBox .btn_form { position: relative; padding: 4rem 2rem; box-sizing: border-box; }
-
-#formBox .btn_form input { position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 80%; height: 50%; background-color: #a91f2b; border: 0; color: #fff; font-size: 1.5rem; }
-
-#formBox fieldset:last-of-type { margin: auto; }
-
-#formBox fieldset:last-of-type a { display: block; width: auto; height: auto; float: left; margin-right: 1rem; }
-
-#formBox fieldset:last-of-type a:last-of-type { margin-right: 0; }
-
-#formBox fieldset:last-of-type a:first-of-type { position: relative; }
-
-#formBox fieldset:last-of-type a:first-of-type:after, #formBox fieldset:last-of-type a:first-of-type::after { content: " "; display: block; position: absolute; top: 50%; right: -0.5rem; width: 0; height: 10px; transform: translateY(-50%); border-right: 1px solid #333; }
-
-@media screen and (max-width: 768px) { #formBox { min-width: 320px; }
-  #formBox .form_wrap { width: 100%; padding-bottom: 7rem; }
-  #formBox .form_wrap form { width: 80%; min-width: 320px; max-width: 450px; }
-  #formBox .form_wrap form fieldset > .in_form { float: none; width: 100%; height: auto; padding: 1rem 2rem; margin-bottom: 2rem; }
-  #formBox .form_wrap form fieldset > .in_form li input { width: 80%; }
-  #formBox .form_wrap form fieldset > .in_form li .narr { width: 80%; }
-  #formBox .form_wrap form fieldset > .btn_form { float: none; width: 100%; height: 100px; padding: 0 2rem; }
-  #formBox .form_wrap form fieldset > .btn_form input { position: static; transform: translate(0); width: 100%; } }
+/* joinBox.css */
+#joinBox { width: 100%; height: 100%; background-color: #dec4a4; }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }

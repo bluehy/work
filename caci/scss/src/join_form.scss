@@ -1,0 +1,23 @@
+// join_form.scss
+/* join_form.css */
+
+@import "../_basic/var";
+@import "../_basic/mixin";
+@import "../_basic/etc";
+
+#wrap {width:100%; height: 100%;}
+// ---------------------------------------
+
+// headBox
+@import "../_temp/headBox";
+
+//viewBox
+@import "../_temp/sub_viewBox";
+
+
+//joinBox
+@import "../_temp/_sub2/s2_joinBox.scss";
+#joinBox {width: 100%; height: 100%; background-color:$sub1;}
+
+// footBox
+@import "../_temp/footBox";
