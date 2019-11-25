@@ -24,7 +24,7 @@
       const serviceBox = mainBox.children('#serviceBox');
 
 
-   wrap.append('<footer id="footBox" class="con_area"></footBox>');
+   wrap.append('<footer id="footBox"></footBox>');
    const footBox = wrap.children('#footBox');
    // ------------------------------------------------
 

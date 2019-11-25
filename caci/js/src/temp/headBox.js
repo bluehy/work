@@ -141,8 +141,6 @@ userBtn.on('click',function(){
 }); //userBtn.on('click')
 
 
-
-
 // -----------------------------------------------------
 
 
@@ -222,7 +220,7 @@ pageLi.eq(0).addClass('action');
 
 
 // ------------------------------------------------------
-// 페이지 내비게이션 스크롤효과
+// 페이지 내비게이션 스크롤되는 요소 추출, 위치값 배열화
    const scroll = $('.con_area');
    const scVal = [];
 
@@ -235,6 +233,34 @@ pageLi.eq(0).addClass('action');
    console.log('con_area의 offset_top');
    console.log(scrTop);
    console.log(scVal);
+// ----------------------------------------------------
+
+
+
+// -----------------------------------------------------------
+// viewBox벗어난 후에 페이지내비게이션 색상 전환
+   let winScroll = $(window).scrollTop();// 현재 스크롤의 위치 계산용 변수
+   console.log(winScroll + '스크롤위치_초기값');
+
+   $(window).on('scroll', function () {
+      winScroll = $(window).scrollTop();
+      console.log(winScroll + '스크롤위칫');
+
+      if (winScroll > 200) {// 페이지내 위치 인디케이터 표시 전환
+         pageUl.css({ backgroundColor: 'rgba(169, 31, 43, 0.5)' });
+         pageLi.children('a').css({ backgroundColor: 'rgba(169, 31, 43, 1)' });
+      } else {
+         pageUl.css({ backgroundColor: 'rgba(255,255,255,0.5)' });
+         pageLi.children('a').css({ backgroundColor: 'rgba(255,255,255, 1)' });
+      }
+
+   });
+// --------------------------------------------------------------
+
+   console.log(scVal[scVal.length-1]+'엥');
+
+// -----------------------------------------------------------
+// 스크롤 내리면 아래로, 올리면 위로 이동하는 효과
 
    let rel = true;
       if(scVal.length == 0){
@@ -255,6 +281,14 @@ pageLi.eq(0).addClass('action');
       };
       console.log(delta);
 
+      // if (winScroll >= scVal[scVal.length - 1]) {
+      //    rel = false;
+      //    wheelN = scVal.length - 1;
+      // }// 스크롤이 con_area영역을 넘어섰을 경우에는, 스크롤 이벤트X
+      // else{
+      //    rel =true;
+      // } 조정중...
+
       if(rel){
          rel = false;
          if (delta > 0) {
@@ -268,9 +302,10 @@ pageLi.eq(0).addClass('action');
                wheelN = 0;
             }
          }//if(delta)
+
          $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px'},500,function(){
             rel = true; // 중복실행방지
-            pageLi.eq(wheelN).addClass('action');
+            pageLi.eq(wheelN).addClass('action');  // 페이지내 위치 인디케이터 표시 전환
             pageLi.eq(wheelN).siblings().removeClass('action');
          });
       }//if(rel)
@@ -278,7 +313,7 @@ pageLi.eq(0).addClass('action');
       
    });//windowscroll
 // ---------------------------------------------------------
-// 
+// 페이지 인디케이터로 이동
    const pageLink = pageLi.children('a');
    pageLink.on('click',function(){
       wheelN = $(this).parent().index();
@@ -290,23 +325,6 @@ pageLi.eq(0).addClass('action');
 
 
 // -----------------------------------------------------------
-   let winScroll = $(window).scrollTop();// 현재 스크롤의 위치 계산용 변수
-   console.log(winScroll + '스크롤위치_초기값');
-
-   $(window).on('scroll',function(){
-      winScroll = $(window).scrollTop();
-      console.log(winScroll + '스크롤위칫');
-
-      if (winScroll > 200) {
-         pageUl.css({ backgroundColor: 'rgba(169, 31, 43, 0.5)' });
-         pageLi.children('a').css({ backgroundColor: 'rgba(169, 31, 43, 1)' });
-      } else {
-         pageUl.css({ backgroundColor: 'rgba(255,255,255,0.5)' });
-         pageLi.children('a').css({ backgroundColor: 'rgba(255,255,255, 1)' });
-      }
-
-   });
-
 
 // ------------------------------------------------------
 // // * 브라우저 768 이하일 때, dt클릭시 dd 나타나기 * rwd
