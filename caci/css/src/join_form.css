@@ -146,7 +146,7 @@
 @media screen and (max-width: 768px) { .view_wrap { height: 250px; } }
 
 /* joinBox.css */
-#joinBox { width: 100%; height: 100%; background-color: #dec4a4; }
+#joinBox { width: 100%; height: 100%; background-color: #fff; }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }
