@@ -202,7 +202,7 @@ headWrap.append('<nav id="pageNav"><h2 class="hidden">현재 페이지 네비게
 const pageNav = headWrap.children('#pageNav');
 const pageUl = pageNav.children('ul');
 
-let conAreaLen = $('.con_area').length;
+let conAreaLen = $('.con_area').length - 1; // footer 제외한 con_area의 갯수만큼 인디케이터 나타나게 수치 조절
 console.log(conAreaLen);
 
 for (let i = 0; i < conAreaLen; i++){
@@ -268,6 +268,9 @@ pageLi.eq(0).addClass('action');
       } // 스크롤 이벤트가 적용되지 않는 페이지용
    let wheelN = 0;
 
+   // if (winScroll >= scVal[scVal.length - 1]) {
+   //    rel = false;
+   // }// 스크롤이 con_area영역을 넘어섰을 경우에는, 스크롤 이벤트X
 
    $(window).on('mousewheel DOMMouseScroll',function(e){
       let oe = e.originalEvent;
@@ -280,16 +283,9 @@ pageLi.eq(0).addClass('action');
          delta = oeDelta * -1;
       };
       console.log(delta);
+     
 
-      // if (winScroll >= scVal[scVal.length - 1]) {
-      //    rel = false;
-      //    wheelN = scVal.length - 1;
-      // }// 스크롤이 con_area영역을 넘어섰을 경우에는, 스크롤 이벤트X
-      // else{
-      //    rel =true;
-      // } 조정중...
-
-      if(rel){
+      if (rel) {
          rel = false;
          if (delta > 0) {
             wheelN++;
@@ -303,13 +299,12 @@ pageLi.eq(0).addClass('action');
             }
          }//if(delta)
 
-         $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px'},500,function(){
+         $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px' }, 500, function () {
             rel = true; // 중복실행방지
             pageLi.eq(wheelN).addClass('action');  // 페이지내 위치 인디케이터 표시 전환
             pageLi.eq(wheelN).siblings().removeClass('action');
          });
       }//if(rel)
-
       
    });//windowscroll
 // ---------------------------------------------------------
