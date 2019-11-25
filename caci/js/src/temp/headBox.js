@@ -203,7 +203,7 @@ const pageNav = headWrap.children('#pageNav');
 const pageUl = pageNav.children('ul');
 
 let conAreaLen = $('.con_area').length - 1; // footer 제외한 con_area의 갯수만큼 인디케이터 나타나게 수치 조절
-console.log(conAreaLen);
+// console.log(conAreaLen);
 
 for (let i = 0; i < conAreaLen; i++){
    pageUl.append('<li><a href="#"></a></li>');
@@ -230,9 +230,9 @@ pageLi.eq(0).addClass('action');
       let scrTop = scroll.eq(i).offset().top;
       scVal.push(scrTop);
    };
-   console.log('con_area의 offset_top');
-   console.log(scrTop);
-   console.log(scVal);
+   // console.log('con_area의 offset_top');
+   // console.log(scrTop);
+   // console.log(scVal);
 // ----------------------------------------------------
 
 
@@ -240,11 +240,11 @@ pageLi.eq(0).addClass('action');
 // -----------------------------------------------------------
 // viewBox벗어난 후에 페이지내비게이션 색상 전환
    let winScroll = $(window).scrollTop();// 현재 스크롤의 위치 계산용 변수
-   console.log(winScroll + '스크롤위치_초기값');
+   // console.log(winScroll + '스크롤위치_초기값');
 
    $(window).on('scroll', function () {
       winScroll = $(window).scrollTop();
-      console.log(winScroll + '스크롤위칫');
+      // console.log(winScroll + '스크롤위칫');
 
       if (winScroll > 200) {// 페이지내 위치 인디케이터 표시 전환
          pageUl.css({ backgroundColor: 'rgba(169, 31, 43, 0.5)' });
@@ -257,7 +257,7 @@ pageLi.eq(0).addClass('action');
    });
 // --------------------------------------------------------------
 
-   console.log(scVal[scVal.length-1]+'엥');
+
 
 // -----------------------------------------------------------
 // 스크롤 내리면 아래로, 올리면 위로 이동하는 효과
@@ -282,7 +282,7 @@ pageLi.eq(0).addClass('action');
       }else{
          delta = oeDelta * -1;
       };
-      console.log(delta);
+      // console.log(delta);
      
 
       if (rel) {

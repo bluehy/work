@@ -174,7 +174,21 @@
 
 #formBox .in_form li label span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#formBox .in_form li input { float: right; width: 200px; height: 3rem; border: 1px solid #00002a; }
+#formBox .in_form li > div { position: relative; width: auto; height: 3rem; }
+
+#formBox .in_form li > div button { position: absolute; right: 0; top: 50%; width: 3rem; height: 3rem; transform: translateY(-50%); background-color: transparent; }
+
+#formBox .in_form li > div button i { width: 100%; height: 100%; line-height: 2.9rem; font-size: 1rem; text-align: center; color: #999; }
+
+#formBox .in_form li > div button.action i { color: #a91f2b; }
+
+#formBox .in_form li input { float: right; width: 200px; height: 3rem; box-sizing: border-box; border: 1px solid #00002a; }
+
+#formBox .in_form li .narr { display: none; }
+
+#formBox .in_form li.action input { border: 0; outline: 3px solid #a91f2b; }
+
+#formBox .in_form li.action .narr { float: right; display: block; width: 200px; height: 1.5rem; font-size: 0.75rem; line-height: 1.5rem; font-weight: bold; color: #f00; }
 
 #formBox .btn_form { position: relative; padding: 4rem 2rem; box-sizing: border-box; }
 
@@ -195,6 +209,7 @@
   #formBox .form_wrap form { width: 80%; min-width: 320px; max-width: 450px; }
   #formBox .form_wrap form fieldset > .in_form { float: none; width: 100%; height: auto; padding: 1rem 2rem; margin-bottom: 2rem; }
   #formBox .form_wrap form fieldset > .in_form li input { width: 80%; }
+  #formBox .form_wrap form fieldset > .in_form li .narr { width: 80%; }
   #formBox .form_wrap form fieldset > .btn_form { float: none; width: 100%; height: 100px; padding: 0 2rem; }
   #formBox .form_wrap form fieldset > .btn_form input { position: static; transform: translate(0); width: 100%; } }
 
