@@ -59,7 +59,8 @@
       });
       // serviceBox {}
       serviceBox.load('./temp/main/m_serviceBox.html',function(){
-
+         conJs = 'm_serviceBox.js';
+         body.append('<script src="'+ jsUrl + jsUrlM + conJs +'"></script>');
       });
 
       

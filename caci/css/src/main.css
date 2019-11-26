@@ -233,9 +233,11 @@
 
 .service_wrap > ul li a span { display: block; position: relative; top: 50%; transform: translateY(-50%); }
 
-.service_wrap .area_view { width: 100%; height: 400px; margin: auto; overflow: hidden; }
+.service_wrap > ul li.action { color: #a91f2b; font-weight: bold; }
 
-.service_wrap .area_view > ul { position: relative; width: 207.5rem; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem; overflow-x: scroll; overflow-y: hidden; }
+.service_wrap .area_view { width: 100%; height: 400px; margin: auto; overflow: hidden; position: relative; }
+
+.service_wrap .area_view > ul { position: absolute; top: 0; width: 207.5rem; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem; overflow-x: scroll; overflow-y: hidden; transition: all 300ms ease; }
 
 .service_wrap .area_view > ul li { float: left; width: 37.5rem; height: 100%; background-color: #dec4a4; margin-right: 5rem; }
 

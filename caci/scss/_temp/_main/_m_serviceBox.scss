@@ -9,15 +9,16 @@
          a {display: block; width: 100%; height: 100%;
             span {display: block; position:relative;top:50%; transform:translateY(-50%);}
          }//a
+      &.action {color: $red; font-weight: bold;}
       }//li
    }//ul
 }//.service_wrap
 
 
 .service_wrap {
-   .area_view {width: 100%; height: 400px; margin:auto; overflow:hidden;
-      > ul {$count: 5; position: relative;
-         width:207.5rem; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem;overflow-x:scroll; overflow-y:hidden;
+   .area_view {width: 100%; height: 400px; margin:auto; overflow:hidden; position:relative;
+      > ul {$count: 5; position: absolute; top:0;
+         width:207.5rem; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem;overflow-x:scroll; overflow-y:hidden; transition:all 300ms ease;
          li {float:left; width: 37.5rem; height:100%; background-color: $sub1; margin-right: 5rem;}
       &:after,&::after {content:" "; display: block; width: 0; height: 0; clear:both;}
       }//ul
