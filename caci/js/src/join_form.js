@@ -29,7 +29,9 @@
 
    // viewBox
    viewBox.load('./temp/sub_viewBox.html',function(){
+      let viewJs = 'sub_viewBox.js';
       let conJs = 's2_viewBox.js';
+      body.append('<script src="'+ jsUrl + viewJs +'"></script>');
       body.append('<script src="'+ jsUrl + conJs +'"></script>');
    })
 

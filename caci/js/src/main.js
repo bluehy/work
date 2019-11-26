@@ -35,19 +35,12 @@
    const jsUrlM = 'main/';
 
 
-   // headBox ---------------------------------------------
-   headBox.load('./temp/headBox.html',function(){
-      let conJs = 'headBox.js';
-      body.append('<script src="'+jsUrl + conJs+'"></script>');
-      
-   });// headBox.load()
-
-
    // viewBox ----------------------------------------------
    viewBox.load('./temp/main/m_viewBox.html',function(){
       let conJs = 'm_viewBox.js';
       body.append('<script src="'+ jsUrl + jsUrlM + conJs +'"></script>');
    });
+
 
    // main ----------------------------------------------
       // newsBox {}
@@ -69,9 +62,17 @@
 
       });
 
+      
    // footer ----------------------------------------------
    footBox.load('./temp/footBox.html');
 
+
+   // headBox ---------------------------------------------
+   headBox.load('./temp/headBox.html', function () {
+      let conJs = 'headBox.js';
+      body.append('<script src="' + jsUrl + conJs + '"></script>');
+
+   });// headBox.load()
 
 
 

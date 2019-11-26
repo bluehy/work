@@ -1,1 +1,20 @@
-#infoBox {width: 100%; height: 600px; background-color: $sub1;}
+#infoBox {width: 100%; height: auto; padding:8rem 0; background-color: #fff;
+   h3 {width: 50%; min-width: 320px; height:auto; margin:auto; margin-bottom: 4rem; text-align:center;}
+   .info_wrap {width: 80%; min-width: 320px; margin:auto; height: auto; min-height: 100px;
+      ul {width: 100%; height:auto; margin:auto; padding:0 2rem; box-sizing:border-box;
+         li {float:left; width: 20%; height: 150px; margin-right: 5%;
+            a {display: block; width: 100%; height: 100%; text-align:center;}
+            dl{width: 100%; height: 100%;
+               dt {width: 100%; height: 100px;
+                  i {width: 100%; height: 100%; font-size: nth($font_s,5); text-align:center; line-height: 100px;}
+               }
+               dd {width: 100%; height: 50px;}
+            }
+            
+            
+            
+         &:last-of-type {margin-right: 0;}
+         }//li
+      }//ul   
+   }//div.info_wrap
+}//#infoBox

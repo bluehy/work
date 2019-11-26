@@ -90,7 +90,7 @@
 
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd a { float: none; display: block; width: 100%; height: auto; padding: 0.2rem 0; margin: auto; margin-bottom: 0.5rem; text-align: center; }
 
-#headBox .head_wrap > #navMenu #sideGnb.action { width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 3rem 1rem; }
+#headBox .head_wrap > #navMenu #sideGnb.action { width: 100%; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 3rem 1rem; }
 
 #headBox .head_wrap > #navMenu #sideGnb.action .member_area { width: 100%; height: auto; opacity: 1; }
 
@@ -112,8 +112,8 @@
 
 #headBox .head_wrap > #pageNav > ul > li a { display: block; width: 100%; height: 100%; }
 
-@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100vw; height: 100vh; min-height: 0; max-height: 900px; padding: 3rem 0; }
-  #headBox .head_wrap #navMenu #sideGnb.action .side_guide { position: absolute; left: 0; width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; padding: 0 5rem 5rem 0; }
+@media screen and (max-width: 768px) { #headBox .head_wrap #navMenu #sideGnb.action { width: 100%; height: 100%; min-height: 0; padding: 3rem 0; }
+  #headBox .head_wrap #navMenu #sideGnb.action .side_guide { position: absolute; left: 0; width: 100%; height: 90%; overflow-x: hidden; overflow-y: auto; padding: 0 5rem 5rem 0; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area { width: 100%; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul { height: 50px; }
   #headBox .head_wrap #navMenu #sideGnb.action .side_guide .member_area ul li { width: 50%; }
@@ -133,7 +133,7 @@
   #headBox .head_wrap #unb button i { font-size: 1.125rem; } }
 
 /* viewBox.css */
-.view_wrap { position: relative; top: 0; left: 0; width: 100%; height: 500px; padding-top: 60px; box-sizing: border-box; background-color: #caf; background-image: url("../../img/sub1/viewBox/viewImg.jpg"); background-position: 50% 50%; background-size: 100%; background-repeat: no-repeat; background-attachment: fixed; }
+.view_wrap { position: relative; top: 0; left: 0; width: 100%; height: 500px; padding-top: 60px; box-sizing: border-box; background-color: #caf; background-image: url("../../img/sub1/viewBox/viewImg.jpg"); background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
 
 .view_wrap .page_btn { position: absolute; top: 50%; left: 50%; width: 90%; height: 0; transform: translate(-50%); }
 
@@ -163,16 +163,21 @@
 
 .page_indicator ul li:last-of-type a:after { display: none; }
 
-@media screen and (max-width: 768px) { .view_wrap { height: 250px; background-position: 50% 50%; background-size: auto 150%; } }
+@media screen and (max-width: 768px) { .view_wrap { height: 250px; background-position: 50% 50%; } }
 
-@media screen and (max-width: 968px) { .view_wrap { background-position: 50% 50%; } }
+@media screen and (max-width: 968px) { .view_wrap { background-position: 50% 50%; }
+  .page_indicator h3 { float: left; width: 50%; height: 100%; line-height: 5rem; text-align: center; background-color: #f9f4ed; }
+  .page_indicator ul { float: right; width: 50%; }
+  .page_indicator ul li { display: none; float: none; position: relative; z-index: 500; background-color: #eaf2f5; }
+  .page_indicator ul li a:after { display: none; }
+  .page_indicator ul li.action { display: block; } }
 
 /* login_form.css */
-#formBox { width: 100%; height: auto; padding-top: 60px; box-sizing: border-box; background-image: url("../../img/sub1/formBox/backImg_01.jpg"); background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; overflow: hidden; }
+#formBox { width: 100%; height: auto; padding-top: 14rem; box-sizing: border-box; background-image: url("../../img/sub1/formBox/backImg_01.jpg"); background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; overflow: hidden; }
 
 #formBox h2 { width: 15rem; margin: auto; text-align: center; }
 
-#formBox .form_wrap { width: 100%; height: auto; padding: 3rem 0 10rem; box-sizing: border-box; }
+#formBox .form_wrap { width: 100%; height: auto; padding: 4rem 0 15rem; box-sizing: border-box; }
 
 #formBox .form_wrap form { width: 500px; height: auto; margin: auto; }
 
@@ -184,7 +189,7 @@
 
 #formBox .form_wrap form fieldset > div { float: left; width: 200px; height: 250px; }
 
-#formBox .in_form { padding: 4rem 2rem; box-sizing: border-box; margin-bottom: 2rem; }
+#formBox .in_form { padding: 4rem 2rem; box-sizing: border-box; margin-bottom: 3rem; }
 
 #formBox .in_form li { width: 100%; height: 50px; }
 
@@ -196,6 +201,8 @@
 
 #formBox .in_form li label span { display: block; width: 0; height: 0; overflow: hidden; }
 
+#formBox .in_form li:last-of-type label { position: relative; z-index: 100; }
+
 #formBox .in_form li > div { position: relative; width: auto; height: 3rem; }
 
 #formBox .in_form li > div button { position: absolute; right: 0; top: 50%; width: 3rem; height: 3rem; transform: translateY(-50%); background-color: transparent; }
@@ -204,7 +211,7 @@
 
 #formBox .in_form li > div button.action i { color: #a91f2b; }
 
-#formBox .in_form li input { float: right; width: 200px; height: 3rem; box-sizing: border-box; border: 1px solid #00002a; }
+#formBox .in_form li input { float: right; width: 200px; height: 3rem; box-sizing: border-box; border: 0; border-bottom: 1px solid #00002a; background-color: rgba(234, 242, 245, 0.5); }
 
 #formBox .in_form li .narr { display: none; }
 

@@ -92,7 +92,7 @@
                   }//ul
                }//.side_guide
             }//#sideGnb                
-            #sideGnb.action {width: 90vw; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: $sub2; color: $black; opacity:1; padding: 3rem 1rem;
+            #sideGnb.action {width: 100%; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: $sub2; color: $black; opacity:1; padding: 3rem 1rem;
                .member_area{width: 100%; height: auto; opacity:1;}
                dl {display:block;
                dd {display:block;}
@@ -118,6 +118,8 @@
       }// #pageNav
 
 
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // device별 사이즈 변경
       @media screen and (max-width: 480px){
 
@@ -126,8 +128,8 @@
 
       @media screen and (max-width: 768px){
          #navMenu{
-            #sideGnb.action {width: 100vw; height: 100vh; min-height: 0; max-height: 900px; padding: 3rem 0;
-               .side_guide{position: absolute; left:0; width: 100%; height: 100%; overflow-x:hidden; overflow-y:auto; padding:0 5rem 5rem 0;
+            #sideGnb.action {width: 100%; height: 100%; min-height: 0; padding: 3rem 0;
+               .side_guide{position: absolute; left:0; width: 100%; height: 90%; overflow-x:hidden; overflow-y:auto; padding:0 5rem 5rem 0;
                   .member_area {width: 100%;
                      ul{height: 50px;
                         li {width: 50%;}

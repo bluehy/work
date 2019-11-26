@@ -1,11 +1,11 @@
 // s2_joinBox.scss
 /* joinBox.css */
 #joinBox {width: 100%; height: auto; min-height: 100%; background-color:$white; padding-top:60px; box-sizing:border-box; 
-   h2 {width: 500px; height:auto; margin:auto; text-align:center;}
+   h2 {width:50%; min-width: 20rem; max-width:30rem; height:auto; margin:auto; text-align:center;}
 }//#joinBox
 
 .join_wrap {width: 100%; height: auto; padding: 3rem 0 10rem; box-sizing:border-box;
-   p {width: 50%; max-width: 31.25rem; height: auto; margin:auto; margin-bottom: 1rem; text-align:center; word-break: keep-all;}
+   p {width: 50%; min-width: 20rem; max-width:30rem; height: auto; margin:auto; margin-bottom: 1rem; text-align:center; word-break: keep-all;}
 
 
 

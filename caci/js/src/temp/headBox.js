@@ -149,7 +149,7 @@ userBtn.on('click',function(){
 
 sideGuide.append('<div class="member_area"></div>');
 const memberArea = sideGuide.children('.member_area');
-memberArea.append('<ul><li><a href="">로그인</a></li><li><a href="">회원가입</a></li></ul>');
+memberArea.append('<ul><li><a href="./user_form.html">로그인</a></li><li><a href="./join_form.html">회원가입</a></li></ul>');
 unb.children('ul').clone(true).appendTo(memberArea);
 gnb.children('ul').clone(true).appendTo(sideGuide);
 closeBtn.hide();
@@ -225,14 +225,14 @@ pageLi.eq(0).addClass('action');
    const scVal = [];
 
    let scrTop;
-
+   
    for(let i = 0; i < scroll.length; i++){
       let scrTop = scroll.eq(i).offset().top;
       scVal.push(scrTop);
    };
    // console.log('con_area의 offset_top');
    // console.log(scrTop);
-   // console.log(scVal);
+   console.log(scVal);
 // ----------------------------------------------------
 
 
