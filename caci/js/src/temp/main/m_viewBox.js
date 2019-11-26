@@ -32,7 +32,16 @@
       slideGuide.children('li').eq(i).find('a').css({backgroundImage:'url("../img/main/viewBox/slideImg'+j+'.jpg")'});
    };
    // ------------------------------------------------------
+  
+   // ------------------------------------------------------
+   // 
+   slideGuide.children('li').append('<div></div>');
+   slideGuide.children('li').children('div').append('<h3></h3>');
 
+
+
+
+   // ------------------------------------------------------
 
 
    // ------------------------------------------------------
@@ -59,9 +68,10 @@
 
    slideGuide.css({width: 100 * slideLen +'%',marginLeft:-100 + '%'});
    slideLi.css({width:100 / slideLen + '%'});
+   slideLi.children('div').css({ 'width': 100 / slideLen + '%' });
    // ---------------------------------------------------------
 
-
+   
 
    // ------------------------------------------------------
    // 자동 슬라이드

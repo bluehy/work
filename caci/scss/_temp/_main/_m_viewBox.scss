@@ -18,7 +18,7 @@
 
 
       // slide_btn
-      .slide_btn {position:absolute; z-index: 500; width: 30%; min-width: 28.125rem; height:0; top:50%; left: 12%;
+      .slide_btn {position:absolute; z-index: 500; width: 40%; min-width: 28.125rem; height:0; top:50%; left: 12%;
          button {width: 5rem; height: 5rem; float:right; text-align:center; background-color:transparent;
          &:last-of-type {float:left;}
          &.action i {color: $red; text-shadow:2px 2px 0 $black;}
@@ -35,9 +35,11 @@
       // slide_guide
       .slide_guide{position:relative; z-index:0; height:100%; 
          li {float:left; height: 100%; 
-            a {display:block; width: 100%; height: 100%;padding-top:3.75rem; box-sizing:border-box; background-repeat:no-repeat; background-position: 50% 50%; background-size: cover; }
-         }
-      }
+            a {position:relative; display:block; width: 100%; height: 100%; padding-top:3.75rem; box-sizing:border-box; background-repeat:no-repeat; background-position: 50% 50%; background-size: cover; }
+            a:after,a::after {content:" "; display: block; position:absolute; top:0; width: 100%; height: 100%; background: linear-gradient(-90deg,rgba(0,0,0,0.8) 10%,rgba(0,0,0,0));}
+            >div {height: 100%;}
+         }//li
+      }//.slide_guide
 
 
 

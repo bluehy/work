@@ -30,12 +30,15 @@
    // viewBox
    viewBox.load('./temp/sub_viewBox.html',function(){
       let conJs = 's2_viewBox.js';
-      body.append('<script src="'+ jsUrl + conJs +'"></script>')
+      body.append('<script src="'+ jsUrl + conJs +'"></script>');
    })
 
 
    // joinBox
-
+   joinBox.load('./temp/s2_joinBox.html',function(){
+      let conJs = 's2_joinBox.js';
+      body.append('<script src="'+ jsUrl + conJs +'"></script>');
+   })
 
 
    // footBox

@@ -149,7 +149,7 @@
 
 #viewBox .slide_wrap .indicator li a { display: block; width: 100%; height: 100%; }
 
-#viewBox .slide_wrap .slide_btn { position: absolute; z-index: 500; width: 30%; min-width: 28.125rem; height: 0; top: 50%; left: 12%; }
+#viewBox .slide_wrap .slide_btn { position: absolute; z-index: 500; width: 40%; min-width: 28.125rem; height: 0; top: 50%; left: 12%; }
 
 #viewBox .slide_wrap .slide_btn button { width: 5rem; height: 5rem; float: right; text-align: center; background-color: transparent; }
 
@@ -165,7 +165,11 @@
 
 #viewBox .slide_wrap .slide_guide li { float: left; height: 100%; }
 
-#viewBox .slide_wrap .slide_guide li a { display: block; width: 100%; height: 100%; padding-top: 3.75rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+#viewBox .slide_wrap .slide_guide li a { position: relative; display: block; width: 100%; height: 100%; padding-top: 3.75rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+
+#viewBox .slide_wrap .slide_guide li a:after, #viewBox .slide_wrap .slide_guide li a::after { content: " "; display: block; position: absolute; top: 0; width: 100%; height: 100%; background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0)); }
+
+#viewBox .slide_wrap .slide_guide li > div { height: 100%; }
 
 @media screen and (max-width: 768px) { #viewBox .slide_wrap .indicator { bottom: 10%; right: 50%; }
   #viewBox .slide_wrap .slide_btn { width: 100%; min-width: 320px; left: 50%; transform: translate(-50%); } }

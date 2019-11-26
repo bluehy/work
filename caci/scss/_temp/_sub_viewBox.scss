@@ -14,12 +14,16 @@
 .page_indicator {width: 100%; height: 5rem; border-bottom:1px solid darken($sub2,10%); box-sizing:border-box;
    h3{@include hidden;}
    ul{$count:3;
-      width: 50%; height: 100%; margin:auto;
+      width: 60%; height: 100%; margin:auto;
       li {float:left; width: 100% / $count; height: 100%;
          a {position:relative; display: block; width: 100%; height: 100%; margin:auto; padding: 1rem 0; box-sizing:border-box; text-align:center; color: $sub4; font-weight: bold; line-height:3rem;}
          a:after {content:" "; display: block; width: 0; height: 60%; position:absolute; top:50%; right: 0; border-right: 1px solid darken($sub2,10%); transform: translateY(-50%);}
+      &.action > a {background-color: $red; color: $sub3; font-size:1.1rem;
+         &:after {display:none;}
+      }//li.action a
       &:last-of-type {border-right: 0;}
       &:last-of-type a:after {display:none;}
+      
       }//li
    }//ul
 }//.page_indicator
