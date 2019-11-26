@@ -1,4 +1,6 @@
 (function($){
+
+
    const serviceBox = $('#serviceBox');
    const serviceWrap = serviceBox.children('.service_wrap');
 
@@ -32,10 +34,41 @@ categoryLi.children('a').on('click',function(e){
       
 });
 
+// ------------------------------------------------------
 
 
 
 // ------------------------------------------------------
+// action이 들어간 이미지들 자동슬라이드
+
+let timed = 3000;
+let myN = 0;
+let go;
+
+const AreaSlideGo = function(){
+   
+   let go = setInterval(function(){
+      let UlAction = areaView.children('.action');
+      myN++;
+      UlAction.stop().animate({'marginLeft':'-20%'},function(){
+         UlAction.children('li').eq(0).appendTo(UlAction);
+         UlAction.css({'marginLeft':'0'});
+      });      
+   },timed )//setInterval()
+   
+}//AreaSlideGo();
+AreaSlideGo();
+
+const StopAreaSlide = function(){
+   clearInterval(go);
+}//StopAreaSlide();
+
+
+// ------------------------------------------------------
+
+
+
+
 
 
 })(jQuery);
