@@ -219,7 +219,31 @@
 @media screen and (min-width: 968px) { .coop_area ul { height: 600px; }
   .coop_area ul li { float: left; width: 33.333333%; height: 100%; } }
 
-#serviceBox { width: 100%; height: 600px; background-color: #faf; }
+#serviceBox { width: 100%; height: auto; min-height: 600px; padding: 8rem 0; background-color: #fff; }
+
+#serviceBox h3 { width: 50%; min-width: 320px; height: auto; margin: auto; margin-bottom: 4rem; text-align: center; }
+
+.service_wrap { width: 100%; height: auto; }
+
+.service_wrap > ul { width: 60%; min-width: 320px; max-width: 1280px; margin: auto; text-align: center; margin-bottom: 3rem; }
+
+.service_wrap > ul li { float: left; width: 14%; height: 2.5rem; padding: 0 0.5rem; word-break: keep-all; }
+
+.service_wrap > ul li a { display: block; width: 100%; height: 100%; }
+
+.service_wrap > ul li a span { display: block; position: relative; top: 50%; transform: translateY(-50%); }
+
+.service_wrap .area_view { width: 100%; height: 400px; margin: auto; overflow: hidden; }
+
+.service_wrap .area_view > ul { position: relative; width: 207.5rem; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem; overflow-x: scroll; overflow-y: hidden; }
+
+.service_wrap .area_view > ul li { float: left; width: 37.5rem; height: 100%; background-color: #dec4a4; margin-right: 5rem; }
+
+.service_wrap .area_view > ul:after, .service_wrap .area_view > ul::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+.service_wrap .area_view ul { display: none; }
+
+.service_wrap .area_view ul.action { display: block; }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }

@@ -230,6 +230,7 @@ pageLi.eq(0).addClass('action');
       let scrTop = scroll.eq(i).offset().top;
       scVal.push(scrTop);
    };
+ 
    // console.log('con_area의 offset_top');
    // console.log(scrTop);
    console.log(scVal);
