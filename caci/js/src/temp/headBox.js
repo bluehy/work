@@ -341,6 +341,8 @@ pageLi.eq(0).addClass('action');
 
          case device[1]:
             body.append('<script src="../js/src/temp/headBox_768.js"></script>');
+            rel = false;
+            pageUl.hide();
             break;
 
          case device[2]:

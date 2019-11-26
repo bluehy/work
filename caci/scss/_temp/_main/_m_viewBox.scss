@@ -6,7 +6,7 @@
 
 
       // indicator
-      .indicator {position:absolute; z-index: 500; width: auto; min-width: 224px; height: 0.5rem; bottom: 5%; right: 30%; transform:translate(50%);
+      .indicator {position:absolute; z-index: 500; width: auto; min-width: 224px; height: 0.5rem; bottom: 8rem; right: 30%; transform:translate(50%);
          li {float:left; width: 3.125rem; height: 100%; margin-right: 0.5rem; background-color: $sub1;
          &:last-of-type {margin-right:0;}
          &.action {background-color: $red;}
