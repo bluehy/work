@@ -9,7 +9,7 @@
    
    const areaView = serviceWrap.children('.area_view');
    const areaUl = areaView.children('ul');
-
+   const areaLi =areaUl.children('li');
 // ------------------------------------------------------
 
 
@@ -38,22 +38,33 @@ categoryLi.children('a').on('click',function(e){
 
 
 
+
+// ------------------------------------------------------
+// Li갯수에 맞춰 Ul 사이즈 조절하기
+
+
+
+
+// ------------------------------------------------------
+
+
+
 // ------------------------------------------------------
 // action이 들어간 이미지들 자동슬라이드
 
 let timed = 3000;
-let myN = 0;
+// let myN = 0;
 let go;
+
 
 const AreaSlideGo = function(){
    
-   let go = setInterval(function(){
+   go = setInterval(function(){
       let UlAction = areaView.children('.action');
-      myN++;
-      UlAction.stop().animate({'marginLeft':'-20%'},function(){
-         UlAction.children('li').eq(0).appendTo(UlAction);
-         UlAction.css({'marginLeft':'0'});
-      });      
+      UlAction.css({'marginLeft':600 + 'px'});
+      UlAction.children('li').eq(0).appendTo(UlAction);
+      // console.log(myN);
+      UlAction.stop().animate({ 'marginLeft': 0});//          
    },timed )//setInterval()
    
 }//AreaSlideGo();
@@ -63,12 +74,16 @@ const StopAreaSlide = function(){
    clearInterval(go);
 }//StopAreaSlide();
 
-
 // ------------------------------------------------------
 
+areaUl.on('mouseenter',function(){
+   StopAreaSlide();
+});
 
 
-
+areaUl.on('mouseleave',function(){
+   AreaSlideGo();
+})
 
 
 })(jQuery);
