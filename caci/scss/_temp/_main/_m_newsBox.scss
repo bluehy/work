@@ -6,5 +6,5 @@
 }
 
 @media screen and (max-width: 768px){
-   #newsBox {position: static; z-index:0; width: 100%; min-width: 320px; height: 80px;}
+   #newsBox {display:none; position: static; z-index:0; width: 100%; min-width: 320px; height: 80px;}
 }

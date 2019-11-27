@@ -55,7 +55,8 @@
       });
       // coopBox {}
       coopBox.load('./temp/main/m_coopBox.html',function(){
-
+         conJs = 'm_coopBox.js';
+         body.append('<script src="' + jsUrl + jsUrlM + conJs +'"></script>')
       });
       // serviceBox {}
       serviceBox.load('./temp/main/m_serviceBox.html',function(){

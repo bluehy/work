@@ -76,11 +76,23 @@ for(let i = 0; i < rList.length; i++){
 // 처음 이미지 리스트 추가하기
 console.log(rList[0].photo.length + 'dk~');
 for (let j = 0; j < rList[0].photo.length; j++) {
+   // areaLi 갯수만큼 추가
    areaUl.append('<li><a href="#">' + rList[0].photo[j].subT +'</a></li>');
+   // areaUl 사이즈 조절
+   // if(rList[0].photo.length/2){} -> 짝수 홀수로 조절
+   areaUl.css({ 'width': 600 * rList[0].photo.length + 'px'});
+   // areaLi 백그라운드 이미지 삽입
    areaUl.children('li').eq(j).css({ backgroundImage: 'url("' + rList[0].imgUrl + rList[0].photo[j].subLink +'")'});
 }
 
 // ------------------------------------------------------
+
+
+
+// ------------------------------------------------------
+
+
+
 
 
 
@@ -105,6 +117,8 @@ categoryLi.children('a').on('click',function(e){
       
       for(let j = 0; j <rList[i].photo.length; j++){
          areaUl.append('<li><a href="#">' + rList[i].photo[j].subT +'</a></li>');
+         // areaUl 사이즈 조절
+         areaUl.css({ 'width': 600 * rList[i].photo.length + 'px' });
          areaUl.children('li').eq(j).css({ backgroundImage: 'url("' + rList[i].imgUrl + rList[i].photo[j].subLink + '")' });
       }
       // areaUl.eq(i).siblings().removeClass('action');

@@ -178,7 +178,7 @@
 
 #newsBox { position: fixed; z-index: 800; bottom: 0; left: 0; width: 40%; min-width: 600px; height: 80px; background-color: #a91f2b; }
 
-@media screen and (max-width: 768px) { #newsBox { position: static; z-index: 0; width: 100%; min-width: 320px; height: 80px; } }
+@media screen and (max-width: 768px) { #newsBox { display: none; position: static; z-index: 0; width: 100%; min-width: 320px; height: 80px; } }
 
 #infoBox { width: 100%; height: auto; padding: 8rem 0; background-color: #fff; }
 
@@ -202,7 +202,7 @@
 
 #infoBox .info_wrap ul li:last-of-type { margin-right: 0; }
 
-#coopBox { width: 100%; height: auto; min-height: 500px; padding: 8rem 0; background-color: #fff; }
+#coopBox { width: 100%; height: auto; min-height: 500px; padding: 8rem 0; background-color: #fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; background-image: url("../../img/main/coopBox/backImg_01.jpg"); }
 
 #coopBox h3 { width: 50%; min-width: 320px; height: auto; margin: auto; margin-bottom: 4rem; text-align: center; }
 
@@ -210,7 +210,7 @@
 
 .coop_area ul { width: 100%; height: auto; min-height: 500px; }
 
-.coop_area ul li { width: 100%; height: 200px; text-align: center; background-color: #f9f4ed; }
+.coop_area ul li { width: 100%; height: 200px; text-align: center; background-color: #f9f4ed; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
 
 .coop_area ul li a { display: block; width: 100%; height: 100%; }
 
@@ -240,6 +240,8 @@
 .service_wrap .area_view > ul { position: absolute; top: 0; width: 3000px; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem; overflow-x: scroll; overflow-y: hidden; }
 
 .service_wrap .area_view > ul li { float: left; width: 600px; height: 100%; background-color: #dec4a4; text-align: center; transform: scale(0.8); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+
+.service_wrap .area_view > ul li a { display: block; width: 100%; height: 100%; }
 
 .service_wrap .area_view > ul:after, .service_wrap .area_view > ul::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
