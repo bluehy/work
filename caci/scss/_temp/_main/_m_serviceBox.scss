@@ -16,10 +16,10 @@
 
 
 .service_wrap {
-   .area_view {position:relative; width: 100%; height: 400px; margin:auto; overflow:hidden; 
+   .area_view {position:relative; width: 100%; height: 400px; margin:auto; margin-bottom: 3rem; overflow:hidden; 
       > ul {position: absolute; top:0;
          width:3000px; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem;overflow-x:scroll; overflow-y:hidden;
-         li {float:left; width: 600px; height:100%; background-color: $sub1; text-align:center; transform: scale(0.8);}
+         li {float:left; width: 600px; height:100%; background-color: $sub1; text-align:center; transform: scale(0.8); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;}
       &:after,&::after {content:" "; display: block; width: 0; height: 0; clear:both;}
       }//ul
       ul {display:none;}
@@ -30,7 +30,11 @@
 
 // btn
 .service_wrap {
-   .rent_btn {width: 200px; height: 60px; margin:auto; background-color: $white; border:1px solid $red; color: $red; box-sizing:border-box;}
+   .rent_btn {width: 200px; height: 60px; margin:auto; background-color: $white; border:1px solid $red; color: $red; box-sizing:border-box;
+      button {width: 100%; height: 100%; color: $red; background-color: transparent; font-size:nth($font_s,2);
+      &:hover,&:focus {color:$white; background-color: $red;}
+      }//button
+   }//.rent_btn
 }
 
 
@@ -47,6 +51,14 @@
    .service_wrap{
       >ul {width: 100%; min-width: 320px;
          li {width: 30%;}
+      }
+   }//.service_wrap
+
+   .service_wrap{
+      .area_view{height: 300px;
+         >ul{width: 2000px;
+            li {width: 400px; }
+         }
       }
    }
 }

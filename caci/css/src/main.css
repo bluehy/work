@@ -235,11 +235,11 @@
 
 .service_wrap > ul li.action { color: #a91f2b; font-weight: bold; }
 
-.service_wrap .area_view { position: relative; width: 100%; height: 400px; margin: auto; overflow: hidden; }
+.service_wrap .area_view { position: relative; width: 100%; height: 400px; margin: auto; margin-bottom: 3rem; overflow: hidden; }
 
 .service_wrap .area_view > ul { position: absolute; top: 0; width: 3000px; height: 100%; left: 50%; transform: translate(-50%); padding-bottom: 2rem; overflow-x: scroll; overflow-y: hidden; }
 
-.service_wrap .area_view > ul li { float: left; width: 600px; height: 100%; background-color: #dec4a4; text-align: center; transform: scale(0.8); }
+.service_wrap .area_view > ul li { float: left; width: 600px; height: 100%; background-color: #dec4a4; text-align: center; transform: scale(0.8); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .service_wrap .area_view > ul:after, .service_wrap .area_view > ul::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
@@ -249,10 +249,17 @@
 
 .service_wrap .rent_btn { width: 200px; height: 60px; margin: auto; background-color: #fff; border: 1px solid #a91f2b; color: #a91f2b; box-sizing: border-box; }
 
+.service_wrap .rent_btn button { width: 100%; height: 100%; color: #a91f2b; background-color: transparent; font-size: 1rem; }
+
+.service_wrap .rent_btn button:hover, .service_wrap .rent_btn button:focus { color: #fff; background-color: #a91f2b; }
+
 @media screen and (max-width: 500px) { .service_wrap > ul li { box-sizing: border-box; } }
 
 @media screen and (max-width: 768px) { .service_wrap > ul { width: 100%; min-width: 320px; }
-  .service_wrap > ul li { width: 30%; } }
+  .service_wrap > ul li { width: 30%; }
+  .service_wrap .area_view { height: 300px; }
+  .service_wrap .area_view > ul { width: 2000px; }
+  .service_wrap .area_view > ul li { width: 400px; } }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }
