@@ -238,6 +238,7 @@ pageLi.eq(0).addClass('action');
 
 
 
+
 // -----------------------------------------------------------
 // viewBox벗어난 후에 페이지내비게이션 색상 전환
    let winScroll = $(window).scrollTop();// 현재 스크롤의 위치 계산용 변수
@@ -309,8 +310,57 @@ pageLi.eq(0).addClass('action');
       
    });//windowscroll
 // ---------------------------------------------------------
-// 페이지 인디케이터로 이동
+
+
+// ------------------------------------------------------
+// 스크롤바 옮길 때, 위치값 계산 =>
+
+$(window).on('scroll',function(){
+   winScroll = $(window).scrollTop();
+
+   
+   // console.log(winScroll);
+   if (winScroll < scVal[1]) {
+      wheelN = 0;
+   } else if (winScroll >= scVal[1] && winScroll < scVal[2]) {
+      wheelN = 1;
+   } else if (winScroll >= scVal[2] && winScroll < scVal[3]) {
+      wheelN = 2;
+   } else if (winScroll >= scVal[3] && winScroll < scVal[4]) {
+      wheelN = 3;
+   }
+
+   // 스크롤이 끝에 닿았을 때, wheelN = scroll.length -1 로 조정
+   let documentHeight = $(document).height();      // 전체 문서 height
+   let windowHeight = $(window).height();          // 브라우저 height
+   let roundWinScroll = Math.round(winScroll);     // 스크롤위치(= 전체문서 height - 브라우저 height) 반올림
+   let ckScroll = documentHeight - windowHeight - roundWinScroll - 100;
+   // console.log(ckScroll);
+
+   if (ckScroll <= -90){
+      wheelN = scroll.length - 1;
+   }
+   
+   pageLi.eq(wheelN).addClass('action');  // 페이지내 위치 인디케이터 표시 전환
+   pageLi.eq(wheelN).siblings().removeClass('action');
+});
+
+   
+
+
+// --------------------------------------------------------
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------
+// 페이지 인디케이터로 위치 이동
    const pageLink = pageLi.children('a');
+
    pageLink.on('click',function(){
       wheelN = $(this).parent().index();
       $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px' });
