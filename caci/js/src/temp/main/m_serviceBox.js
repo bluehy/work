@@ -1,6 +1,17 @@
 (function($){
+//
 
 
+
+
+
+
+
+
+
+
+
+// 
    const serviceBox = $('#serviceBox');
    const serviceWrap = serviceBox.children('.service_wrap');
 
