@@ -67,14 +67,14 @@ rList =[
 
 // ------------------------------------------------------
 // .탭메뉴에 타이틀 집어넣기
-console.log(rList.length+'g');
+console.log(rList.length+'대관시설 갯수');
 for(let i = 0; i < rList.length; i++){
    // console.log(rList[i].title);
    categoryLi.eq(i).find('span').text(rList[i].title);
 }
 
 // 처음 이미지 리스트 추가하기
-console.log(rList[0].photo.length + 'dk~');
+console.log(rList[0].photo.length + '이미지 갯수');
 for (let j = 0; j < rList[0].photo.length; j++) {
    // areaLi 갯수만큼 추가
    areaUl.append('<li><a href="#">' + rList[0].photo[j].subT +'</a></li>');
@@ -85,13 +85,60 @@ for (let j = 0; j < rList[0].photo.length; j++) {
    areaUl.children('li').eq(j).css({ backgroundImage: 'url("' + rList[0].imgUrl + rList[0].photo[j].subLink +'")'});
 }
 
+// 이미지 갯수에 따라 Ul의 위치 변환
+let rel = (areaUl.children('li').length) % 2 == 1; // 리스트의 갯수가 짝수인지 확인.
+console.log('rel' + rel);
+if (rel) {
+   areaUl.css({'left':50 + '%',transform:'translate(-50%)'});
+}else{
+   areaUl.css({left:'-600px'});
+}
 // ------------------------------------------------------
 
 
 
 // ------------------------------------------------------
 
+// ------------------------------------------------------
+// 이미지 자동슬라이드 기능
 
+let timed = 3000;
+// let myN = 0;
+let go;
+
+
+const AreaSlideGo = function () {
+
+   go = setInterval(function () {
+      // let areaUl = areaView.children('.action');
+      areaUl.css({ 'marginLeft': 600 + 'px' });        //768이하에서는 400px
+      areaUl.children('li').eq(0).appendTo(areaUl);
+      // console.log(myN);
+      areaUl.stop().animate({ 'marginLeft': 0 });//          
+   }, timed)//setInterval()
+
+}//AreaSlideGo();
+AreaSlideGo();
+
+const StopAreaSlide = function () {
+   clearInterval(go);
+}//StopAreaSlide();
+
+// ------------------------------------------------------
+// 마우스 이벤트 발생시, 슬라이드 멈추거나 재생
+areaUl.on('mouseenter', function () {
+   StopAreaSlide();
+});
+
+
+areaUl.on('mouseleave', function () {
+   if(areaUl.children('li').length <= 1){// 리스트가 1개인 경우에는,
+      StopAreaSlide();                   // mouseleave이벤트가 발생해도 움직이지 않는다.
+   }else{
+      AreaSlideGo();                     // 다른 경우엔 자동슬라이드 재개
+   }
+})
+// ---------------------------------------------------
 
 
 
@@ -99,7 +146,7 @@ for (let j = 0; j < rList[0].photo.length; j++) {
 // ------------------------------------------------------
 // 카테고리 선택시 변경(탭메뉴형식)
 categoryLi.eq(0).addClass('action');
-
+// 첫번째 카테고리에 클래스 추가 (색상, 폰트굵기 변환)
 
 
 categoryLi.children('a').on('click',function(e){
@@ -111,74 +158,58 @@ categoryLi.children('a').on('click',function(e){
       categoryLi.eq(i).addClass('action');
       categoryLi.eq(i).siblings().removeClass('action');
 
-
       // 대관 공간별 이미지 새로 갱신
       areaUl.empty();
       
       for(let j = 0; j <rList[i].photo.length; j++){
          areaUl.append('<li><a href="#">' + rList[i].photo[j].subT +'</a></li>');
+         
          // areaUl 사이즈 조절
          areaUl.css({ 'width': 600 * rList[i].photo.length + 'px' });
          areaUl.children('li').eq(j).css({ backgroundImage: 'url("' + rList[i].imgUrl + rList[i].photo[j].subLink + '")' });
       }
-      // areaUl.eq(i).siblings().removeClass('action');
-      // areaUl.eq(i).addClass('action');
-   }//if(!has)
+
+      let liLen = areaUl.children('li').length;
+      // 1개인 경우,
+      if (liLen <= 1) {
+         StopAreaSlide();
+         console.log(go);
+      }else{
+         StopAreaSlide();
+         setTimeout(() => {
+            AreaSlideGo();
+         }, 10);
+      }
+
+      // 3개 이하인 경우, 
+      let len = liLen == 3; // 리스트의 갯수가 3개인 경우,
+
+      if(len){
+         for(let l = 0; l < 2; l++){
+            areaUl.children('li').clone().prependTo(areaUl);
+         }
+         liLen = areaUl.children('li').length;
+         areaUl.css({ 'width': 600 * liLen + 'px' });
+      }//if(len)
+
+      // 총 리스트의 개수가 짝수인 경우, 두번째 이미지를 임의로 복사해 끝에 추가할 것.
+      rel = liLen % 2 == 1; // 리스트의 갯수가 홀수인지, 짝수인지 확인.
       
+      if(rel){//홀수인 경우,
+         areaUl.css({ left: '50%', transform: 'translate(-50%)'});
+      }else {//짝수인 경우,
+         for (let l = 0; l < 3; l++) {
+            areaUl.children('li').eq(l).clone().appendTo(areaUl);
+         }
+         // 추가된 Li갯수에 맞춰 Ul 사이즈 조절하기
+         liLen = areaUl.children('li').length;
+         areaUl.css({'width':600 * liLen + 'px'});
+      }//if(rel)
+      
+   }//if(!has)
+
 });
-
-// ------------------------------------------------------
-
-
-
-
-// ------------------------------------------------------
-// Li갯수에 맞춰 Ul 사이즈 조절하기
-
-
-
-
-
-
-// ------------------------------------------------------
-
-
-
-// ------------------------------------------------------
-// action이 들어간 이미지들 자동슬라이드
-
-let timed = 3000;
-// let myN = 0;
-let go;
-
-
-const AreaSlideGo = function(){
-   
-   go = setInterval(function(){
-      let UlAction = areaView.children('.action');
-      UlAction.css({'marginLeft': 600 + 'px'});        //768이하에서는 400px
-      UlAction.children('li').eq(0).appendTo(UlAction);
-      // console.log(myN);
-      UlAction.stop().animate({ 'marginLeft': 0});//          
-   },timed )//setInterval()
-   
-}//AreaSlideGo();
-AreaSlideGo();
-
-const StopAreaSlide = function(){
-   clearInterval(go);
-}//StopAreaSlide();
-
-// ------------------------------------------------------
-
-areaUl.on('mouseenter',function(){
-   StopAreaSlide();
-});
-
-
-areaUl.on('mouseleave',function(){
-   AreaSlideGo();
-})
+// ---------------------------------------------------------------------------
 
 
 })(jQuery);
