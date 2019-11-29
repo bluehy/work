@@ -7,24 +7,26 @@ rList =[
          {title: '대극장',imgUrl:'../img/main/serviceBox/grand_01/',
          photo: [
                { subT: 'areaImg_01', subLink: 'grand_01.jpg' },
-               { subT: 'areaImg_02', subLink: 'grand_02.gif' },
+               { subT: 'areaImg_02', subLink: 'grand_02.jpg' },
                { subT: 'areaImg_03', subLink: 'grand_03.jpg' },
                { subT: 'areaImg_04', subLink: 'grand_04.jpg' },
                { subT: 'areaImg_05', subLink: 'grand_05.jpg' },
+               { subT: 'areaImg_05', subLink: 'grand_06.jpg' }
                ]},
          {title:'중극장 블랙',imgUrl:'../img/main/serviceBox/black_02/',
          photo:[
-               {subT:'areaImg_06',subLink:'black_01.gif'},
+               {subT:'areaImg_06',subLink:'black_01.jpg'},
                {subT:'areaImg_07',subLink:'black_02.jpg'},
                {subT:'areaImg_08',subLink:'black_03.jpg'},
                {subT:'areaImg_09',subLink:'black_04.jpg'},
-               {subT:'areaImg_10',subLink:'black_05.jpg'},
+               {subT:'areaImg_10',subLink:'black_05.jpg'}
                ]},
          {title:'소극장 블루',imgUrl:'../img/main/serviceBox/blue_03/',
          photo:[
                {subT:'areaImg_11',subLink:'blue_01.jpg'},
                {subT:'areaImg_12',subLink:'blue_02.jpg'},
-               {subT:'areaImg_13',subLink:'blue_03.jpg'}
+               {subT:'areaImg_13',subLink:'blue_03.jpg'},
+               {subT:'areaImg_13',subLink:'blue_04.jpg'}
                ]},
          {title:'충무갤러리',imgUrl:'../img/main/serviceBox/gallery_04/',
          photo:[
@@ -32,14 +34,11 @@ rList =[
                {subT:'areaImg_17',subLink:'gallery_02.jpg'},
                {subT:'areaImg_18',subLink:'gallery_03.jpg'},
                {subT:'areaImg_19',subLink:'gallery_04.jpg'},
-               {subT:'areaImg_20',subLink:'gallery_05.jpg'},
+               {subT:'areaImg_19',subLink:'gallery_05.jpg'}
                ]},
          {title:'컨벤션홀',imgUrl:'../img/main/serviceBox/convention_05/',
          photo:[
-               {subT:'areaImg_21',subLink:'convention_01.jpg'},
-               {subT:'areaImg_22',subLink:'convention_02.jpg'},
-               {subT:'areaImg_23',subLink:'convention_03.jpg'},
-               {subT:'areaImg_24',subLink:'convention_04.jpg'}
+               {subT:'areaImg_21',subLink:'convention_01.jpg'}
                ]},
          {title:'스튜디오 (연습실)',imgUrl:'../img/main/serviceBox/studio_06/',
          photo:[
