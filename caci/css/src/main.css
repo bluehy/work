@@ -251,7 +251,7 @@
 
 .service_wrap .rent_btn { width: 200px; height: 60px; margin: auto; background-color: #fff; border: 1px solid #a91f2b; color: #a91f2b; box-sizing: border-box; }
 
-.service_wrap .rent_btn button { width: 100%; height: 100%; color: #a91f2b; background-color: transparent; font-size: 1rem; }
+.service_wrap .rent_btn button { width: 100%; height: 100%; color: #a91f2b; background-color: transparent; font-size: 1rem; text-transform: uppercase; }
 
 .service_wrap .rent_btn button:hover, .service_wrap .rent_btn button:focus { color: #fff; background-color: #a91f2b; }
 
