@@ -10,25 +10,58 @@
    
    // 공연 정보 추가
    let pList =[
-            {place:'대극장',title:'뮤지컬<레베카>',date:'2019-ya-ya~2020-ya-ya',link:'#1'
-            ,detail: [
-                     {subtitle:'티켓:',
-                     subcontent:'화수목 VIP석 14만원, R석 12만원, S석 9만원, A석 6만원<br/>금토일/ 공휴일 VIP석 15만원, R석 13만원, S석 10만원, A석 7만원'},
-                     {subtitle:'시간:',
-                     subcontent:'화목 7시 / 수, 금 3시, 8시 / 토, 공휴일 2시, 7시 / 일 3시(월 공연 없음)'},
-                     {subtitle:'등급:',
-                     subcontent:'취학(8세 이상, 2019년_2012년 출생자 / 2020년_2013년)'},
-                     {subtitle:'문의:',
-                     subcontent:'멜론티켓 1899 - 0042 / 인터파크 1544 - 1555'}
-                     ]
-            },
-            {place:'중극장 블랙',title:'연극<도둑배우>',date:'2019-xz-xz~2020-xz-xz',link:'#2'
-            ,detail:'공연정보'},
-            {place:'소극장 블루',title:'뮤지컬<플레이리스트>쇼케이스',date:'2019-xy-xy~2020-xy-xy',link:'#3'
-            ,detail:'공연정보'},
-            {place:'소극장 블루',title:'뮤지컬<오드리부띠끄>쇼케이스',date:'2019-xx-xx~2020-xx-xx',link:'#4'
-            ,detail:'공연정보'}
-         ];
+               {place: '대극장', title: '뮤지컬 <레베카>', date: '2019-ya-ya~2020-ya-ya', src:'poster_01.gif'
+               ,detail: [
+                        {subtitle:'티켓:',
+                        subcontent:'화수목 VIP석 14만원, R석 12만원, S석 9만원, A석 6만원<br/>금토일/ 공휴일 VIP석 15만원, R석 13만원, S석 10만원, A석 7만원'},
+                        {subtitle:'시간:',
+                        subcontent:'화목 7시 / 수, 금 3시, 8시 / 토, 공휴일 2시, 7시 / 일 3시(월 공연 없음)'},
+                        {subtitle:'등급:',
+                        subcontent:'취학(8세 이상, 2019년_2012년 출생자 / 2020년_2013년)'},
+                        {subtitle:'문의:',
+                        subcontent:'멜론티켓 1899 - 0042 / 인터파크 1544 - 1555'}
+                        ]
+               },
+
+               {place:'중극장 블랙',title:'연극 <도둑배우>',date:'2019-xz-xz~2020-xz-xz',src:'poster_02.gif'
+               ,detail: [
+                        {subtitle:'티켓:',
+                        subcontent:'R석 50,000원 / S석 40,000원'},
+                        {subtitle:'시간:',
+                        subcontent:'화,목,금 8시 / 수 3시 / 토 3시, 6시30분 / 일 2시, 5시30분'},
+                        {subtitle:'등급:',
+                        subcontent:'8세 이상'},
+                        {subtitle:'문의:',
+                        subcontent:'(주)파크컴퍼니 : 02-6925-0419'}
+                        ]
+               },
+               
+               {place:'소극장 블루',title:'뮤지컬 <플레이리스트> 쇼케이스',date:'2019-xy-xy~2020-xy-xy',src:'poster_03.gif'
+               ,detail: [
+                        {subtitle:'티켓:',
+                        subcontent:'무료'},
+                        {subtitle:'시간:',
+                        subcontent:'금요일 오후 8시 ㅣ 토요일 오후 5시'},
+                        {subtitle:'등급:',
+                        subcontent:'만 17세 이상'},
+                        {subtitle:'문의:',
+                        subcontent:'블랙앤블루 사무국 2230-6627'}
+                        ]
+               },
+               
+               {place:'소극장 블루',title:'뮤지컬 <오드리부띠끄> 쇼케이스',date:'2019-xx-xx~2020-xx-xx',src:'poster_04.gif'
+               ,detail: [
+                        {subtitle:'티켓:',
+                        subcontent:'무료'},
+                        {subtitle:'시간:',
+                        subcontent:'금요일 오후 8시 ㅣ 토요일 오후 5시'},
+                        {subtitle:'등급:',
+                        subcontent:'만 17세 이상'},
+                        {subtitle:'문의:',
+                        subcontent:'블랙앤블루 사무국 2230-6627'}
+                        ]
+               }
+            ];
 
 
 
@@ -110,6 +143,7 @@
    let timed = 5000;
    let myN = 0;
    let go;
+   let ddLen = pList[myN].detail.length;
    
    const GoSlide = function(){
       go = setInterval(function() {
@@ -119,8 +153,18 @@
             slideGuide.css({ 'left': 100 + '%' });
          }
          slideGuide.stop().animate({ 'left': -100 * myN + '%' });
+         // 인디케이터 이동
          indiLi.eq(myN).addClass('action');
          indiLi.eq(myN).siblings().removeClass('action');
+         // info 변경
+         infoDt.nextAll('dd').empty();
+         infoDt.text(pList[myN].title); //dt
+         infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` }); //img
+
+         ddLen = pList[myN].detail.length;
+         for (let i = 0; i < ddLen; i++) {
+            infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
+         }// dd
       }, timed); // go = setInterval
    }// GoSlide()
    GoSlide();
@@ -159,25 +203,46 @@
 
    next.on('click',function(){
       myN++;
+      // 슬라이드 이동
       if(myN >= slideLen - 1){
          myN = 0;
          slideGuide.css({'left':100 +'%'});
       }
       slideGuide.stop().animate({'left': -100 * myN + '%'});
+      // 인디케이터 이동
       indiLi.eq(myN).addClass('action');
       indiLi.eq(myN).siblings().removeClass('action');
+      // 공연info변경
+      infoDt.nextAll('dd').empty();
+      infoDt.text(pList[myN].title);
+      infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
+      ddLen = pList[myN].detail.length;
+      for (let i = 0; i < ddLen; i++) {
+         infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
+      }// dd
    });
 
    prev.on('click',function(){
       myN--;
+      // 슬라이드 이동
       slideGuide.stop().animate({'left': -100 * myN + '%'},function(){
          if(myN < 0){
             myN = slideLen -2;
             slideGuide.css({'left':-100 * myN + '%'});
          }
+         // 인디케이터 이동
+         indiLi.eq(myN).addClass('action');
+         indiLi.eq(myN).siblings().removeClass('action');
+         // 공연info변경
+         infoDt.nextAll('dd').empty();
+         infoDt.text(pList[myN].title);
+         infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
+         ddLen = pList[myN].detail.length;
+         for (let i = 0; i < ddLen; i++) {
+            infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
+         }// dd
       });
-      indiLi.eq(myN).addClass('action');
-      indiLi.eq(myN).siblings().removeClass('action');
+      // console.log(myN + 'myN확인용');
    });
    // -----------------------------------------------------------------
 
@@ -187,28 +252,43 @@
    // 인디케이터 조작으로 슬라이드 이동
    indiLi.on('click',function(){
       myN = $(this).index();
+      // 슬라이드 이동
       slideGuide.stop().animate({'left': -100 * myN + '%'});
+      // 인디케이터 이동
       indiLi.eq(myN).addClass('action');
       indiLi.eq(myN).siblings().removeClass('action');
+      // info 변경
+      infoDt.nextAll('dd').empty();
+      infoDt.text(pList[myN].title);
+      infoImg.attr({'src':`../img/main/viewBox/${pList[myN].src}`});
+      ddLen = pList[myN].detail.length;
+      for (let i = 0; i < ddLen; i++) {
+         infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
+      }// dd
+   })
+
+   indiLi.children('a').on('click',function(e){
+      e.preventDefault();
    })
    // --------------------------------------------------------------------
 
-   
 
 
    // --------------------------------------------------------------------
    // infoDl의 dt, dd 내용삽입
-   let ddLen = pList[myN].detail.length;
-   
+   ddLen = pList[myN].detail.length;
+
    console.log('디테일내용갯수', ddLen);
    
    //infoDl 파트 초기값 설정   
    infoDt.text(pList[0].title);
+   infoImg.attr({ 'src':`../img/main/viewBox/${pList[0].src}`});
+   
    for(let i = 0; i < ddLen; i++){
-      infoDl.append(`<dd><strong>${pList[0].detail[i].subtitle}</strong><span>${pList[0].detail[i].subcontent}</span></dd>`);
+      infoDt.after(`<dd><strong>${pList[0].detail[i].subtitle}</strong><p>${pList[0].detail[i].subcontent}</p></dd>`);
    }// 초기값 설정
 
-
+   
    
 
 })(jQuery);
