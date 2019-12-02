@@ -90,8 +90,15 @@ console.log('rel' + rel);
 if (rel) {
    areaUl.css({'left':50 + '%',transform:'translate(-50%)'});
 }else{
-   areaUl.css({left:'-600px'});
+   for (let l = 0; l < 3; l++) {
+      areaUl.children('li').eq(l).clone().appendTo(areaUl);
+   }
+   // 추가된 Li갯수에 맞춰 Ul 사이즈 조절하기
+   liLen = areaUl.children('li').length;
+   areaUl.css({ 'width': 600 * liLen + 'px', 'left': 50 + '%', transform: 'translate(-50%)' });
 }
+
+
 // ------------------------------------------------------
 
 

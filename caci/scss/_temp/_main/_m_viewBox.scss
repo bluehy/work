@@ -2,7 +2,7 @@
 
 #viewBox {width: 100%; height: 100%;
    h2 {@include hidden;}
-   .slide_wrap{width: 100%; height: 100%; overflow:hidden;
+   .slide_wrap{position: relative; width: 100%; height: 100%; overflow:hidden;
 
 
       // indicator
@@ -49,19 +49,18 @@
       .slide_info {position:absolute; z-index:0; top:0; left:0; width: 100%; height: 100%;
          >ul {background-color: transparent;}
          
-         >img {position:absolute; top:40%; left: 12%; width: 40%; min-width: 28.125rem; height: auto; transform:scale(0.7) translateY(-40%); opacity:0; transition:all 300ms ease;
+         >img {position:absolute; top:50%; left: 12%; width: 40%; min-width: 28.125rem; height: auto; transform-origin:50% 50%; transform:scale(0.6) translateY(-75%);
          }//img
-         &.action img {transform: scale(0.7) translateY(-50%); opacity:1;}
          
-         >dl {position:absolute; top: 30%; right: 20%; width:40%; min-width: 28.125rem; height: auto; transform:translate(50%); color: $white;
-            dt {width: 80%; margin-bottom: 2rem; font-size:nth($font_s,5); font-weight: bold;}
-            dd {width: 80%; margin-bottom: 1rem; font-size:nth($font_s,3);
-               strong {display: block; margin-bottom:0.5rem;}
+         >dl {position:absolute; top: 35%; right: 20%; width:40%; min-width: 28.125rem; height: auto; transform:translate(50%); color: $white;
+            dt {width: 80%; min-width: 500px; margin-bottom: 2rem; font-size:nth($font_s,5); font-weight: bold;}
+            dd {width: 80%; min-width: 300px; margin-bottom: 1rem; font-size:nth($font_s,3);
+               strong {display: block; margin-bottom:0.5rem; word-break:keep-all;}
                p {font-size:nth($font_s,2)}
             }//dd
          }//dl
 
-         >button {float:right; width: 200px; height: 80px;}
+         >button {position:absolute; float:right; width: 200px; height: 80px; right: 0; bottom: 0;}
       }//.slide_info
 
 

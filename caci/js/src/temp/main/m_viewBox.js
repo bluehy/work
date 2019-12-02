@@ -165,6 +165,13 @@
          for (let i = 0; i < ddLen; i++) {
             infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
          }// dd
+         // 이미지 등장 효과
+         infoImg.hide();
+         infoDl.hide();
+         setTimeout(() => {
+            infoImg.stop().fadeIn();
+            infoDl.stop().fadeIn();
+         }, 300);    
       }, timed); // go = setInterval
    }// GoSlide()
    GoSlide();
@@ -220,6 +227,13 @@
       for (let i = 0; i < ddLen; i++) {
          infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
       }// dd
+      // 이미지 등장 효과
+      infoImg.hide();
+      infoDl.hide();
+      setTimeout(() => {
+         infoImg.stop().fadeIn();
+         infoDl.stop().fadeIn();
+      }, 300);    
    });
 
    prev.on('click',function(){
@@ -237,10 +251,18 @@
          infoDt.nextAll('dd').empty();
          infoDt.text(pList[myN].title);
          infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
+         
          ddLen = pList[myN].detail.length;
          for (let i = 0; i < ddLen; i++) {
             infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
          }// dd
+         // 이미지 등장 효과
+         infoImg.hide();
+         infoDl.hide();
+         setTimeout(() => {
+            infoImg.stop().fadeIn();
+            infoDl.stop().fadeIn();
+         }, 300);      
       });
       // console.log(myN + 'myN확인용');
    });
@@ -265,6 +287,13 @@
       for (let i = 0; i < ddLen; i++) {
          infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
       }// dd
+      // 이미지 등장 효과
+      infoImg.hide();
+      infoDl.hide();
+      setTimeout(() => {
+         infoImg.stop().fadeIn();
+         infoDl.stop().fadeIn();
+      }, 300);
    })
 
    indiLi.children('a').on('click',function(e){
