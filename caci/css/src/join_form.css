@@ -202,7 +202,7 @@
 
 #footBox .foot_wrap address > span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox .foot_wrap address div { position: absolute; width: auto; min-width: 20rem; top: 1rem; left: 50%; transform: translate(-50%); margin-bottom: 1rem; }
+#footBox .foot_wrap address > div { position: absolute; width: auto; min-width: 20rem; top: 1rem; left: 50%; transform: translate(-50%); margin-bottom: 1rem; }
 
 #footBox .foot_wrap address a { display: block; float: left; width: auto; height: 1rem; padding: 0 0.2rem; box-sizing: border-box; margin-right: 0.2rem; }
 

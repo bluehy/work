@@ -187,6 +187,8 @@
 
 #viewBox .slide_wrap .slide_info > dl dd p { font-size: 1rem; }
 
+#viewBox .slide_wrap .slide_info > dl dd:first-of-type { font-weight: bold; }
+
 #viewBox .slide_wrap .slide_info > button { position: absolute; float: right; width: 200px; height: 80px; right: 0; bottom: 0; }
 
 @media screen and (max-width: 768px) { #viewBox .slide_wrap .indicator { bottom: 10%; right: 50%; }
@@ -194,7 +196,27 @@
 
 #mainBox { width: 100%; height: auto; min-height: 100%; background-color: #5b6574; }
 
-#newsBox { position: fixed; z-index: 800; bottom: 0; left: 0; width: 40%; min-width: 600px; height: 80px; background-color: #a91f2b; }
+#newsBox { position: fixed; z-index: 800; bottom: 0; left: 0; width: 40%; min-width: 600px; height: 5rem; padding: 1rem 2rem; box-sizing: border-box; background-color: #a91f2b; }
+
+#newsBox h3 { position: relative; float: left; width: 20%; height: 100%; font-size: 1.5rem; color: #fff; line-height: 3rem; text-align: center; margin-right: 20px; }
+
+#newsBox h3:after, #newsBox h3::after { position: absolute; top: 50%; right: 0; content: " "; display: block; width: 0; height: 60%; transform: translateY(-50%); border-right: 1px solid #fff; }
+
+#newsBox ul { float: left; width: 60%; height: 100%; line-height: 3rem; color: #fff; }
+
+#newsBox ul dl { width: 100%; height: 100%; }
+
+#newsBox ul dl dt { float: left; }
+
+#newsBox ul dl dd { float: right; }
+
+#newsBox > div { position: relative; float: right; width: 5%; height: 100%; }
+
+#newsBox > div button { position: absolute; bottom: 0; width: 100%; height: 50%; background-color: transparent; }
+
+#newsBox > div button:last-of-type { top: 0; }
+
+#newsBox > div button span { display: block; width: 0; height: 0; overflow: hidden; }
 
 @media screen and (max-width: 768px) { #newsBox { display: none; position: static; z-index: 0; width: 100%; min-width: 320px; height: 80px; } }
 
@@ -302,7 +324,7 @@
 
 #footBox .foot_wrap address > span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox .foot_wrap address div { position: absolute; width: auto; min-width: 20rem; top: 1rem; left: 50%; transform: translate(-50%); margin-bottom: 1rem; }
+#footBox .foot_wrap address > div { position: absolute; width: auto; min-width: 20rem; top: 1rem; left: 50%; transform: translate(-50%); margin-bottom: 1rem; }
 
 #footBox .foot_wrap address a { display: block; float: left; width: auto; height: 1rem; padding: 0 0.2rem; box-sizing: border-box; margin-right: 0.2rem; }
 

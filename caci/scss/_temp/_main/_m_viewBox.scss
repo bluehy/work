@@ -58,6 +58,7 @@
                strong {display: block; margin-bottom:0.5rem; word-break:keep-all;}
                p {font-size:nth($font_s,2)}
             }//dd
+            dd:first-of-type {font-weight: bold;}
          }//dl
 
          >button {position:absolute; float:right; width: 200px; height: 80px; right: 0; bottom: 0;}
@@ -66,14 +67,8 @@
 
 
 
-
-
-
-
    }//.slide_wrap
 }// #viewBox
-
-
 
 
 
