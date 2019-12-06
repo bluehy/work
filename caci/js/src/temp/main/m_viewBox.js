@@ -157,7 +157,7 @@
          indiLi.eq(myN).addClass('action');
          indiLi.eq(myN).siblings().removeClass('action');
          // info 변경
-         infoDt.nextAll('dd').empty();
+         infoDt.nextAll('dd').remove();
          infoDt.text(pList[myN].title); //dt
          infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` }); //img
 
@@ -221,7 +221,7 @@
       indiLi.eq(myN).addClass('action');
       indiLi.eq(myN).siblings().removeClass('action');
       // 공연info변경
-      infoDt.nextAll('dd').empty();
+      infoDt.nextAll('dd').remove();
       infoDt.text(pList[myN].title);
       infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
       ddLen = pList[myN].detail.length;
@@ -250,7 +250,7 @@
          indiLi.eq(myN).addClass('action');
          indiLi.eq(myN).siblings().removeClass('action');
          // 공연info변경
-         infoDt.nextAll('dd').empty();
+         infoDt.nextAll('dd').remove();
          infoDt.text(pList[myN].title);
          infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
          
@@ -283,7 +283,7 @@
       indiLi.eq(myN).addClass('action');
       indiLi.eq(myN).siblings().removeClass('action');
       // info 변경
-      infoDt.nextAll('dd').empty();
+      infoDt.nextAll('dd').remove();
       infoDt.text(pList[myN].title);
       infoImg.attr({'src':`../img/main/viewBox/${pList[myN].src}`});
       ddLen = pList[myN].detail.length;

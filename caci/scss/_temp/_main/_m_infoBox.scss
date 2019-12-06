@@ -18,3 +18,15 @@
       }//ul   
    }//div.info_wrap
 }//#infoBox
+
+@media screen and (max-width: 480px){
+   #infoBox{
+      .info_wrap{
+         ul{
+            li {width: 40%; margin-right: 20%;
+            &:nth-of-type(2){margin-right:0;}
+            }
+         }
+      }
+   }
+}
