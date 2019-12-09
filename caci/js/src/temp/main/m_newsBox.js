@@ -12,7 +12,7 @@
       if(winScroll > 100){
          newsBox.slideUp();
       }else{
-         newsBox.slideDown();
+         // newsBox.slideDown();
       }
    });
 

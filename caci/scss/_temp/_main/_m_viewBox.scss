@@ -6,8 +6,9 @@
 
 
       // indicator
-      .indicator {position:absolute; z-index: 500; right: 20%; width:40%; min-width: 224px; height: 0.7rem; bottom: 10rem; transform:translate(50%);
-         li {float:left; width: 50px; height: 100%; margin-right: 0.5rem; background-color: $sub1;
+      .indicator {$count:4;
+         position:absolute; z-index: 500; right: 12%; width: 4rem * $count - 0.5rem; height: 0.5rem; top: 80%; transform:translate(0);
+         li {float:left; width: 3.5rem; height: 100%; margin-right: 0.5rem; background-color: $sub1;
          &:last-of-type {margin-right:0;}
          &.action {background-color: $red;}
             a {display: block; width: 100%; height: 100%;}
@@ -33,9 +34,11 @@
 
 
       // slide_guide
-      .slide_guide{position:relative; z-index:0; height:100%; 
+      .slide_guide{position:relative; z-index:0; height:100%;
          li {float:left; height: 100%; 
-            a {position:relative; display:block; width: 100%; height: 100%; padding-top:3.75rem; box-sizing:border-box; background-repeat:no-repeat; background-position: 50% 50%; background-size: cover; }
+            a {position:relative; display:block; width: 100%; height: 100%; padding-top:3.75rem; box-sizing:border-box; background-repeat:no-repeat; background-position: 50% 50%; background-size: cover; 
+               span {@include hidden}
+            }
             a:after,a::after {content:" "; display: block; position:absolute; top:0; width: 100%; height: 100%; background: linear-gradient(-90deg,rgba(0,0,0,0.8) 10%,rgba(0,0,0,0));}
             >div {height: 100%;}
          }//li
@@ -47,25 +50,27 @@
       
       // slide_info
       .slide_info {position:absolute; z-index:0; top:0; left:0; width: 100%; height: 100%;
-         >ul {position:absolute; width: 40%; top : 10%; left: 12%; background-color: transparent;
+         >ul {position:absolute; width: auto; min-width: 28.125rem; top : 13%; left: 23%; background-color: transparent;
             li {float:left; margin-right: 1rem;
-               a {font-size: nth($font_s,3); color: $white;}
+               a {font-size: nth($font_s,2); color: $white;line-height: nth($font_s,3);}
+            &.action a {font-weight: bold;font-size:nth($font_s,3);} 
             }//li
          }//ul
          
          >img {position:absolute; top:45%; left: 12%; width: 40%; min-width: 28.125rem; height: auto; transform-origin:50% 50%; transform:scale(0.6) translateY(-75%);
          }//img
          
-         >dl {position:absolute; top: 30%; right: 20%; width:40%; min-width: 28.125rem; height: auto; transform:translate(50%); color: $white;
+         >dl {position:absolute; top: 25%; right: 20%; width:40%; min-width: 28.125rem; height: auto; transform:translate(50%); color: $white;
             dt {width: 80%; min-width: 500px; margin-bottom: 2rem; font-size:nth($font_s,5); font-weight: bold;}
-            dd {width: 80%; min-width: 300px; margin-bottom: 1rem; font-size:nth($font_s,3);
+            dd {width: 80%; min-width: 400px; margin-bottom: 1rem; font-size:nth($font_s,3);
                strong {display: block; margin-bottom:0.5rem; word-break:keep-all;}
                p {font-size:nth($font_s,2)}
             }//dd
             dd:first-of-type {font-weight: bold;}
          }//dl
 
-         >button {position:absolute; float:right; width: 50%; height: 80px; padding: 0 2rem; box-sizing:border-box; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); color: #fff; text-align:right;}
+         >button {position:absolute; float:right; width: 50%; height: 80px; padding: 0 2rem; box-sizing:border-box; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); color: #fff; text-align:right;
+         }//button
       }//.slide_info
 
 
@@ -86,31 +91,42 @@
 
 };
 
-@media screen and (max-width: 768px){
-   #viewBox{height: 150%;
+@media screen and (max-width: 960px){
+   #viewBox{height: 150%; min-height:63rem; overflow-x:hidden; overflow-y:visible;
       .slide_wrap{
-         .indicator {bottom: 10%; right: 50%;}
+         .indicator {top:90%; left: 50%; right:0; transform: translate(-50%);}
 
-         .slide_btn {width: 100%; min-width: 320px; top: 25%; left: 50%; transform:translate(-50%);}
+         .slide_guide {height: 40%; max-height:31.25rem;}
+
+         .slide_btn {width: 100%; min-width: 320px; top: 25%; left:50%; transform:translate(-50%);}
 
 
-         // .slide_info{
-         //    > ul{position:static; width: 100%; height: auto;}
-         //    > img{position: relative; top: 6rem; left:50%; transform: translate(-50%); min-width: 18.75rem; height: auto; margin:auto; margin-bottom: 10rem;}
-         //    > dl {position:static; transform:translate(0); width: 100%; min-width: 18.75rem;  background-color: #fff; color: #333;}
-         //       dt {font-size:nth($font_s,3); width: 100%; min-width: 18.75rem}
-         //       dd {font-size:nth($font_s,2);}
-      
-         // }//.slide_info
+         .slide_info{min-height:63rem;
+            // > ul{position:static; width: 100%; height: auto;}
+            > img{position: relative; top: 10%; left:50%; width: 80%; min-width: 18.75rem; max-width: 350px; height: auto; margin:auto;  transform: translate(-50%);}
+            > dl {z-index: 500; top: 55%; left:50%; right:0; margin:auto; width: 90%; min-width: 18.75rem;  background-color: #fff; color: #333; text-align:center; transform: translate(-50%);
+               dt {font-size:nth($font_s,3); width: 100%; min-width: 18.75rem}
+               dd {font-size:nth($font_s,2); width: 100%; min-width: 18.75rem;}
+               }//dl
+
+            >button {float:none; width: 20%; min-width: 200px; height: 50px; left:0; margin:auto; text-align:center; border: 1px solid $red; background-color: transparent; color: $red; font-size:nth($font_s,1);
+            &:hover,&:focus {background-color:$red; color: $white;}
+            }
+         }//.slide_info
       }
    }
 };
 
-@media screen and (max-width: 1280px){
+@media screen and(min-width:961px) and (max-width: 1280px){
    #viewBox{
       .slide_wrap{
+         // .indicator{left:5%;}
+
+         .slide_btn {left: 5%;}
          
          .slide_info{
+            >ul {left:15%;}
+            >img {left:5%;}
             >dl{
                dt{font-size:nth($font_s,3)}
                dd{font-size:nth($font_s,2)}

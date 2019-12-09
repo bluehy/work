@@ -89,7 +89,7 @@
    // -----------------------------------------------------
    // 공연 리스트 data 적용 + 리스트에 이미지 배정
    for(let i = 0; i < pList.length;i++){
-      slideGuide.append('<li><a href="#">'+ pList[i].title +'</a></li>');
+      slideGuide.append('<li><a href="#"><span>'+ pList[i].title +'</span></a></li>');
       if (i < 9){
          j = '0'+ (i + 1) ;
       }
