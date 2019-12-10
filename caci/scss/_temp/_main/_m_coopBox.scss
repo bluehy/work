@@ -10,7 +10,7 @@
             a {display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size:cover; transition:all 300ms ease;
                dl {position:relative; width: 100%; height: 100%;padding:2rem; box-sizing:border-box; color: #fff; background-color: rgba(0,0,0,0.5); }
                dt {height: 60%; font-size: nth($font_s,4); font-weight: bold; padding-top: 2rem; box-sizing:border-box;}
-               dd {height: 40%;}
+               dd {height: 40%; word-break:keep-all;}
                dd:last-of-type{display:none;}
             }//a
          }//li

@@ -111,7 +111,7 @@
          position:fixed; top: 50%; left: 5%; transform:translate(-50%, -50%); width: 3px; height: auto; min-height: 2.5rem;
          >ul {width: 100%; height: 2.5rem * $count; background-color: rgba($white,0.5); transition: background-color 300ms ease;
             >li {width: 100%; height: 100% / $count; transition:all 300ms ease; background-color: #fff; opacity:0;
-            &.action {opacity:1;}
+            &.action {opacity:1; width: 5px;}
                a {display: block; width:100%; height:100%;}
             }//li
          }// ul

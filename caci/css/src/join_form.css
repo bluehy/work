@@ -108,7 +108,7 @@
 
 #headBox .head_wrap > #pageNav > ul > li { width: 100%; height: 33.33333%; transition: all 300ms ease; background-color: #fff; opacity: 0; }
 
-#headBox .head_wrap > #pageNav > ul > li.action { opacity: 1; }
+#headBox .head_wrap > #pageNav > ul > li.action { opacity: 1; width: 5px; }
 
 #headBox .head_wrap > #pageNav > ul > li a { display: block; width: 100%; height: 100%; }
 

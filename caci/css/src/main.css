@@ -108,7 +108,7 @@
 
 #headBox .head_wrap > #pageNav > ul > li { width: 100%; height: 33.33333%; transition: all 300ms ease; background-color: #fff; opacity: 0; }
 
-#headBox .head_wrap > #pageNav > ul > li.action { opacity: 1; }
+#headBox .head_wrap > #pageNav > ul > li.action { opacity: 1; width: 5px; }
 
 #headBox .head_wrap > #pageNav > ul > li a { display: block; width: 100%; height: 100%; }
 
@@ -289,7 +289,7 @@
 
 .coop_area ul li a dt { height: 60%; font-size: 1.5rem; font-weight: bold; padding-top: 2rem; box-sizing: border-box; }
 
-.coop_area ul li a dd { height: 40%; }
+.coop_area ul li a dd { height: 40%; word-break: keep-all; }
 
 .coop_area ul li a dd:last-of-type { display: none; }
 
