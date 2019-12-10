@@ -1,6 +1,6 @@
 /* viewBox.css */
 
-#viewBox {width: 100%; height: 100%;
+#viewBox {width: 100%; min-width: 20rem; height: 100%;
    h2 {@include hidden;}
    .slide_wrap{position: relative; width: 100%; height: 100%; overflow:hidden;
 
@@ -86,11 +86,6 @@
 // rwd적용
 // ======================================================
 
-
-@media screen and (max-width: 480px){
-
-};
-
 @media screen and (max-width: 960px){
    #viewBox{height: 150%; min-height:63rem; overflow-x:hidden; overflow-y:visible;
       .slide_wrap{
@@ -103,7 +98,7 @@
 
          .slide_info{min-height:63rem;
             // > ul{position:static; width: 100%; height: auto;}
-            > img{position: relative; top: 10%; left:50%; width: 80%; min-width: 18.75rem; max-width: 350px; height: auto; margin:auto;  transform: translate(-50%);}
+            > img{position: relative; top: 10%; left:50%; width: 80%; min-width: 18.75rem; max-width: 350px; height: auto; margin:auto; transform: translate(-50%);}
             > dl {z-index: 500; top: 55%; left:50%; right:0; margin:auto; width: 90%; min-width: 18.75rem;  background-color: #fff; color: #333; text-align:center; transform: translate(-50%);
                dt {font-size:nth($font_s,3); width: 100%; min-width: 18.75rem}
                dd {font-size:nth($font_s,2); width: 100%; min-width: 18.75rem;}
@@ -136,3 +131,14 @@
       }//.slide_wrap
    }//#viewBox
 }
+
+@media screen and (max-width: 500px){
+   #viewBox{min-height:68em;
+      .slide_wrap{
+         .slide_info{
+            >img{min-width: 12.5rem; max-width: 300px;}
+            >dl {top:48%;}
+         }
+      }
+   }
+};

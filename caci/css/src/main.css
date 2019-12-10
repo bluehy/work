@@ -133,7 +133,7 @@
   #headBox .head_wrap #unb button i { font-size: 1.125rem; } }
 
 /* viewBox.css */
-#viewBox { width: 100%; height: 100%; }
+#viewBox { width: 100%; min-width: 20rem; height: 100%; }
 
 #viewBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
@@ -217,6 +217,10 @@
   #viewBox .slide_wrap .slide_info > dl dt { font-size: 1.125rem; }
   #viewBox .slide_wrap .slide_info > dl dd { font-size: 1rem; } }
 
+@media screen and (max-width: 500px) { #viewBox { min-height: 68em; }
+  #viewBox .slide_wrap .slide_info > img { min-width: 12.5rem; max-width: 300px; }
+  #viewBox .slide_wrap .slide_info > dl { top: 48%; } }
+
 #mainBox { width: 100%; height: auto; min-height: 100%; background-color: #5b6574; }
 
 #newsBox { position: fixed; z-index: 800; bottom: 0; left: 0; width: 50%; min-width: 600px; height: 5rem; padding: 1rem 2rem; box-sizing: border-box; background-color: #a91f2b; }
@@ -241,7 +245,7 @@
 
 #newsBox > div button span { display: block; width: 0; height: 0; overflow: hidden; }
 
-@media screen and (max-width: 768px) { #newsBox { display: none; position: static; z-index: 0; width: 100%; min-width: 320px; height: 80px; }
+@media screen and (max-width: 960px) { #newsBox { display: none; position: static; z-index: 0; width: 100%; min-width: 320px; height: 80px; }
   #newsBox h3 { font-size: 1rem; } }
 
 #infoBox { width: 100%; height: auto; padding: 8rem 0; background-color: #fff; }
@@ -269,7 +273,7 @@
 @media screen and (max-width: 480px) { #infoBox .info_wrap ul li { width: 40%; margin-right: 20%; }
   #infoBox .info_wrap ul li:nth-of-type(2) { margin-right: 0; } }
 
-#coopBox { width: 100%; height: auto; min-height: 500px; padding: 8rem 0; box-sizing: border-box; background-color: #fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; background-image: url("../../img/main/coopBox/backImg_01.jpg"); }
+#coopBox { width: 100%; min-width: 20rem; height: auto; min-height: 500px; padding: 8rem 0; box-sizing: border-box; background-color: #fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; background-image: url("../../img/main/coopBox/backImg_01.jpg"); }
 
 #coopBox h3 { width: 50%; min-width: 320px; height: auto; margin: auto; margin-bottom: 4rem; text-align: center; }
 
@@ -286,7 +290,7 @@
 @media screen and (min-width: 968px) { .coop_area ul { height: 200px; }
   .coop_area ul li { float: left; width: 33.333333%; height: 100%; } }
 
-#serviceBox { width: 100%; height: 100%; min-height: 300px; padding: 6.25rem 0; background-color: #fff; box-sizing: border-box; }
+#serviceBox { width: 100%; min-width: 20rem; height: auto; min-height: 300px; padding: 6.25rem 0; background-color: #fff; box-sizing: border-box; }
 
 #serviceBox h3 { width: 50%; min-width: 320px; height: auto; margin: auto; margin-bottom: 4rem; text-align: center; }
 
@@ -322,14 +326,15 @@
 
 .service_wrap .rent_btn button:hover, .service_wrap .rent_btn button:focus { color: #fff; background-color: #a91f2b; }
 
-@media screen and (max-width: 500px) { .service_wrap > ul li { box-sizing: border-box; } }
-
 @media screen and (max-width: 768px) { #serviceBox { height: auto; }
   .service_wrap > ul { width: 100%; min-width: 320px; }
-  .service_wrap > ul li { width: 33.333333%; }
+  .service_wrap > ul li { width: 33.333333%; box-sizing: border-box; }
   .service_wrap .area_view { height: 300px; }
   .service_wrap .area_view > ul { width: 2000px; }
-  .service_wrap .area_view > ul li { width: 600px; transform: scale(0.6); } }
+  .service_wrap .area_view > ul li { width: 600px; transform: scale(0.8); } }
+
+@media screen and (max-width: 500px) { .service_wrap > ul li { box-sizing: border-box; }
+  .service_wrap .area_view > ul li { width: 600px; transform: scale(0.5); } }
 
 /* footBox.css */
 #footBox { width: 100%; min-width: 320px; height: auto; padding: 5rem 2rem; box-sizing: border-box; background-color: #f9f4ed; }
