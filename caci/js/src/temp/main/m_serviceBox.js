@@ -4,45 +4,45 @@
 ext = ['.jpg','.png','.gif'];
 
 rList =[
-         {title: '대극장',imgUrl:'../img/main/serviceBox/grand_01/',
+         {title: '대극장',imgUrl:'../img/main/serviceBox/grand_01/',photoT: '대극장 내부 촬영 이미지',
          photo: [
-               { subT: 'areaImg_01', subLink: 'grand_01.jpg' },
-               { subT: 'areaImg_02', subLink: 'grand_02.jpg' },
-               { subT: 'areaImg_03', subLink: 'grand_03.jpg' },
-               { subT: 'areaImg_04', subLink: 'grand_04.jpg' },
-               { subT: 'areaImg_05', subLink: 'grand_05.jpg' },
-               { subT: 'areaImg_05', subLink: 'grand_06.jpg' }
+               { subLink: 'grand_01.jpg' },
+               { subLink: 'grand_02.jpg' },
+               { subLink: 'grand_03.jpg' },
+               { subLink: 'grand_04.jpg' },
+               { subLink: 'grand_05.jpg' },
+               { subLink: 'grand_06.jpg' }
                ]},
-         {title:'중극장 블랙',imgUrl:'../img/main/serviceBox/black_02/',
+         {title:'중극장 블랙',imgUrl:'../img/main/serviceBox/black_02/',photoT: '중극장 블랙 내부 촬영 이미지',
          photo:[
-               {subT:'areaImg_06',subLink:'black_01.jpg'},
-               {subT:'areaImg_07',subLink:'black_02.jpg'},
-               {subT:'areaImg_08',subLink:'black_03.jpg'},
-               {subT:'areaImg_09',subLink:'black_04.jpg'},
-               {subT:'areaImg_10',subLink:'black_05.jpg'}
+               {subLink:'black_01.jpg'},
+               {subLink:'black_02.jpg'},
+               {subLink:'black_03.jpg'},
+               {subLink:'black_04.jpg'},
+               {subLink:'black_05.jpg'}
                ]},
-         {title:'소극장 블루',imgUrl:'../img/main/serviceBox/blue_03/',
+         {title:'소극장 블루',imgUrl:'../img/main/serviceBox/blue_03/',photoT: '소극장 블루 내부 촬영 이미지',
          photo:[
-               {subT:'areaImg_11',subLink:'blue_01.jpg'},
-               {subT:'areaImg_12',subLink:'blue_02.jpg'},
-               {subT:'areaImg_13',subLink:'blue_03.jpg'},
-               {subT:'areaImg_13',subLink:'blue_04.jpg'}
+               {subLink:'blue_01.jpg'},
+               {subLink:'blue_02.jpg'},
+               {subLink:'blue_03.jpg'},
+               {subLink:'blue_04.jpg'}
                ]},
-         {title:'충무갤러리',imgUrl:'../img/main/serviceBox/gallery_04/',
+         {title:'충무갤러리',imgUrl:'../img/main/serviceBox/gallery_04/',photoT: '충무갤러리 내부 촬영 이미지',
          photo:[
-               {subT:'areaImg_16',subLink:'gallery_01.jpg'},
-               {subT:'areaImg_17',subLink:'gallery_02.jpg'},
-               {subT:'areaImg_18',subLink:'gallery_03.jpg'},
-               {subT:'areaImg_19',subLink:'gallery_04.jpg'},
-               {subT:'areaImg_19',subLink:'gallery_05.jpg'}
+               {subLink:'gallery_01.jpg'},
+               {subLink:'gallery_02.jpg'},
+               {subLink:'gallery_03.jpg'},
+               {subLink:'gallery_04.jpg'},
+               {subLink:'gallery_05.jpg'}
                ]},
-         {title:'컨벤션홀',imgUrl:'../img/main/serviceBox/convention_05/',
+         {title:'컨벤션홀',imgUrl:'../img/main/serviceBox/convention_05/',photoT: '컨벤션홀 내부 촬영 이미지',
          photo:[
-               {subT:'areaImg_21',subLink:'convention_01.jpg'}
+               {subLink:'convention_01.jpg'}
                ]},
-         {title:'스튜디오 (연습실)',imgUrl:'../img/main/serviceBox/studio_06/',
+         {title:'스튜디오 (연습실)',imgUrl:'../img/main/serviceBox/studio_06/',photoT: '스튜디오(연습실) 내부 촬영 이미지',
          photo:[
-               {subT:'areaImg_26',subLink:'studio_01.jpg'}
+               {subLink:'studio_01.jpg'}
                ]}
          ];
 // --------------------------------------------------------
@@ -77,7 +77,7 @@ for(let i = 0; i < rList.length; i++){
 console.log(rList[0].photo.length + '이미지 갯수');
 for (let j = 0; j < rList[0].photo.length; j++) {
    // areaLi 갯수만큼 추가
-   areaUl.append('<li><a href="#">' + rList[0].photo[j].subT +'</a></li>');
+   areaUl.append('<li><a href="#"><span>' + rList[0].photoT +'</span></a></li>');
    // areaUl 사이즈 조절
    // if(rList[0].photo.length/2){} -> 짝수 홀수로 조절
    areaUl.css({ 'width': 600 * rList[0].photo.length + 'px'});
@@ -176,7 +176,7 @@ categoryLi.children('a').on('click',function(e){
       areaUl.empty();
       
       for(let j = 0; j <rList[i].photo.length; j++){
-         areaUl.append('<li><a href="#">' + rList[i].photo[j].subT +'</a></li>');
+         areaUl.append('<li><a href="#"><span>' + rList[i].photoT +'</span></a></li>');
          
          // areaUl 사이즈 조절
          areaUl.css({ 'width': 600 * rList[i].photo.length + 'px' });

@@ -281,14 +281,27 @@
 
 .coop_area ul { width: 100%; height: auto; min-height: 400px; }
 
-.coop_area ul li { width: 100%; height: 200px; text-align: center; background-color: #f9f4ed; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+.coop_area ul li { width: 100%; height: 200px; box-sizing: border-box; text-align: center; background-color: #f9f4ed; overflow: hidden; }
 
-.coop_area ul li a { display: block; width: 100%; height: 100%; }
+.coop_area ul li a { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; transition: all 300ms ease; }
+
+.coop_area ul li a dl { position: relative; width: 100%; height: 100%; padding: 2rem; box-sizing: border-box; color: #fff; background-color: rgba(0, 0, 0, 0.5); }
+
+.coop_area ul li a dt { height: 60%; font-size: 1.5rem; font-weight: bold; padding-top: 2rem; box-sizing: border-box; }
+
+.coop_area ul li a dd { height: 40%; }
+
+.coop_area ul li a dd:last-of-type { display: none; }
+
+.coop_area ul li.action a { transform: scale(1.1); }
+
+.coop_area ul li.action dd:last-of-type { position: absolute; left: 0; bottom: 0; background-color: rgba(234, 242, 245, 0.5); color: #333; font-size: 1.125rem; font-weight: bold; width: 100%; height: 100%; line-height: 12.5rem; }
 
 @media screen and (max-width: 768px) { #coopBox .coop_area { width: 100%; } }
 
 @media screen and (min-width: 968px) { .coop_area ul { height: 200px; }
-  .coop_area ul li { float: left; width: 33.333333%; height: 100%; } }
+  .coop_area ul li { float: left; width: 33.333333%; height: 100%; }
+  .coop_area ul li.action dd:last-of-type { position: absolute; left: 0; bottom: 0; background-color: rgba(249, 244, 237, 0.5); color: #333; font-weight: bold; font-size: 1.125rem; width: 100%; height: 100%; line-height: 25rem; } }
 
 #serviceBox { width: 100%; min-width: 20rem; height: auto; min-height: 300px; padding: 6.25rem 0; background-color: #fff; box-sizing: border-box; }
 
@@ -313,6 +326,8 @@
 .service_wrap .area_view > ul li { float: left; width: 600px; height: 100%; background-color: #dec4a4; text-align: center; transform: scale(0.8); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-image: url("../../img/caci_logo.png"); }
 
 .service_wrap .area_view > ul li a { display: block; width: 100%; height: 100%; }
+
+.service_wrap .area_view > ul li a span { display: block; width: 0; height: 0; overflow: hidden; }
 
 .service_wrap .area_view > ul:after, .service_wrap .area_view > ul::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 

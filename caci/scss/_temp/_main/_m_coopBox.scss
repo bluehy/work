@@ -6,10 +6,16 @@
 
    .coop_area {width: 80vw; max-width: 1280px; height: 100%; margin:auto;
       ul {width: 100%; height: auto; min-height: 400px;
-      
-         li {width: 100%; height: 200px; text-align:center; background-color: $sub2; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;
-            a {display: block; width: 100%; height: 100%; }
-         }
+         li {width: 100%; height: 200px; box-sizing:border-box; text-align:center; background-color: $sub2; overflow:hidden;
+            a {display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size:cover; transition:all 300ms ease;
+               dl {position:relative; width: 100%; height: 100%;padding:2rem; box-sizing:border-box; color: #fff; background-color: rgba(0,0,0,0.5); }
+               dt {height: 60%; font-size: nth($font_s,4); font-weight: bold; padding-top: 2rem; box-sizing:border-box;}
+               dd {height: 40%;}
+               dd:last-of-type{display:none;}
+            }//a
+         }//li
+         li.action a{transform:scale(1.1);}
+         li.action dd:last-of-type{position:absolute; left:0; bottom:0; background-color: rgba($sub3,0.5); color: $black; font-size:nth($font_s,3); font-weight: bold; width: 100%; height: 100%; line-height:12.5rem;}
       }//ul
    }//.coop_area
 
@@ -24,7 +30,8 @@
 @media screen and (min-width:968px){
    .coop_area {
       ul{height: 200px;
-         li {float:left; width: 33.333333%; height: 100%; }
+         li {float:left; width: 33.333333%; height: 100%;}
+         li.action dd:last-of-type{position:absolute; left:0; bottom:0; background-color: rgba($sub2,0.5); color: $black; font-weight: bold; font-size:nth($font_s,3); width: 100%; height: 100%; line-height:25rem;}
       }//ul
    }//.coop_area
 }
