@@ -312,6 +312,24 @@ pageLi.eq(0).addClass('action');
 // ---------------------------------------------------------
 
 
+
+// ---------------------------------------------------------
+// footer move_top버튼 클릭시 최상단으로 이동하는 기능
+   const footWrap = $('.foot_wrap');
+   const footBtn = $('.move_top');
+   
+   footBtn.children('a').on('click',function(e){
+      e.preventDefault();
+      wheelN = 0;
+      $('html, body').stop().animate({ scrollTop: scVal[wheelN] + 'px' },700);
+   })   
+
+// ---------------------------------------------------------
+
+
+
+
+
 // ------------------------------------------------------
 // 스크롤바 옮길 때, 위치값 계산 =>
 
@@ -392,11 +410,12 @@ $(window).on('scroll',function(){
 
          case device[1]:
             body.append('<script src="../js/src/temp/headBox_768.js"></script>');
-            rel = false;
+            
             pageUl.hide();
-            break;
 
          case device[2]:
+            rel = false;
+            break;
          case device[3]:
          case device[4]:
             break;
