@@ -10,7 +10,7 @@
    
    // 공연 정보 추가
    let pList =[
-               {place: '대극장', title: '뮤지컬 <레베카>', date: '2019.11.16~2020.03.15', src:'poster_01.gif',link:'#01'
+               {place: '대극장', title: '뮤지컬 <레베카>', date: '2019.11.16~2020.03.15', src:'poster_01.gif',link:'#01_공연정보더보기링크'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'화수목 VIP석 14만원, R석 12만원, S석 9만원, A석 6만원<br/>금토일/ 공휴일 VIP석 15만원, R석 13만원, S석 10만원, A석 7만원'},
@@ -23,7 +23,7 @@
                         ]
                },
 
-               {place:'중극장 블랙',title:'연극 <도둑배우>',date:'2019.11.09~2020.01.27',src:'poster_02.gif',link:'#02'
+               {place:'중극장 블랙',title:'연극 <도둑배우>',date:'2019.11.09~2020.01.27',src:'poster_02.gif',link:'#02_공연정보더보기링크'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'R석 50,000원 / S석 40,000원'},
@@ -36,7 +36,7 @@
                         ]
                },
                
-               {place:'소극장 블루',title:'뮤지컬 <플레이리스트> 쇼케이스',date:'2019.12.06~2019.12.07',src:'poster_03.gif',link:'#03'
+               {place:'소극장 블루',title:'뮤지컬 <플레이리스트> 쇼케이스',date:'2019.12.06~2019.12.07',src:'poster_03.gif',link:'#03_공연정보더보기링크'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'무료'},
@@ -49,7 +49,7 @@
                         ]
                },
                
-               {place:'소극장 블루',title:'뮤지컬 <오드리부띠끄> 쇼케이스',date:'2019.12.13~2019.12.14',src:'poster_04.gif',link:'#04'
+               {place:'소극장 블루',title:'뮤지컬 <오드리부띠끄> 쇼케이스',date:'2019.12.13~2019.12.14',src:'poster_04.gif',link:'#04_공연정보더보기링크'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'무료'},
@@ -82,6 +82,8 @@
       const infoDl = slideInfo.children('dl');
       let infoDt = infoDl.children('dt');
       let infoDd = infoDl.children('dd');
+      const infoBtn = slideInfo.children('.info_btn');
+      let infoBtnLink =infoBtn.children('a');
 
    // -------------------------------------------------------
 
@@ -101,9 +103,7 @@
    // ------------------------------------------------------
    // 슬라이드 html 구조 추가
    slideGuide.children('li').append('<div></div>');
-   slideGuide.children('li').children('div').append('<h3></h3>');
-
-
+   // slideGuide.children('li').children('div').append('<h3></h3>');
 
 
    // ------------------------------------------------------
@@ -160,6 +160,7 @@
          infoDt.nextAll('dd').remove();
          infoDt.text(pList[myN].title); //dt
          infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` }); //img
+         infoBtnLink.attr({'href':pList[myN].link});
 
          ddLen = pList[myN].detail.length;
          for (let i = 0; i < ddLen; i++) {
@@ -224,6 +225,8 @@
       infoDt.nextAll('dd').remove();
       infoDt.text(pList[myN].title);
       infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
+      infoBtnLink.attr({'href':pList[myN].link});
+
       ddLen = pList[myN].detail.length;
       for (let i = 0; i < ddLen; i++) {
          infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
@@ -253,6 +256,7 @@
          infoDt.nextAll('dd').remove();
          infoDt.text(pList[myN].title);
          infoImg.attr({ 'src': `../img/main/viewBox/${pList[myN].src}` });
+         infoBtnLink.attr({'href':pList[myN].link});
          
          ddLen = pList[myN].detail.length;
          for (let i = 0; i < ddLen; i++) {
@@ -286,6 +290,8 @@
       infoDt.nextAll('dd').remove();
       infoDt.text(pList[myN].title);
       infoImg.attr({'src':`../img/main/viewBox/${pList[myN].src}`});
+      infoBtnLink.attr({'href':pList[myN].link});
+
       ddLen = pList[myN].detail.length;
       for (let i = 0; i < ddLen; i++) {
          infoDt.after(`<dd><strong>${pList[myN].detail[i].subtitle}</strong><p>${pList[myN].detail[i].subcontent}</p></dd>`);
@@ -308,14 +314,15 @@
 
 
    // --------------------------------------------------------------------
-   // infoDl의 dt, dd 내용삽입
+   // infoDl의 초기 dt, dd 내용삽입
    ddLen = pList[myN].detail.length;
 
    console.log('디테일내용갯수', ddLen);
    
-   //infoDl 파트 초기값 설정   
+   //infoDl 파트 초기값 설정
    infoDt.text(pList[0].title);
    infoImg.attr({ 'src':`../img/main/viewBox/${pList[0].src}`});
+   infoBtnLink.attr({'href':pList[0].link});
    
    for(let i = 0; i < ddLen; i++){
       infoDt.after(`<dd><strong>${pList[0].detail[i].subtitle}</strong><p>${pList[0].detail[i].subcontent}</p></dd>`);
