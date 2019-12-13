@@ -10,7 +10,7 @@
    
    // 공연 정보 추가
    let pList =[
-               {place: '대극장', title: '뮤지컬 <레베카>', date: '2019.11.16~2020.03.15', src:'poster_01.gif'
+               {place: '대극장', title: '뮤지컬 <레베카>', date: '2019.11.16~2020.03.15', src:'poster_01.gif',link:'#01'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'화수목 VIP석 14만원, R석 12만원, S석 9만원, A석 6만원<br/>금토일/ 공휴일 VIP석 15만원, R석 13만원, S석 10만원, A석 7만원'},
@@ -23,7 +23,7 @@
                         ]
                },
 
-               {place:'중극장 블랙',title:'연극 <도둑배우>',date:'2019.11.09~2020.01.27',src:'poster_02.gif'
+               {place:'중극장 블랙',title:'연극 <도둑배우>',date:'2019.11.09~2020.01.27',src:'poster_02.gif',link:'#02'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'R석 50,000원 / S석 40,000원'},
@@ -36,7 +36,7 @@
                         ]
                },
                
-               {place:'소극장 블루',title:'뮤지컬 <플레이리스트> 쇼케이스',date:'2019.12.06~2019.12.07',src:'poster_03.gif'
+               {place:'소극장 블루',title:'뮤지컬 <플레이리스트> 쇼케이스',date:'2019.12.06~2019.12.07',src:'poster_03.gif',link:'#03'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'무료'},
@@ -49,7 +49,7 @@
                         ]
                },
                
-               {place:'소극장 블루',title:'뮤지컬 <오드리부띠끄> 쇼케이스',date:'2019.12.13~2019.12.14',src:'poster_04.gif'
+               {place:'소극장 블루',title:'뮤지컬 <오드리부띠끄> 쇼케이스',date:'2019.12.13~2019.12.14',src:'poster_04.gif',link:'#04'
                ,detail: [
                         {subtitle:'티켓:',
                         subcontent:'무료'},
