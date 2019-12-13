@@ -258,7 +258,7 @@
 
 #newsBox ul dl dt a:hover, #newsBox ul dl dt a:focus { font-weight: bold; }
 
-#newsBox ul dl dd { float: right; width: 20%; font-size: 1rem; }
+#newsBox ul dl dd { float: right; width: 20%; min-width: 5rem; font-size: 1rem; }
 
 #newsBox > div { position: relative; float: right; width: 5%; height: 100%; }
 
