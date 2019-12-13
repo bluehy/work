@@ -42,4 +42,24 @@
    });
 
 
+   //
+   // 메뉴박스 하이라이트 설정
+sideDtLink.on('mouseenter focus',function(){
+   $(this).parent().addClass('active');
+});
+
+sideDtLink.on('mouseleave blur',function(){
+   $(this).parent().removeClass('active');
+});
+
+sideDdLink.on('mouseenter focus',function(){
+   $(this).addClass('active');
+   $(this).parent().prevAll('dt').addClass('active');
+})
+
+sideDdLink.on('mouseleave blur',function(){
+   $(this).removeClass('active');
+   $(this).parent().prevAll('dt').removeClass('active');
+})
+
 })(jQuery);

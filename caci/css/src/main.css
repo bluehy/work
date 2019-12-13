@@ -30,9 +30,13 @@
 
 #headBox .head_wrap > #gnb ul li dl dt a { display: block; width: auto; height: 100%; padding: 0 1rem; line-height: 3.75rem; font-size: 1.125rem; font-weight: bold; transition: all 300ms ease; }
 
+#headBox .head_wrap > #gnb ul li dl dt.active a { color: #bf9c50; }
+
 #headBox .head_wrap > #gnb ul li dl dd { display: none; width: auto; height: auto; }
 
 #headBox .head_wrap > #gnb ul li dl dd a { display: block; width: auto; height: auto; padding: 0.4rem 0; font-size: 1rem; }
+
+#headBox .head_wrap > #gnb ul li dl dd a.active { color: #bf9c50; }
 
 #headBox .head_wrap > #gnb ul.action:before, #headBox .head_wrap > #gnb ul.action::before { padding-bottom: 1.5rem; }
 
@@ -44,7 +48,7 @@
 
 #headBox .head_wrap #unb a i { width: 100%; height: 100%; font-size: 1.5rem; text-align: center; color: #fff; line-height: 2.5rem; }
 
-#headBox .head_wrap #unb a.action i { color: #a91f2b; }
+#headBox .head_wrap #unb a.action i { color: #bf9c50; }
 
 #headBox .head_wrap #unb a.action + form { display: block; }
 
@@ -86,9 +90,13 @@
 
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dt a { display: block; width: 100%; height: 100%; text-align: center; }
 
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dt.active a { color: #bf9c50; }
+
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd { width: 7.5rem; margin: auto; display: none; }
 
 #headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd a { float: none; display: block; width: 100%; height: auto; padding: 0.2rem 0; margin: auto; margin-bottom: 0.5rem; text-align: center; }
+
+#headBox .head_wrap > #navMenu #sideGnb .side_guide > ul dd a.active { color: #bf9c50; }
 
 #headBox .head_wrap > #navMenu #sideGnb.action { width: 100%; min-width: 320px; max-width: 750px; height: auto; min-height: 500px; background-color: #f9f4ed; color: #333; opacity: 1; padding: 3rem 1rem; }
 
@@ -169,7 +177,7 @@
 
 #viewBox .slide_wrap .slide_guide li a span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#viewBox .slide_wrap .slide_guide li a:after, #viewBox .slide_wrap .slide_guide li a::after { content: " "; display: block; position: absolute; top: 0; width: 100%; height: 100%; background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0)); }
+#viewBox .slide_wrap .slide_guide li a:after, #viewBox .slide_wrap .slide_guide li a::after { content: " "; display: block; position: absolute; top: 0; width: 100%; height: 100%; background: linear-gradient(-90deg, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0)); }
 
 #viewBox .slide_wrap .slide_guide li > div { height: 100%; }
 
@@ -268,14 +276,15 @@
 
 #infoBox .info_wrap ul li dl dt { width: 100%; height: 100px; }
 
-#infoBox .info_wrap ul li dl dt i { width: 100%; height: 100%; font-size: 2rem; text-align: center; line-height: 100px; }
+#infoBox .info_wrap ul li dl dt i { width: 100%; height: 100%; font-size: 3rem; text-align: center; line-height: 100px; }
 
 #infoBox .info_wrap ul li dl dd { width: 100%; height: 50px; }
 
 #infoBox .info_wrap ul li:last-of-type { margin-right: 0; }
 
 @media screen and (max-width: 480px) { #infoBox .info_wrap ul li { width: 40%; margin-right: 20%; }
-  #infoBox .info_wrap ul li:nth-of-type(2) { margin-right: 0; } }
+  #infoBox .info_wrap ul li:nth-of-type(2) { margin-right: 0; }
+  #infoBox .info_wrap ul li dl dt i { font-size: 2rem; } }
 
 #coopBox { width: 100%; min-width: 20rem; height: auto; min-height: 500px; padding: 8rem 0; box-sizing: border-box; background-color: #fff; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; background-image: url("../../img/main/coopBox/backImg_01.jpg"); }
 

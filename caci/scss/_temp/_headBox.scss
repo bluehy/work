@@ -24,13 +24,13 @@
                dl {width: auto; height: auto;
                   dt {width: auto; height: 3.75rem;
                      a {display: block; width: auto; height:100%; padding: 0 1rem; line-height: 3.75rem; font-size: nth($font_s,3); font-weight: bold; transition:all 300ms ease;}
-                  }
+                  &.active a{color: $sub5;}
+                  }//dt
                   dd {display:none; width: auto; height: auto;
                      a {display:block; width: auto; height: auto; padding: 0.4rem 0; font-size: nth($font_s,2);}
-                  }
-               }// dl
-            
-            
+                     a.active {color: $sub5;}
+                  }//dd
+               }// dl            
             }//li
          }// ul
          ul.action {
@@ -45,7 +45,7 @@
          h2 {@include hidden;}
          a{display: block; width: 100%; height: 100%; background-color: transparent;
             i {width: 100%; height: 100%; font-size: nth($font_s,4); text-align:center; color: #fff; line-height: 2.5rem;}
-            &.action i {color: $red;}
+            &.action i {color: $sub5;}
             &.action + form {display:block;}
          }// a
       }// #unb------------------------------------------------------------------
@@ -85,9 +85,11 @@
                      dl {width: 100%; height: auto;}
                      dt {width: 9.375rem; margin:auto; font-size: nth($font_s,3); font-weight: bold; margin-bottom: 1rem;
                         a {display: block; width: 100%; height: 100%; text-align:center;}
+                     &.active a{color: $sub5;}
                      }//dt
                      dd {width: 7.5rem; margin:auto; display:none;
-                     a{float:none; display: block; width: 100%; height: auto; padding:0.2rem 0; margin:auto; margin-bottom: 0.5rem; text-align:center;}
+                        a{float:none; display: block; width: 100%; height: auto; padding:0.2rem 0; margin:auto; margin-bottom: 0.5rem; text-align:center;}
+                        a.active {color: $sub5;}
                      }//dd
                   }//ul
                }//.side_guide
@@ -98,7 +100,7 @@
                dd {display:block;}
                }
             }//#sideGnb.action
-
+      
       } //#navMenu------------------------------------------------------------------
 
       #navMenu:before,#navMenu::before {content:" "; display: block; position:fixed; z-index: 100; left:0; top:0; background-color: rgba($darkblue,0.5); opacity:0;}

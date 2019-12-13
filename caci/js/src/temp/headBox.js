@@ -127,11 +127,31 @@ gnbDdLink.eq(-1).on('blur',function(){
 // -----------------------------------------------------
 
 
+// ----------------------------------------------------
+// 메뉴박스 하이라이트 설정
+gnbDtLink.on('mouseenter focus',function(){
+   $(this).parent().addClass('active');
+});
+
+gnbDtLink.on('mouseleave blur',function(){
+   $(this).parent().removeClass('active');
+});
+
+gnbDdLink.on('mouseenter focus',function(){
+   $(this).addClass('active');
+   $(this).parent().prevAll('dt').addClass('active');
+})
+
+gnbDdLink.on('mouseleave blur',function(){
+   $(this).removeClass('active');
+   $(this).parent().prevAll('dt').removeClass('active');
+})
+
 
 // -----------------------------------------------------
 // unb 조작_ 로그인/회원가입창 나타나기
 
-userBtn.on('click',function(){
+userBtn.on('mouseenter focus click',function(){
    let has = userBtn.hasClass('action');
    if(has){
       $(this).removeClass('action');
@@ -140,12 +160,15 @@ userBtn.on('click',function(){
    }
 }); //userBtn.on('click')
 
+userBtn.on('mouseleave blur',function(){
+   $(this).removeClass('action');
+})
 
 // -----------------------------------------------------
 
 
 // -----------------------------------------------------
-// navMenu로 메뉴 오픈하기
+// navMenu로 사이드메뉴 오픈하기
 
 sideGuide.append('<div class="member_area"></div>');
 const memberArea = sideGuide.children('.member_area');
@@ -371,10 +394,6 @@ $(window).on('scroll',function(){
 
 
 
-
-
-
-
 // ---------------------------------------------------------
 // 페이지 인디케이터로 위치 이동
    const pageLink = pageLi.children('a');
@@ -471,9 +490,6 @@ $(window).on('scroll',function(){
    
    
    DeviceData(beforeDevice);
-
-
-
 
 
 })(jQuery);

@@ -6,7 +6,7 @@
             a {display: block; width: 100%; height: 100%; text-align:center;}
             dl{width: 100%; height: 100%;
                dt {width: 100%; height: 100px;
-                  i {width: 100%; height: 100%; font-size: nth($font_s,5); text-align:center; line-height: 100px;}
+                  i {width: 100%; height: 100%; font-size: 3rem; text-align:center; line-height: 100px;}
                }
                dd {width: 100%; height: 50px;}
             }
@@ -25,6 +25,11 @@
          ul{
             li {width: 40%; margin-right: 20%;
             &:nth-of-type(2){margin-right:0;}
+               dl {
+                  dt{
+                     i {font-size: nth($font_s,5);}
+                  }
+               }
             }
          }
       }
