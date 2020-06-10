@@ -1,0 +1,21 @@
+// mixin.scss
+/* hidden */
+@mixin hidden{
+   display:block; width: 0; height: 0; overflow:hidden;
+};
+
+/* clearfix */
+@mixin clearfix {
+   &:after,
+   &::after {content:" "; display:block; width:0; height:0; clear:both;}
+};
+
+/* menu divider - line */
+@mixin divider {
+   position:relative;
+   &:after,
+   &::after {content:" "; display:block; width: 0; height: 30%; border-right: 1px solid $black; position: absolute; top:50%; right: 0; transform:translateY(-50%);}
+   &:last-of-type:after,&:last-of-type::after {display:none;}
+}
+
+/*  */
